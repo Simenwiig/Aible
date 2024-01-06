@@ -17290,7 +17290,7 @@ MonoBehaviour:
   skiMovement: {fileID: 1786322572}
   startText: {fileID: 607405535}
   startCounterText: {fileID: 550650586}
-  instantlyStart: 1
+  instantlyStart: 0
   startCounter: 3
   startStick: {fileID: 4645848357271759}
   stickEndPoint: {fileID: 248878633}
