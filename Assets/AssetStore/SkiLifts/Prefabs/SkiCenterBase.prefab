@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5700947389067873387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6973108581379315864}
+  - component: {fileID: 4081552131421462418}
+  - component: {fileID: 5798797149496460070}
+  m_Layer: 0
+  m_Name: SkiCenterBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6973108581379315864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700947389067873387}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4081552131421462418
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700947389067873387}
+  m_Mesh: {fileID: 7049081916645431886, guid: 7982e4ce4aea5cc4f8bba730bdf7c4f6, type: 3}
+--- !u!23 &5798797149496460070
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700947389067873387}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 430b3c62889a4c443bbd1f7c3377be56, type: 2}
+  - {fileID: 2100000, guid: 50984c9ad0feae647b53f0547825a3cf, type: 2}
+  - {fileID: 2100000, guid: a4c7ecf4bbb20de4a888f66754165ab4, type: 2}
+  - {fileID: 2100000, guid: 047748f1481818f4383663707e66145a, type: 2}
+  - {fileID: 2100000, guid: ac2913c3994800d4f82faf3e982e0c15, type: 2}
+  - {fileID: 2100000, guid: 0ada23ba6e7a55346b360f2739f09cd6, type: 2}
+  - {fileID: 2100000, guid: 1b90d583a06302645a587f5f0b7bb51e, type: 2}
+  - {fileID: 2100000, guid: 628b41168cd9e9f41a918cfae7c3ef95, type: 2}
+  - {fileID: 2100000, guid: 098715c85dfe1a34ba76c01ea19d741e, type: 2}
+  - {fileID: 2100000, guid: b0e0a038482bb7c44a854955109bda36, type: 2}
+  - {fileID: 2100000, guid: c7053b1d73041fc468f5ee83b54145a8, type: 2}
+  - {fileID: 2100000, guid: a497a8855c2491948b971167d7ea163f, type: 2}
+  - {fileID: 2100000, guid: c49d5a9a47e80b04282e7243e7243095, type: 2}
+  - {fileID: 2100000, guid: 7e774fa1a5f892448b47808ad5654f34, type: 2}
+  - {fileID: 2100000, guid: c34decd084f222c489b470a48b087061, type: 2}
+  - {fileID: 2100000, guid: b64b68006904cda4f8c85293f85627fb, type: 2}
+  - {fileID: 2100000, guid: 5a4ae8b4ad8e5a34ba600934441fca1d, type: 2}
+  - {fileID: 2100000, guid: 69de215ffd93b6d4281751831d32bc5d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
