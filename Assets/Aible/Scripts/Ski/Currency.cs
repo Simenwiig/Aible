@@ -15,11 +15,13 @@ namespace Currency
         public TextMeshProUGUI currencyText;
 
         static bool changeCoinAmount = true;
+        static bool changeCurrencyAmount;
 
         private void Start()
         {
             numberOfCoins = 0;
             coinsText.text = numberOfCoins.ToString();
+            currency = PlayerPrefs.GetInt("currency", 0);
         }
            
         private void Update()
@@ -28,6 +30,11 @@ namespace Currency
             {
                 coinsText.text = numberOfCoins.ToString();
                 changeCoinAmount = false;
+            }
+
+            if (changeCurrencyAmount)
+            {
+                StartCoroutine(CoinsToCurrency());
             }
         }
 
@@ -47,7 +54,24 @@ namespace Currency
 
         public static void AddCoinsToCurrency()
         {
-            currency += numberOfCoins;
+            changeCurrencyAmount = true;  
+        }
+
+        IEnumerator CoinsToCurrency()
+        {
+            changeCurrencyAmount = false;
+
+            int coins = numberOfCoins;
+
+            for (int i = 0; i < coins; i++)
+            {
+                currency++;
+                numberOfCoins--;
+                currencyText.text = currency.ToString();
+                coinsText.text = numberOfCoins.ToString();
+                yield return new WaitForSeconds(0.1f);
+            }
+
             PlayerPrefs.SetInt("currency", currency);
         }
     }

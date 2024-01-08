@@ -6,6 +6,7 @@ using Currency;
 public class FinishSkiing : MonoBehaviour
 {
     [SerializeField] private SkiMovement skiMovement;
+    [SerializeField] private Canvas finishCanvas;
 
     private bool hasFinished;
 
@@ -33,6 +34,8 @@ public class FinishSkiing : MonoBehaviour
         skiMovement.rb.isKinematic = true;
 
         skiMovement.canMove = false;
+
+        finishCanvas.gameObject.SetActive(true);
 
         Currency.Currency.AddCoinsToCurrency();
     }
