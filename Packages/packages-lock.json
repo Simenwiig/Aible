@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.simonoliver.unityfigma": {
+      "version": "https://github.com/simonoliver/UnityFigmaBridge.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.1-preview.1",
+        "com.unity.textmeshpro": "2.0.1"
+      },
+      "hash": "df46de2babace2aaec76342666722a740041d10d"
+    },
     "com.unity.burst": {
       "version": "1.8.9",
       "depth": 1,
@@ -97,6 +107,13 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.postprocessing": {
