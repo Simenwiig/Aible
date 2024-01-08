@@ -7,6 +7,7 @@ public class StartSkiing : MonoBehaviour
 {
     [Header("Refrences")]
     [SerializeField] private SkiMovement skiMovement;
+    [SerializeField] private Canvas startCanvas;
     [SerializeField] private TextMeshProUGUI startText;
     [SerializeField] private TextMeshProUGUI startCounterText;
 
@@ -22,6 +23,7 @@ public class StartSkiing : MonoBehaviour
 
     private void Start()
     {
+        startCanvas.gameObject.SetActive(true);
         StartCoroutine(StartSki());
     }
 
@@ -44,8 +46,7 @@ public class StartSkiing : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        startText.text = "";
-        startCounterText.text = "";
+        startCanvas.gameObject.SetActive(false);
 
         StartCoroutine(skiMovement.StartMovement());
         moveStartStick();

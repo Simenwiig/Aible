@@ -9,16 +9,19 @@ namespace Currency
     {
         public static int numberOfCoins;
 
+        public static int currency;
+
         public TextMeshProUGUI coinsText;
+        public TextMeshProUGUI currencyText;
 
         static bool changeCoinAmount = true;
 
-        private void Awake()
+        private void Start()
         {
-            numberOfCoins = PlayerPrefs.GetInt("numberOfCoins", 0);
+            numberOfCoins = 0;
             coinsText.text = numberOfCoins.ToString();
         }
-
+           
         private void Update()
         {
             if (changeCoinAmount)
@@ -31,15 +34,21 @@ namespace Currency
         public static void AddCoins(int coins)
         {
             numberOfCoins += coins;
-            PlayerPrefs.SetInt("numberOfCoins", numberOfCoins);
             changeCoinAmount = true;
         }
 
         public static void ResetCoins()
         {
             numberOfCoins = 0;
-            PlayerPrefs.SetInt("numberOfCoins", numberOfCoins);
+            currency = 0;
+            PlayerPrefs.SetInt("currency", currency);
             changeCoinAmount = true;
+        }
+
+        public static void AddCoinsToCurrency()
+        {
+            currency += numberOfCoins;
+            PlayerPrefs.SetInt("currency", currency);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Currency;
 
 public class FinishSkiing : MonoBehaviour
 {
@@ -26,12 +27,14 @@ public class FinishSkiing : MonoBehaviour
         skiMovement.canUseInput = false;
         skiMovement.canAnimate = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         SkiAnimation.PlayAnimation("Winning");
         skiMovement.rb.isKinematic = true;
 
         skiMovement.canMove = false;
+
+        Currency.Currency.AddCoinsToCurrency();
     }
 
     private void Update()
