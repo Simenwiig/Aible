@@ -1,4 +1,11 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "creativeikep",
+      "url": "https://registry.npmjs.com",
+      "scopes": [ "jp.ikep" ]
+    }
+  ],
   "dependencies": {
     "com.simonoliver.unityfigma": "https://github.com/simonoliver/UnityFigmaBridge.git",
     "com.unity.cinemachine": "2.9.5",
@@ -48,6 +55,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "jp.ikep.mediapipe.blazepose": "1.3.0"
   }
 }
