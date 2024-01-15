@@ -68,6 +68,7 @@
     <Compile Include="Assets\Aible\Scripts\Ski\MovementTest.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\BenchmarkShortcutManager.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\Obstacles.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\Visualizers\PoseVisualizer.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowHeight.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\StatsGraphVE.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\SceneLoader.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Runtime\OasisFogVolumeComponent.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\TransformContraint.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnow.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\Visualizers\WebCamVisualizer.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\InputSystem\FirstPersonInputs.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
@@ -109,11 +111,13 @@
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\SpeedParticles.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Garden\Scripts\Runtime\WashiLightController.cs" />
     <Compile Include="Assets\MediaPipe\Scripts\WebCam\WebCamInput.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\VNectModel.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\TrailRendererClear.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowTree.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Runtime\HDRFogOverride.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\Currency.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\ParticleSpawnSystem.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\PositionIndex.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\IsGrounded.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\CoinPickup.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\CockpitHUD.cs" />
@@ -150,6 +154,7 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Cross.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-Overlay.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\MediaPipe\Shaders\Visualizer.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Grass.shader" />
@@ -171,6 +176,7 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Detail Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Bark Snow.shader" />
+    <None Include="Assets\AssetStore\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_PBR.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross Snow.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Leaf Snow.shader" />
@@ -201,6 +207,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-Masking.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Props Snow.shader" />
+    <None Include="Assets\AssetStore\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_Toon.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Overlay.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Fonts\LiberationSans-OFL.txt" />

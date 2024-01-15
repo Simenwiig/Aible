@@ -38,7 +38,7 @@ public class WebCamInput : MonoBehaviour
         var hMirrored = mirrorHorizontally ? -1 : 1;
         aspectGap = aspectGap * hMirrored;
         var vMirrored = webCamTexture.videoVerticallyMirrored;
-        var scale = new Vector2(aspectGap, vMirrored ? 1 : 0);
+        var scale = new Vector2(aspectGap, vMirrored ? -1 : 1);
         var offset = new Vector2((1 - aspectGap) / 2, vMirrored ? 1 : 0);
 
         //Copy the pixel data from a texture into a render texture. A Render Texture is a type of Texture that Unity creates and updates at run time. 
