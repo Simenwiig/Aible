@@ -8,7 +8,7 @@ public class WebCamVisualizer : MonoBehaviour
     [SerializeField] WebCamInput webCamInput;
     [SerializeField] RawImage webCamImageUI;
 
-    private void Update()
+    private void LateUpdate()
     {
         webCamImageUI.texture = webCamInput.inputImageTexture;
     }

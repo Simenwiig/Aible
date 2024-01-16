@@ -27,11 +27,18 @@ public class VNectModel : MonoBehaviour
         public JointPoint end = null;
     }
 
+    [Header("Skeleton Bodyparts")]
+    public bool rotation = true;
+    public bool legs = true;
+
     private List<Skeleton> skeletons = new List<Skeleton>();
+    [Header("Settings")]
     public Material skeletonMaterial;
 
     public bool showSkeleton;
     private bool useSkeleton;
+
+    
 
     public float skeletonX;
     public float skeletonY;
@@ -102,15 +109,21 @@ public class VNectModel : MonoBehaviour
 
         // Right Leg
         jointPoints[PositionIndex.rHip.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightUpperLeg);
-        jointPoints[PositionIndex.rKnee.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightLowerLeg);
-        jointPoints[PositionIndex.rAnkle.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightFoot);
-        jointPoints[PositionIndex.rFootIndex.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightToes);
+        if (legs)
+        {
+            jointPoints[PositionIndex.rKnee.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightLowerLeg);
+            jointPoints[PositionIndex.rAnkle.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightFoot);
+            jointPoints[PositionIndex.rFootIndex.Int()].transform = anim.GetBoneTransform(HumanBodyBones.RightToes);
+        }
 
         // Left Leg
         jointPoints[PositionIndex.lHip.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftUpperLeg);
-        jointPoints[PositionIndex.lKnee.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftLowerLeg);
-        jointPoints[PositionIndex.lAnkle.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftFoot);
-        jointPoints[PositionIndex.lFootIndex.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftToes);
+        if (legs)
+        {
+            jointPoints[PositionIndex.lKnee.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftLowerLeg);
+            jointPoints[PositionIndex.lAnkle.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftFoot);
+            jointPoints[PositionIndex.lFootIndex.Int()].transform = anim.GetBoneTransform(HumanBodyBones.LeftToes);
+        }
 
         // Spine
         jointPoints[PositionIndex.head.Int()].transform = anim.GetBoneTransform(HumanBodyBones.Head);
@@ -130,17 +143,20 @@ public class VNectModel : MonoBehaviour
         jointPoints[PositionIndex.lElbow.Int()].child = jointPoints[PositionIndex.lWrist.Int()];
         jointPoints[PositionIndex.lElbow.Int()].parent = jointPoints[PositionIndex.lShoulder.Int()];
 
-        // Right Leg
-        jointPoints[PositionIndex.rHip.Int()].child = jointPoints[PositionIndex.rKnee.Int()];
-        jointPoints[PositionIndex.rKnee.Int()].child = jointPoints[PositionIndex.rAnkle.Int()];
-        jointPoints[PositionIndex.rAnkle.Int()].child = jointPoints[PositionIndex.rFootIndex.Int()];
-        jointPoints[PositionIndex.rAnkle.Int()].parent = jointPoints[PositionIndex.rKnee.Int()];
+        if (legs)
+        {
+            // Right Leg
+            jointPoints[PositionIndex.rHip.Int()].child = jointPoints[PositionIndex.rKnee.Int()];
+            jointPoints[PositionIndex.rKnee.Int()].child = jointPoints[PositionIndex.rAnkle.Int()];
+            jointPoints[PositionIndex.rAnkle.Int()].child = jointPoints[PositionIndex.rFootIndex.Int()];
+            jointPoints[PositionIndex.rAnkle.Int()].parent = jointPoints[PositionIndex.rKnee.Int()];
 
-        // Left Leg
-        jointPoints[PositionIndex.lHip.Int()].child = jointPoints[PositionIndex.lKnee.Int()];
-        jointPoints[PositionIndex.lKnee.Int()].child = jointPoints[PositionIndex.lAnkle.Int()];
-        jointPoints[PositionIndex.lAnkle.Int()].child = jointPoints[PositionIndex.lFootIndex.Int()];
-        jointPoints[PositionIndex.lAnkle.Int()].parent = jointPoints[PositionIndex.lKnee.Int()];
+            // Left Leg
+            jointPoints[PositionIndex.lHip.Int()].child = jointPoints[PositionIndex.lKnee.Int()];
+            jointPoints[PositionIndex.lKnee.Int()].child = jointPoints[PositionIndex.lAnkle.Int()];
+            jointPoints[PositionIndex.lAnkle.Int()].child = jointPoints[PositionIndex.lFootIndex.Int()];
+            jointPoints[PositionIndex.lAnkle.Int()].parent = jointPoints[PositionIndex.lKnee.Int()];
+        }
 
         // Spine
         jointPoints[PositionIndex.spine.Int()].child = jointPoints[PositionIndex.chest.Int()];
@@ -169,15 +185,19 @@ public class VNectModel : MonoBehaviour
             AddSkeleton(PositionIndex.rEar, PositionIndex.rEye);
             AddSkeleton(PositionIndex.rEye, PositionIndex.Nose);
 
-            // Right Leg
-            AddSkeleton(PositionIndex.rHip, PositionIndex.rKnee);
-            AddSkeleton(PositionIndex.rKnee, PositionIndex.rAnkle);
-            AddSkeleton(PositionIndex.rAnkle, PositionIndex.rFootIndex);
+            
+            if (legs)
+            {
+                // Right Leg
+                AddSkeleton(PositionIndex.rHip, PositionIndex.rKnee);
+                AddSkeleton(PositionIndex.rKnee, PositionIndex.rAnkle);
+                AddSkeleton(PositionIndex.rAnkle, PositionIndex.rFootIndex);
 
-            // Left Leg
-            AddSkeleton(PositionIndex.lHip, PositionIndex.lKnee);
-            AddSkeleton(PositionIndex.lKnee, PositionIndex.lAnkle);
-            AddSkeleton(PositionIndex.lAnkle, PositionIndex.lFootIndex);
+                // Left Leg
+                AddSkeleton(PositionIndex.lHip, PositionIndex.lKnee);
+                AddSkeleton(PositionIndex.lKnee, PositionIndex.lAnkle);
+                AddSkeleton(PositionIndex.lAnkle, PositionIndex.lFootIndex);
+            }
 
             // Torso
             AddSkeleton(PositionIndex.hips, PositionIndex.spine);
@@ -195,50 +215,58 @@ public class VNectModel : MonoBehaviour
             jointPoints[PositionIndex.lHip.Int()].transform.position,
             jointPoints[PositionIndex.rHip.Int()].transform.position);
 
-        foreach (var jointPoint in jointPoints)
-        {
-            if (jointPoint != null)
+       
+            foreach (var jointPoint in jointPoints)
             {
-                if (jointPoint.transform != null)
+                if (jointPoint != null)
                 {
-                    jointPoint.initRotation = jointPoint.transform.rotation;
-                }
+                    if (jointPoint.transform != null)
+                    {
+                        jointPoint.initRotation = jointPoint.transform.rotation;
+                    }
 
-                if (jointPoint.child != null && jointPoint.child.transform != null && jointPoint.child.transform.position != null)
-                {
-                    jointPoint.inverse = GetInverse(jointPoint, jointPoint.child, forward);
-                    jointPoint.inverseRotation = jointPoint.inverse * jointPoint.initRotation;
+                    if (jointPoint.child != null && jointPoint.child.transform != null && jointPoint.child.transform.position != null)
+                    {
+                        jointPoint.inverse = GetInverse(jointPoint, jointPoint.child, forward);
+                        jointPoint.inverseRotation = jointPoint.inverse * jointPoint.initRotation;
+                    }
                 }
             }
+
+
+
+
+
+        if (rotation)
+        {
+            // Hips Rotation
+            var hips = jointPoints[PositionIndex.hips.Int()];
+            initPos = jointPoints[PositionIndex.hips.Int()].transform.position;
+            hips.inverse = Quaternion.Inverse(Quaternion.LookRotation(forward));
+            hips.inverseRotation = hips.inverse * hips.initRotation;
+
+            // Head Rotation
+            var head = jointPoints[PositionIndex.head.Int()];
+            head.initRotation = jointPoints[PositionIndex.head.Int()].transform.rotation;
+
+            var gaze = jointPoints[PositionIndex.Nose.Int()].transform.position - jointPoints[PositionIndex.head.Int()].transform.position;
+            head.inverse = Quaternion.Inverse(Quaternion.LookRotation(gaze));
+            head.inverseRotation = head.inverse * head.initRotation;
+
+            // Wrists rotation
+            var lWrist = jointPoints[PositionIndex.lWrist.Int()];
+            var lf = TriangleNormal(lWrist.pos3D, jointPoints[PositionIndex.lPinky.Int()].pos3D, jointPoints[PositionIndex.lThumb.Int()].pos3D);
+            lWrist.initRotation = lWrist.transform.rotation;
+            lWrist.inverse = Quaternion.Inverse(Quaternion.LookRotation(jointPoints[PositionIndex.lThumb.Int()].transform.position - jointPoints[PositionIndex.lPinky.Int()].transform.position, lf));
+            lWrist.inverseRotation = lWrist.inverse * lWrist.initRotation;
+
+            var rWrist = jointPoints[PositionIndex.rWrist.Int()];
+            var rf = TriangleNormal(rWrist.pos3D, jointPoints[PositionIndex.rThumb.Int()].pos3D, jointPoints[PositionIndex.rPinky.Int()].pos3D);
+            rWrist.initRotation = jointPoints[PositionIndex.rWrist.Int()].transform.rotation;
+            rWrist.inverse = Quaternion.Inverse(Quaternion.LookRotation(jointPoints[PositionIndex.rThumb.Int()].transform.position - jointPoints[PositionIndex.rPinky.Int()].transform.position, rf));
+            rWrist.inverseRotation = rWrist.inverse * rWrist.initRotation;
         }
-
-        // Hips Rotation
-        var hips = jointPoints[PositionIndex.hips.Int()];
-        initPos = jointPoints[PositionIndex.hips.Int()].transform.position;
-        hips.inverse = Quaternion.Inverse(Quaternion.LookRotation(forward));
-        hips.inverseRotation = hips.inverse * hips.initRotation;
-
-        // Head Rotation
-        var head = jointPoints[PositionIndex.head.Int()];
-        head.initRotation = jointPoints[PositionIndex.head.Int()].transform.rotation;
        
-        var gaze = jointPoints[PositionIndex.Nose.Int()].transform.position - jointPoints[PositionIndex.head.Int()].transform.position;
-        head.inverse = Quaternion.Inverse(Quaternion.LookRotation(gaze));
-        head.inverseRotation = head.inverse * head.initRotation;
-
-        // Wrists rotation
-        var lWrist = jointPoints[PositionIndex.lWrist.Int()];
-        var lf = TriangleNormal(lWrist.pos3D, jointPoints[PositionIndex.lPinky.Int()].pos3D, jointPoints[PositionIndex.lThumb.Int()].pos3D);
-        lWrist.initRotation = lWrist.transform.rotation;
-        lWrist.inverse = Quaternion.Inverse(Quaternion.LookRotation(jointPoints[PositionIndex.lThumb.Int()].transform.position - jointPoints[PositionIndex.lPinky.Int()].transform.position, lf));
-        lWrist.inverseRotation = lWrist.inverse * lWrist.initRotation;
-
-        var rWrist = jointPoints[PositionIndex.rWrist.Int()];
-        var rf = TriangleNormal(rWrist.pos3D, jointPoints[PositionIndex.rThumb.Int()].pos3D, jointPoints[PositionIndex.rPinky.Int()].pos3D);
-        rWrist.initRotation = jointPoints[PositionIndex.rWrist.Int()].transform.rotation;
-        rWrist.inverse = Quaternion.Inverse(Quaternion.LookRotation(jointPoints[PositionIndex.rThumb.Int()].transform.position - jointPoints[PositionIndex.rPinky.Int()].transform.position, rf));
-        rWrist.inverseRotation = rWrist.inverse * rWrist.initRotation;
-
         return JointPoints;
     }
 
@@ -248,8 +276,7 @@ public class VNectModel : MonoBehaviour
         var forward = TriangleNormal(jointPoints[PositionIndex.hips.Int()].pos3D, 
             jointPoints[PositionIndex.lHip.Int()].pos3D, jointPoints[PositionIndex.rHip.Int()].pos3D);
 
-        jointPoints[PositionIndex.hips.Int()].transform.position = jointPoints[PositionIndex.hips.Int()].pos3D + initPos - jointPosOffset;
-        jointPoints[PositionIndex.hips.Int()].transform.rotation = Quaternion.LookRotation(forward) * jointPoints[PositionIndex.hips.Int()].inverseRotation;
+       
 
         // rotation of each of the bones
         foreach (var jointPoint in jointPoints)
@@ -265,21 +292,29 @@ public class VNectModel : MonoBehaviour
             }
         }
 
-        // Head Rotation
-        var gaze = jointPoints[PositionIndex.Nose.Int()].pos3D - jointPoints[PositionIndex.head.Int()].pos3D;
-        var f = TriangleNormal(jointPoints[PositionIndex.Nose.Int()].pos3D, jointPoints[PositionIndex.rEar.Int()].pos3D, jointPoints[PositionIndex.lEar.Int()].pos3D);
-        var head = jointPoints[PositionIndex.head.Int()];
-        head.transform.rotation = Quaternion.LookRotation(gaze, f) * head.inverseRotation;
+       
 
-        // Wrist rotation
-        var lWrist = jointPoints[PositionIndex.lWrist.Int()];
-        var lf = TriangleNormal(lWrist.pos3D, jointPoints[PositionIndex.lPinky.Int()].pos3D, jointPoints[PositionIndex.lThumb.Int()].pos3D);
-        lWrist.transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.lThumb.Int()].pos3D - jointPoints[PositionIndex.lPinky.Int()].pos3D, lf) * lWrist.inverseRotation;
+        if (rotation)
+        {
+            jointPoints[PositionIndex.hips.Int()].transform.position = jointPoints[PositionIndex.hips.Int()].pos3D + initPos - jointPosOffset;
+            jointPoints[PositionIndex.hips.Int()].transform.rotation = Quaternion.LookRotation(forward) * jointPoints[PositionIndex.hips.Int()].inverseRotation;
 
-        var rWrist = jointPoints[PositionIndex.rWrist.Int()];
-        var rf = TriangleNormal(rWrist.pos3D, jointPoints[PositionIndex.rThumb.Int()].pos3D, jointPoints[PositionIndex.rPinky.Int()].pos3D);
-        rWrist.transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.rThumb.Int()].pos3D - jointPoints[PositionIndex.rPinky.Int()].pos3D, rf) * rWrist.inverseRotation;
+            // Head Rotation
+            var gaze = jointPoints[PositionIndex.Nose.Int()].pos3D - jointPoints[PositionIndex.head.Int()].pos3D;
+            var f = TriangleNormal(jointPoints[PositionIndex.Nose.Int()].pos3D, jointPoints[PositionIndex.rEar.Int()].pos3D, jointPoints[PositionIndex.lEar.Int()].pos3D);
+            var head = jointPoints[PositionIndex.head.Int()];
+            head.transform.rotation = Quaternion.LookRotation(gaze, f) * head.inverseRotation;
 
+            // Wrist rotation
+            var lWrist = jointPoints[PositionIndex.lWrist.Int()];
+            var lf = TriangleNormal(lWrist.pos3D, jointPoints[PositionIndex.lPinky.Int()].pos3D, jointPoints[PositionIndex.lThumb.Int()].pos3D);
+            lWrist.transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.lThumb.Int()].pos3D - jointPoints[PositionIndex.lPinky.Int()].pos3D, lf) * lWrist.inverseRotation;
+
+            var rWrist = jointPoints[PositionIndex.rWrist.Int()];
+            var rf = TriangleNormal(rWrist.pos3D, jointPoints[PositionIndex.rThumb.Int()].pos3D, jointPoints[PositionIndex.rPinky.Int()].pos3D);
+            rWrist.transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.rThumb.Int()].pos3D - jointPoints[PositionIndex.rPinky.Int()].pos3D, rf) * rWrist.inverseRotation;
+        }
+       
         foreach (var sk in skeletons)
         {
             var s = sk.start;

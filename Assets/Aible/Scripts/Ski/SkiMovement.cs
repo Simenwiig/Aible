@@ -18,6 +18,7 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public bool canUseInput;
     [HideInInspector] public bool isSlowingDown;
+    [HideInInspector] public float armAngle;
 
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
@@ -55,8 +56,14 @@ public class SkiMovement : MonoBehaviour
 
     private void LateUpdate()
     {
+
+        SkiAnimation.SetLayerWeight(1, armAngle);
+    
+
         if (!canAnimate)
             return;
+
+
 
         StartCoroutine(HandleAnimation());
     }

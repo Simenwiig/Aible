@@ -12,6 +12,7 @@ public class StartSkiing : MonoBehaviour
     [SerializeField] private TextMeshProUGUI startCounterText;
 
     [Header("Settings")]
+    [SerializeField] bool dontStart;
     [SerializeField] bool instantlyStart;
     [SerializeField] private int startCounter = 3;
 
@@ -29,6 +30,12 @@ public class StartSkiing : MonoBehaviour
 
     IEnumerator StartSki()
     {
+        if (dontStart)
+        {
+            startCanvas.gameObject.SetActive(false);
+            yield break;
+        }
+
         if (!instantlyStart)
         {
             int counter = startCounter;

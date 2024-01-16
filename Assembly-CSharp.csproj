@@ -86,6 +86,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\DeviceTypeUI.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\FullscreenQuad.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\DisableIfTransitionManager.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\Visualizers\PoseVisualizerSki.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\TimelineLooper.cs" />
     <Compile Include="Assets\MediaPipe\Scripts\WebCam\WebCamNameAttribute.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />

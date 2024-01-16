@@ -42,9 +42,6 @@ public enum PositionIndex : int
     chest,
     spine,
     hips,
-    lController,
-    rController,
-    centerHead,
 
     Count,
     None,

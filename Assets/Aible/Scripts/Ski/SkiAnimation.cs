@@ -25,4 +25,9 @@ public class SkiAnimation : MonoBehaviour
     {
         animator.Play(anim);
     }
+
+    public static void SetLayerWeight(int layer, float weight)
+    {
+        animator.SetLayerWeight(layer, weight);
+    }
 }

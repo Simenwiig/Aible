@@ -8,6 +8,7 @@ public class PoseVisualizer : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
     [SerializeField] WebCamInput webCamInput;
+    public bool showShader;
     [SerializeField] Shader shader;
     [SerializeField, Range(0, 1)] float humanExistThreshold = 0.5f;
 
@@ -29,12 +30,12 @@ public class PoseVisualizer : MonoBehaviour
         new Vector4(24, 26), new Vector4(26, 28), new Vector4(28, 30), new Vector4(30, 32), new Vector4(32, 28)
     };
 
+    public bool showSkeleton = true;
     public VNectModel vNectModel;
 
     // Coordinates of joint points
     private VNectModel.JointPoint[] jointPoints;
     private Vector3 scaling = Vector3.one;
-    public bool showSkeleton;
 
     private void Start()
     {
@@ -43,10 +44,12 @@ public class PoseVisualizer : MonoBehaviour
         jointPoints = vNectModel.Initialize();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         // Process an image from a webcam and predict the pose of the person in the frame.
         detecter.ProcessImage(webCamInput.inputImageTexture);
+
+        if (!showSkeleton) return;
 
         for (int i = 0; i < detecter.vertexCount; i++)
         {
@@ -112,7 +115,7 @@ public class PoseVisualizer : MonoBehaviour
 
     private void OnRenderObject()
     {
-        if (!showSkeleton) return;
+        if (!showShader) return;
 
         // Use predicted pose world landmark results on the ComputeBuffer (GPU) memory.
         material.SetBuffer("_worldVertices", detecter.worldLandmarkBuffer);
@@ -145,6 +148,7 @@ public class PoseVisualizer : MonoBehaviour
     private void OnApplicationQuit()
     {
         // Must call Dispose method when no longer in use.
-        detecter.Dispose();
+        if(detecter != null)
+            detecter.Dispose();
     }
 }

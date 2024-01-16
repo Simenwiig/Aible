@@ -2,10 +2,10 @@
 {
     CGINCLUDE
 
-    #include "UnityCG.cginc"
+#include "UnityCG.cginc"
 
-    // Pose landmarks
-    StructuredBuffer<float4> _vertices;
+        // Pose landmarks
+        StructuredBuffer<float4> _vertices;
     // Pose world landmarks
     StructuredBuffer<float4> _worldVertices;
     // Count of pose landmarks
@@ -17,7 +17,7 @@
     float4 _linePair[35];
     float4x4 _invViewMatrix;
 
-    struct v2f{
+    struct v2f {
         float4 position: SV_POSITION;
         float4 color: COLOR;
     };
@@ -36,7 +36,7 @@
         float len = length(p0_p1);
         // Line thickness
         const float size = 0.005;
-        
+
         // Calculate position of p0 -> p1 vector direction.
         float2 p = p0.xy + len * lerp(0, 1, vid & 1) * normalize(p0_p1);
         // Add position of orthogonal vector direction.
@@ -58,7 +58,7 @@
 
     // Draw point by quad.
     v2f VertexPoint(uint vid : SV_VertexID, uint iid : SV_InstanceID)
-    {   
+    {
         float4 p = _vertices[iid];
         float score = p.w;
         const float size = 0.01;
@@ -79,7 +79,7 @@
 
     // Draw 3D body topology.
     v2f Vertex3DLine(uint vid : SV_VertexID, uint iid : SV_InstanceID)
-    {   
+    {
         // Get 2 points of draw target line.
         uint2 pairIndex = (uint2)_linePair[iid].xy;
         float4 p0 = _worldVertices[pairIndex[0]];
@@ -87,8 +87,8 @@
 
         float3 camPos = _WorldSpaceCameraPos;
         float3 dir = p1.xyz - p0.xyz;
-		float3 toCamDir = normalize(camPos - p0);
-		float3 sideDir = normalize(cross(toCamDir, dir));
+        float3 toCamDir = normalize(camPos - p0);
+        float3 sideDir = normalize(cross(toCamDir, dir));
 
         float len = length(dir);
         // Line thickness
@@ -113,11 +113,11 @@
 
     // Draw world landmark point by quad.
     v2f Vertex3DPoint(uint vid : SV_VertexID, uint iid : SV_InstanceID)
-    {   
+    {
         float3 p = _worldVertices[iid].xyz;
         float score = _worldVertices[iid].w;
         const float size = 0.03;
-        
+
         float x = size * lerp(-0.5, 0.5, vid & 1);
         float y = size * lerp(-0.5, 0.5, vid < 2 || vid == 5);
         p += mul(_invViewMatrix, float3(x, y, 0));
@@ -129,39 +129,39 @@
         return o;
     }
 
-    float4 Fragment(v2f i): SV_Target
+    float4 Fragment(v2f i) : SV_Target
     {
         return i.color;
     }
 
-    ENDCG
+        ENDCG
 
-    SubShader
+        SubShader
     {
         ZWrite Off ZTest Always Cull Off
-        Blend SrcAlpha OneMinusSrcAlpha
-        Pass
+            Blend SrcAlpha OneMinusSrcAlpha
+            Pass
         {
             CGPROGRAM
             #pragma vertex VertexLine
             #pragma fragment Fragment
             ENDCG
         }
-        Pass
+            Pass
         {
             CGPROGRAM
             #pragma vertex VertexPoint
             #pragma fragment Fragment
             ENDCG
         }
-        Pass
+            Pass
         {
             CGPROGRAM
             #pragma vertex Vertex3DLine
             #pragma fragment Fragment
             ENDCG
         }
-        Pass
+            Pass
         {
             CGPROGRAM
             #pragma vertex Vertex3DPoint
