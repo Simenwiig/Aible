@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mediapipe.BlazePose;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PoseVisualizerSki : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PoseVisualizerSki : MonoBehaviour
 
     Material material;
     BlazePoseDetecter detecter;
-    bool isUnderMinShoulderAngle;
+    bool moveToShoulderAngle;
 
     const int BODY_LINE_NUM = 35;
 
@@ -40,14 +41,15 @@ public class PoseVisualizerSki : MonoBehaviour
         detecter = new BlazePoseDetecter();
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         // Process an image from a webcam and predict the pose of the person in the frame.
         detecter.ProcessImage(webCamInput.inputImageTexture);
+
         /*
         for (int i = 0; i < detecter.vertexCount; i++)
         {
-            /*
+            
             0~32 index datas are pose world landmark.
             Check below Mediapipe document about relation between index and landmark position.
             https://google.github.io/mediapipe/solutions/pose#pose-landmark-model-blazepose-ghum-3d
@@ -57,24 +59,30 @@ public class PoseVisualizerSki : MonoBehaviour
 
             33 index data is the score whether human pose is visible ([0, 1]).
             This data is (score, 0, 0, 0).
-                     
+               
         }*/
 
         float angle = CalculateAngles(detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12), detecter.GetPoseWorldLandmark(14));
 
         float normalizedAngle = angle / 90f;
 
-        if (normalizedAngle > minShulderAngle)
+        bool threshold = detecter.GetPoseWorldLandmark(33).x > humanExistThreshold ? true : false;
+
+        if (normalizedAngle > minShulderAngle && skiMovement.armAngle < (normalizedAngle - 0.05f) && threshold)
+        {
+            skiMovement.armAngle += Time.deltaTime;
+        }     
+        else if(normalizedAngle > minShulderAngle && threshold)
         {
             skiMovement.armAngle = normalizedAngle;
-        }         
+        }
         else if(skiMovement.armAngle >= 0)
         {
-            skiMovement.armAngle -= Time.fixedDeltaTime;
+            skiMovement.armAngle -= Time.deltaTime;
         }
             
 
-        print(skiMovement.armAngle);
+        //print(material.GetFloat("_humanExistThreshold"));
     }
 
     float CalculateAngles(Vector4 a, Vector4 b, Vector4 c)

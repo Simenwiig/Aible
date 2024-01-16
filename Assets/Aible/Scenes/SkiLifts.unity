@@ -30239,10 +30239,10 @@ MonoBehaviour:
   webCamInput: {fileID: 9145349977035693880}
   inputImageUI: {fileID: 100255786062052081}
   skiMovement: {fileID: 1786322572}
-  minShulderAngle: 0.3
+  minShulderAngle: 0.28
   showShader: 1
   shader: {fileID: 4800000, guid: b16d5cfc5c250d34c9d535bea143d6c2, type: 3}
-  humanExistThreshold: 0.5
+  humanExistThreshold: 0.7
 --- !u!33 &4043961370132936344
 MeshFilter:
   m_ObjectHideFlags: 0
