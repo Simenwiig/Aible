@@ -89,6 +89,7 @@
     <Compile Include="Assets\MediaPipe\Scripts\Visualizers\PoseVisualizerSki.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\TimelineLooper.cs" />
     <Compile Include="Assets\MediaPipe\Scripts\WebCam\WebCamNameAttribute.cs" />
+    <Compile Include="Assets\Aible\Scripts\Utilities\SceneManger.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\MoveTo.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\ScreenController.cs" />
@@ -1309,10 +1310,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D4BEF512-E32D-B1CF-E8DA-BD0C7D30E5AA}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

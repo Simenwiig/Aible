@@ -10,14 +10,15 @@ public class PoseVisualizerSki : MonoBehaviour
     [SerializeField] RawImage inputImageUI;
     [SerializeField] SkiMovement skiMovement;
     [SerializeField, Range(0, 1)] float minShulderAngle = 0.3f;
-    [SerializeField, Range(0, 180)] float minHipAngle = 160f;
+    [SerializeField, Range(0, 0.2f)] float minHipDifference = 0.02f;
+    [SerializeField, Range(10, 30)] float minKneeAngle = 15f;
     public bool showShader;
     [SerializeField] Shader shader;
     [SerializeField, Range(0, 1)] float humanExistThreshold = 0.5f;
 
     Material material;
     BlazePoseDetecter detecter;
-    bool moveToShoulderAngle;
+    bool threshold;
 
     const int BODY_LINE_NUM = 35;
 
@@ -62,7 +63,7 @@ public class PoseVisualizerSki : MonoBehaviour
         }*/
 
 
-        bool threshold = detecter.GetPoseWorldLandmark(33).x > humanExistThreshold ? true : false;
+        threshold = detecter.GetPoseWorldLandmark(33).x > humanExistThreshold ? true : false;
 
         //Right Arm
         float rArmAngle = CalculateAngles(detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12), detecter.GetPoseWorldLandmark(14));
@@ -71,7 +72,7 @@ public class PoseVisualizerSki : MonoBehaviour
 
         if (rNormalizedAngle > minShulderAngle && skiMovement.rightArmAngle < (rNormalizedAngle - 0.05f) && threshold)
         {
-            skiMovement.rightArmAngle += Time.deltaTime;
+            skiMovement.rightArmAngle += Time.deltaTime * 2;
         }     
         else if(rNormalizedAngle > minShulderAngle && threshold)
         {
@@ -89,7 +90,7 @@ public class PoseVisualizerSki : MonoBehaviour
 
         if (lNormalizedAngle > minShulderAngle && skiMovement.leftArmAngle < (lNormalizedAngle - 0.05f) && threshold)
         {
-            skiMovement.leftArmAngle += Time.deltaTime;
+            skiMovement.leftArmAngle += Time.deltaTime * 2;
         }
         else if (lNormalizedAngle > minShulderAngle && threshold)
         {
@@ -100,11 +101,29 @@ public class PoseVisualizerSki : MonoBehaviour
             skiMovement.leftArmAngle -= Time.deltaTime;
         }
 
-        //Right Hip
-        float rHipAngle = CalculateAngles(detecter.GetPoseWorldLandmark(26), 
-            detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12));
+        //MOVE RIGHT AND LEFT
 
-        if(rHipAngle < minHipAngle && threshold)
+        //Right Hip
+        float lHipPont = detecter.GetPoseWorldLandmark(23).y;
+        //Left Hip
+        float rHipPont = detecter.GetPoseWorldLandmark(24).y;
+
+        //float hipMidPoint = CalculateEuclideanMidpoint(lHipPont, rHipPont);
+
+        float hipDiff = lHipPont - rHipPont;
+
+
+        //Right Knee Angle
+        float rKneeAngle = CalculateAngles(detecter.GetPoseWorldLandmark(24),
+            detecter.GetPoseWorldLandmark(26), detecter.GetPoseWorldLandmark(28));
+
+        //Left Knee Angle
+        float lKneeAngle = CalculateAngles(detecter.GetPoseWorldLandmark(23),
+            detecter.GetPoseWorldLandmark(25), detecter.GetPoseWorldLandmark(27));
+
+        float kneeDiff = lKneeAngle - rKneeAngle;
+
+        if ((hipDiff > minHipDifference || (hipDiff > 0.001 && kneeDiff > minKneeAngle)) && threshold)
         {
             skiMovement.moveRight = true;
         }
@@ -113,7 +132,19 @@ public class PoseVisualizerSki : MonoBehaviour
             skiMovement.moveRight = false;
         }
 
-        print(rHipAngle);
+        if ((hipDiff < -minHipDifference || (hipDiff < -0.001 && kneeDiff < -minKneeAngle)) && threshold)
+        {
+            skiMovement.moveLeft = true;
+        }
+        else
+        {
+            skiMovement.moveLeft = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
     float CalculateAngles(Vector4 a, Vector4 b, Vector4 c)
@@ -129,6 +160,13 @@ public class PoseVisualizerSki : MonoBehaviour
         return angle;
     }
 
+    Vector2 CalculateEuclideanMidpoint(Vector2 a, Vector2 b)
+    {
+        Vector2 midPoint = new Vector2((a.x + b.x) / 2, (a.y + b.y) / 2);
+
+        return midPoint;
+    }
+
     private void OnRenderObject()
     {
         if (!showShader) return;
@@ -141,7 +179,7 @@ public class PoseVisualizerSki : MonoBehaviour
         // Set pose landmark counts.
         material.SetInt("_keypointCount", detecter.vertexCount);
         material.SetFloat("_humanExistThreshold", humanExistThreshold);
-        material.SetVector("_uiScale", new Vector2(w, h));
+        material.SetVector("_uiScale", new Vector2(w * 1.5f, h * 1.5f));
         material.SetVectorArray("_linePair", linePair);
 
         // Draw 35 body topology lines.

@@ -6,10 +6,11 @@ public class SkiMovement : MonoBehaviour
 {
     [HideInInspector] public bool canMove;
     [HideInInspector] public bool canAnimate;
-    public bool moveRight;
+    [HideInInspector] public bool moveRight;
     [HideInInspector] public bool moveLeft;
 
     public bool canMoveArms = true;
+    public bool canMoveHips = true;
 
     [Header("MovementSettings")]
     public float maxSpeed = 15f;
@@ -61,10 +62,8 @@ public class SkiMovement : MonoBehaviour
 
     private void LateUpdate()
     {     
-        /*
         if (!canAnimate)
-            return;
-        */
+            return;       
 
         if (canMoveArms)
         {
@@ -84,7 +83,7 @@ public class SkiMovement : MonoBehaviour
 
         SkiAnimation.PlayAnimation("Skiing_Straight");
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         canUseInput = true;
     }
@@ -116,7 +115,15 @@ public class SkiMovement : MonoBehaviour
 
     void MoveSki()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = 0;
+        if (moveRight)
+        {
+            horizontalInput = 1;
+        }
+        else if (moveLeft)
+        {
+            horizontalInput = -1;
+        }
         sideMoveSpeed = sideMovementForce * Time.fixedDeltaTime;
         float horizontalMovement = horizontalInput * sideMoveSpeed;
         Vector3 sideMovement = transform.right * horizontalMovement;
@@ -134,7 +141,7 @@ public class SkiMovement : MonoBehaviour
 
     IEnumerator HandleAnimation()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        if ((moveRight || moveLeft) && canMoveHips)
         {
             if (!isMovingToSide)
             {
@@ -145,9 +152,9 @@ public class SkiMovement : MonoBehaviour
         }
         else if (isMovingToSide)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.02f);
 
-            if(Input.GetAxis("Horizontal") != 0)
+            if(moveRight || moveLeft)
             {
                 isMovingToSide = false;
             }
@@ -159,11 +166,11 @@ public class SkiMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetAxis("Horizontal") > 0)
+        if (moveRight && canMoveHips)
         {
             SkiAnimation.SetAnimationBool("MoveRight", false);
         }
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (moveLeft && canMoveHips)
         {
             SkiAnimation.SetAnimationBool("MoveRight", true);
         }
