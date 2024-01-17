@@ -6,6 +6,10 @@ public class SkiMovement : MonoBehaviour
 {
     [HideInInspector] public bool canMove;
     [HideInInspector] public bool canAnimate;
+    public bool moveRight;
+    [HideInInspector] public bool moveLeft;
+
+    public bool canMoveArms = true;
 
     [Header("MovementSettings")]
     public float maxSpeed = 15f;
@@ -18,7 +22,8 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public bool canUseInput;
     [HideInInspector] public bool isSlowingDown;
-    [HideInInspector] public float armAngle;
+    [HideInInspector] public float rightArmAngle;
+    [HideInInspector] public float leftArmAngle;
 
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
@@ -55,15 +60,17 @@ public class SkiMovement : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
-
-        SkiAnimation.SetLayerWeight(1, armAngle);
-    
-
+    {     
+        /*
         if (!canAnimate)
             return;
+        */
 
-
+        if (canMoveArms)
+        {
+            SkiAnimation.SetLayerWeight(1, rightArmAngle);
+            SkiAnimation.SetLayerWeight(2, leftArmAngle);
+        }
 
         StartCoroutine(HandleAnimation());
     }

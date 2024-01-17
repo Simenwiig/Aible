@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AM_Right_Arm_Male_Skier
+  m_Mask: 00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Boots
+    m_Weight: 1
+  - m_Path: Eyes
+    m_Weight: 1
+  - m_Path: Eyes_Glass
+    m_Weight: 1
+  - m_Path: Helmet
+    m_Weight: 1
+  - m_Path: Male_Head
+    m_Weight: 1
+  - m_Path: Olympic_Bib
+    m_Weight: 1
+  - m_Path: Poles
+    m_Weight: 1
+  - m_Path: Root
+    m_Weight: 1
+  - m_Path: Root/Pelvis
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/Dummy_Pole_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/index_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/index_01_l/index_02_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/index_01_l/index_02_l/index_03_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/middle_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/middle_01_l/middle_02_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/middle_01_l/middle_02_l/middle_03_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/pinky_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/pinky_01_l/pinky_02_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/pinky_01_l/pinky_02_l/pinky_03_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/ring_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/ring_01_l/ring_02_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/ring_01_l/ring_02_l/ring_03_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/thumb_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/thumb_01_l/thumb_02_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/Hand_L/thumb_01_l/thumb_02_l/thumb_03_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/lowerarm_l/lowerarm_twist_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_l/Upperarm_L/upperarm_twist_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/Dummy_Pole_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/index_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/index_01_r/index_02_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/index_01_r/index_02_r/index_03_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/middle_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/middle_01_r/middle_02_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/middle_01_r/middle_02_r/middle_03_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/pinky_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/pinky_01_r/pinky_02_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/pinky_01_r/pinky_02_r/pinky_03_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/ring_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/ring_01_r/ring_02_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/ring_01_r/ring_02_r/ring_03_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/thumb_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/thumb_01_r/thumb_02_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/Hand_R/thumb_01_r/thumb_02_r/thumb_03_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/lowerarm_r/lowerarm_twist_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/clavicle_r/Upperarm_R/upperarm_twist_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eye_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eye_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyebrow_C
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyebrow_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyebrow_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyelid_Lower_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyelid_Lower_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyelid_Upper_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Eyelid_Upper_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Jaw
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Lip_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Lip_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_L/Bone_Ski_Goggles_02_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_L/Bone_Ski_Goggles_02_L/Bone_Ski_Goggles_03_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_L/Bone_Ski_Goggles_02_L/Bone_Ski_Goggles_03_L/Bone_Ski_Goggles_04_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_L/Bone_Ski_Goggles_02_L/Bone_Ski_Goggles_03_L/Bone_Ski_Goggles_04_L/Bone_Ski_Goggles_05_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_R/Bone_Ski_Goggles_02_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_R/Bone_Ski_Goggles_02_R/Bone_Ski_Goggles_03_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_R/Bone_Ski_Goggles_02_R/Bone_Ski_Goggles_03_R/Bone_Ski_Goggles_04_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Bone_Ski_Goggles_01_R/Bone_Ski_Goggles_02_R/Bone_Ski_Goggles_03_R/Bone_Ski_Goggles_04_R/Bone_Ski_Goggles_05_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Dummy_Chin_Strap
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Dummy_Helmet
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Dummy_Ski_Goggles
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Dummy_Ski_Goggles/IK_Chain_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/spine_01/spine_02/spine_03/neck_01/head/Dummy_Ski_Goggles/IK_Chain_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/calf_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/calf_l/calf_twist_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/calf_l/Foot_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/calf_l/Foot_L/ball_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/calf_l/Foot_L/Dummy_Ski_L
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_L/thigh_twist_01_l
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/calf_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/calf_r/calf_twist_01_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/calf_r/Foot_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/calf_r/Foot_R/ball_r
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/calf_r/Foot_R/Dummy_Ski_R
+    m_Weight: 1
+  - m_Path: Root/Pelvis/Thigh_R/thigh_twist_01_r
+    m_Weight: 1
+  - m_Path: Ski_Goggles
+    m_Weight: 1
+  - m_Path: Ski_Goggles_Glass
+    m_Weight: 1
+  - m_Path: Ski_Suits
+    m_Weight: 1
+  - m_Path: Skiing_Gloves
+    m_Weight: 1
+  - m_Path: Skis
+    m_Weight: 1

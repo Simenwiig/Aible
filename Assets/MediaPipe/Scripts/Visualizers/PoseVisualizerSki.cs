@@ -1,9 +1,7 @@
-using System.Collections;
+using Mediapipe.BlazePose;
 using System.Collections.Generic;
 using UnityEngine;
-using Mediapipe.BlazePose;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class PoseVisualizerSki : MonoBehaviour
 {
@@ -12,6 +10,7 @@ public class PoseVisualizerSki : MonoBehaviour
     [SerializeField] RawImage inputImageUI;
     [SerializeField] SkiMovement skiMovement;
     [SerializeField, Range(0, 1)] float minShulderAngle = 0.3f;
+    [SerializeField, Range(0, 180)] float minHipAngle = 160f;
     public bool showShader;
     [SerializeField] Shader shader;
     [SerializeField, Range(0, 1)] float humanExistThreshold = 0.5f;
@@ -62,27 +61,59 @@ public class PoseVisualizerSki : MonoBehaviour
                
         }*/
 
-        float angle = CalculateAngles(detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12), detecter.GetPoseWorldLandmark(14));
-
-        float normalizedAngle = angle / 90f;
 
         bool threshold = detecter.GetPoseWorldLandmark(33).x > humanExistThreshold ? true : false;
 
-        if (normalizedAngle > minShulderAngle && skiMovement.armAngle < (normalizedAngle - 0.05f) && threshold)
-        {
-            skiMovement.armAngle += Time.deltaTime;
-        }     
-        else if(normalizedAngle > minShulderAngle && threshold)
-        {
-            skiMovement.armAngle = normalizedAngle;
-        }
-        else if(skiMovement.armAngle >= 0)
-        {
-            skiMovement.armAngle -= Time.deltaTime;
-        }
-            
+        //Right Arm
+        float rArmAngle = CalculateAngles(detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12), detecter.GetPoseWorldLandmark(14));
 
-        //print(material.GetFloat("_humanExistThreshold"));
+        float rNormalizedAngle = rArmAngle / 90f;
+
+        if (rNormalizedAngle > minShulderAngle && skiMovement.rightArmAngle < (rNormalizedAngle - 0.05f) && threshold)
+        {
+            skiMovement.rightArmAngle += Time.deltaTime;
+        }     
+        else if(rNormalizedAngle > minShulderAngle && threshold)
+        {
+            skiMovement.rightArmAngle = rNormalizedAngle;
+        }
+        else if(skiMovement.rightArmAngle >= 0)
+        {
+            skiMovement.rightArmAngle -= Time.deltaTime;
+        }
+
+        //Left Arm
+        float lArmAngle = CalculateAngles(detecter.GetPoseWorldLandmark(23), detecter.GetPoseWorldLandmark(11), detecter.GetPoseWorldLandmark(13));
+
+        float lNormalizedAngle = lArmAngle / 90f;
+
+        if (lNormalizedAngle > minShulderAngle && skiMovement.leftArmAngle < (lNormalizedAngle - 0.05f) && threshold)
+        {
+            skiMovement.leftArmAngle += Time.deltaTime;
+        }
+        else if (lNormalizedAngle > minShulderAngle && threshold)
+        {
+            skiMovement.leftArmAngle = lNormalizedAngle;
+        }
+        else if (skiMovement.leftArmAngle >= 0)
+        {
+            skiMovement.leftArmAngle -= Time.deltaTime;
+        }
+
+        //Right Hip
+        float rHipAngle = CalculateAngles(detecter.GetPoseWorldLandmark(26), 
+            detecter.GetPoseWorldLandmark(24), detecter.GetPoseWorldLandmark(12));
+
+        if(rHipAngle < minHipAngle && threshold)
+        {
+            skiMovement.moveRight = true;
+        }
+        else
+        {
+            skiMovement.moveRight = false;
+        }
+
+        print(rHipAngle);
     }
 
     float CalculateAngles(Vector4 a, Vector4 b, Vector4 c)
