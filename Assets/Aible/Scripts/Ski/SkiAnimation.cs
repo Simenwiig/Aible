@@ -30,4 +30,9 @@ public class SkiAnimation : MonoBehaviour
     {
         animator.SetLayerWeight(layer, weight);
     }
+
+    public static float GetLayerWieght(int layer)
+    {
+        return animator.GetLayerWeight(layer);
+    }
 }

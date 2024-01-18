@@ -191,6 +191,12 @@ public class PoseVisualizerSki : MonoBehaviour
         Graphics.DrawProceduralNow(MeshTopology.Triangles, 6, detecter.vertexCount);
     }
 
+    private void OnDestroy()
+    {
+        if (detecter != null)
+            detecter.Dispose();
+    }
+
     private void OnApplicationQuit()
     {
         // Must call Dispose method when no longer in use.

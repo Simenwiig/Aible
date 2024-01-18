@@ -8,10 +8,11 @@ namespace Currency
     {
         [SerializeField] ParticleSystem normalCoin;
         [SerializeField] ParticleSystem grabCoin;
+        bool isGrabed;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.tag == "Player")
+            if ((other.transform.tag == "Player" || other.transform.tag == "PlayerBodyPart" )&& !isGrabed)
             {
                 Currency.AddCoins(1);
                 StartCoroutine(GrabCoin());
@@ -20,6 +21,7 @@ namespace Currency
 
         IEnumerator GrabCoin()
         {
+            isGrabed = true;
             Destroy(normalCoin.gameObject);
             yield return new WaitForSeconds(0.01f);
             grabCoin.Play();
@@ -31,11 +33,6 @@ namespace Currency
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                Currency.AddCoins(1);
-            }
-
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Currency.ResetCoins();

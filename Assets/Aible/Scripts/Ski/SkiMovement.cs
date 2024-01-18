@@ -25,6 +25,8 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public bool isSlowingDown;
     [HideInInspector] public float rightArmAngle;
     [HideInInspector] public float leftArmAngle;
+    [HideInInspector] public float lLayerWeight;
+    [HideInInspector] public float rLayerWeight;
 
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
@@ -108,9 +110,16 @@ public class SkiMovement : MonoBehaviour
         if (speed < 0.2f)
         {
             speed = 0;
+            rLayerWeight = 0;
+            lLayerWeight = 0;
         }
 
         speed -= Time.fixedDeltaTime * slowDownSpeed;
+
+        rLayerWeight -= Time.fixedDeltaTime;
+        lLayerWeight -= Time.fixedDeltaTime;
+        SkiAnimation.SetLayerWeight(1, rLayerWeight);
+        SkiAnimation.SetLayerWeight(2, lLayerWeight);
     }
 
     void MoveSki()

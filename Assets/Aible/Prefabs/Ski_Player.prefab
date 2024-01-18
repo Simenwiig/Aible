@@ -6292,9 +6292,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7856069279621995512}
+  - component: {fileID: 4912737989747738726}
   m_Layer: 0
   m_Name: lowerarm_l
-  m_TagString: Untagged
+  m_TagString: PlayerBodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6316,6 +6317,27 @@ Transform:
   - {fileID: 4786092219217617625}
   m_Father: {fileID: 6582668993235491862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4912737989747738726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964460496102717866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.64, y: 0.13, z: 0.15}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2970141936316493655
 GameObject:
   m_ObjectHideFlags: 0
@@ -22720,9 +22742,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5654115267161972705}
+  - component: {fileID: 1434016354081411184}
   m_Layer: 0
   m_Name: lowerarm_r
-  m_TagString: Untagged
+  m_TagString: PlayerBodyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22744,6 +22767,27 @@ Transform:
   - {fileID: 5894748613343510990}
   m_Father: {fileID: 4020151176230720508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1434016354081411184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802132337328703330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.64, y: 0.13, z: 0.15}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5974281378492714305
 GameObject:
   m_ObjectHideFlags: 0
@@ -33278,15 +33322,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 0
   canAnimate: 0
-  maxSpeed: 15
-  startSpeed: 13
+  moveRight: 0
+  moveLeft: 0
+  canMoveArms: 1
+  canMoveHips: 1
+  maxSpeed: 13
+  startSpeed: 10
   acceleratingSpeed: 5
   slowDownSpeed: 2
   sideMovementForce: 5
-  turnTorque: 80
+  turnTorque: 45
   rb: {fileID: 0}
   canUseInput: 0
   isSlowingDown: 0
+  rightArmAngle: 0
+  leftArmAngle: 0
 --- !u!114 &4970299478324538825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33324,7 +33374,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.7, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &8727602947010765437
 Rigidbody:

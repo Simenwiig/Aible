@@ -15,19 +15,33 @@ public class Obstacles : MonoBehaviour
         if (other.transform.tag == "Player" && !hasHit)
         {
             hasHit = true;
+
             skiMovement = other.GetComponent<SkiMovement>();
-            skiMovement.canMove = false;
-            skiMovement.rb.isKinematic = true;
-
-            playerPos = skiMovement.transform.position;
-
-            SkiAnimation.PlayAnimation("Fall");
-
-            StartCoroutine(MoveTo.Position(skiMovement.transform,
-                new Vector3(skiMovement.transform.position.x, playerPos.y, skiMovement.transform.position.z), 0.4f, 2.167f + 1.1f));
-
-            StartCoroutine(StandUp());
+            PlayerFall();
         }
+        else if(other.transform.tag == "PlayerBodyPart" && !hasHit)
+        {
+            hasHit = true;
+
+            skiMovement = other.GetComponentInParent<SkiMovement>();
+            PlayerFall();
+        }
+
+    }
+
+    private void PlayerFall()
+    {
+        skiMovement.canMove = false;
+        skiMovement.rb.isKinematic = true;
+
+        playerPos = skiMovement.transform.position;
+
+        SkiAnimation.PlayAnimation("Fall");
+
+        StartCoroutine(MoveTo.Position(skiMovement.transform,
+            new Vector3(skiMovement.transform.position.x, playerPos.y, skiMovement.transform.position.z), 0.4f, 2.167f + 1.1f));
+
+        StartCoroutine(StandUp());
     }
 
 

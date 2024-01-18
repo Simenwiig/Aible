@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Currency;
 
 public class FinishSkiing : MonoBehaviour
@@ -14,10 +15,11 @@ public class FinishSkiing : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (hasFinished)
-            return;
-
-        StartCoroutine(FinishSki());
+        if (other.transform.tag == "Player" && !hasFinished)
+        {
+            hasFinished = true;
+            StartCoroutine(FinishSki());
+        }   
     }
 
     IEnumerator FinishSki()
@@ -27,6 +29,8 @@ public class FinishSkiing : MonoBehaviour
         startSlowdown = true;
         skiMovement.canUseInput = false;
         skiMovement.canAnimate = false;
+        skiMovement.rLayerWeight = SkiAnimation.GetLayerWieght(1);
+        skiMovement.lLayerWeight = SkiAnimation.GetLayerWieght(2);
 
         yield return new WaitForSeconds(1.5f);
 
@@ -45,6 +49,11 @@ public class FinishSkiing : MonoBehaviour
         if (startSlowdown && skiMovement != null)
         {
             skiMovement.SlowDown();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManger.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

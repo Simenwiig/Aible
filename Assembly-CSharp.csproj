@@ -89,7 +89,6 @@
     <Compile Include="Assets\MediaPipe\Scripts\Visualizers\PoseVisualizerSki.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\TimelineLooper.cs" />
     <Compile Include="Assets\MediaPipe\Scripts\WebCam\WebCamNameAttribute.cs" />
-    <Compile Include="Assets\Aible\Scripts\Utilities\SceneManger.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\MoveTo.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\ScreenController.cs" />
@@ -146,6 +145,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\SceneTransitionManager.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\OutlineEffect.cs" />
+    <Compile Include="Assets\Aible\Scripts\UI\SceneManger.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\PerformanceTestUtilities.cs" />
   </ItemGroup>
   <ItemGroup>

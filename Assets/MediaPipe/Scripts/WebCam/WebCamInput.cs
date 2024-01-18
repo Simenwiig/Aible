@@ -47,6 +47,7 @@ public class WebCamInput : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (webCamTexture != null) webCamTexture.Stop(); ;
         if (webCamTexture != null) Destroy(webCamTexture);
         if (inputRT != null) Destroy(inputRT);
     }
