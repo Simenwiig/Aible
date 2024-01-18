@@ -209,6 +209,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-Masking.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Props Snow.shader" />
+    <None Include="Assets\AssetStore\SkySeries Freebie\Hdri setup.txt" />
     <None Include="Assets\AssetStore\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_Toon.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Overlay.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_Bitmap-Mobile.shader" />
