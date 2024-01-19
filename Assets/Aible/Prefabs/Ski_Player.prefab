@@ -33328,6 +33328,7 @@ MonoBehaviour:
   canMoveHips: 1
   maxSpeed: 13
   startSpeed: 10
+  obsticleSpeed: 9
   acceleratingSpeed: 5
   slowDownSpeed: 2
   sideMovementForce: 5
@@ -33337,6 +33338,9 @@ MonoBehaviour:
   isSlowingDown: 0
   rightArmAngle: 0
   leftArmAngle: 0
+  lLayerWeight: 0
+  rLayerWeight: 0
+  speed: 0
 --- !u!114 &4970299478324538825
 MonoBehaviour:
   m_ObjectHideFlags: 0
