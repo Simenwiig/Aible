@@ -7,10 +7,6 @@ public class SceneManger : MonoBehaviour
 {
     public static void LoadScene(string name)
     {
-
-        name = SceneManager.GetActiveScene().name;
-        
-
         SceneManager.LoadSceneAsync(name);
     }
 
