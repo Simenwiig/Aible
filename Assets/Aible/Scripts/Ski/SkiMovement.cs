@@ -15,6 +15,7 @@ public class SkiMovement : MonoBehaviour
     [Header("MovementSettings")]
     public float maxSpeed = 15f;
     public float startSpeed = 10f;
+    public float obsticleSpeed = 7f;
     public float acceleratingSpeed = 1f;
     public float slowDownSpeed = 10f;
     public float sideMovementForce = 5f;
@@ -28,9 +29,9 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public float lLayerWeight;
     [HideInInspector] public float rLayerWeight;
 
+    [HideInInspector] public float speed;
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
-    private float speed;
 
     private bool isMovingToSide;
 

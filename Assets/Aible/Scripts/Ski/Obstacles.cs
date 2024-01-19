@@ -34,6 +34,11 @@ public class Obstacles : MonoBehaviour
         skiMovement.canMove = false;
         skiMovement.rb.isKinematic = true;
 
+        if(Currency.Currency.numberOfCoins > 0)
+            Currency.Currency.AddCoins(-1);
+
+        skiMovement.speed = skiMovement.obsticleSpeed;
+
         playerPos = skiMovement.transform.position;
 
         SkiAnimation.PlayAnimation("Fall");
