@@ -19,7 +19,7 @@ public class SkiMovement : MonoBehaviour
     public float acceleratingSpeed = 1f;
     public float slowDownSpeed = 10f;
     public float sideMovementForce = 5f;
-    public float turnTorque = 80f;
+    public float maxTurnTorque = 45f;
 
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public bool canUseInput;
@@ -30,6 +30,7 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public float rLayerWeight;
 
     [HideInInspector] public float speed;
+    [HideInInspector] public float turnTorque;
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
 
@@ -43,6 +44,7 @@ public class SkiMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         isGrounded = GetComponent<IsGrounded>();
 
+        turnTorque = maxTurnTorque;
         speed = startSpeed;
     }
 

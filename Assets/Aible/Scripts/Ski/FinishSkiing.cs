@@ -39,7 +39,10 @@ public class FinishSkiing : MonoBehaviour
 
         skiMovement.canMove = false;
 
+        yield return new WaitForSeconds(0.7f);
+
         finishCanvas.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
 
         Currency.Currency.AddCoinsToCurrency();
     }

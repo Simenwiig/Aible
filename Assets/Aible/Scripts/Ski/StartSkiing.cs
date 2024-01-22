@@ -30,6 +30,7 @@ public class StartSkiing : MonoBehaviour
 
     IEnumerator StartSki()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         if (dontStart)
         {
             startCanvas.gameObject.SetActive(false);

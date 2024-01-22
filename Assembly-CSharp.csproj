@@ -78,6 +78,7 @@
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\CameraFly.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\SceneMetaData.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\PerformanceTestStage.cs" />
+    <Compile Include="Assets\Aible\Scripts\Ski\SlowDownSkier.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\SkiMovement.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\WormLazerBeam.cs" />
