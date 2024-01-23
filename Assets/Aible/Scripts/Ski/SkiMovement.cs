@@ -30,7 +30,7 @@ public class SkiMovement : MonoBehaviour
     [HideInInspector] public float rLayerWeight;
 
     [HideInInspector] public float speed;
-    [HideInInspector] public float turnTorque;
+    public float turnTorque;
     private float forwardMoveSpeed;
     private float sideMoveSpeed;
 

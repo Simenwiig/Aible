@@ -29,14 +29,14 @@ public class SceneManger : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadSceneAsync(name);
+        SceneManager.LoadScene(name);
     }
 
     public static void RestartScene()
     {
         isPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public static void PauseScene()

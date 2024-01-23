@@ -71,6 +71,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\RenameToPrefabName.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\Editor\PerformanceTestEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\LodLightmapCopy.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\WebCam\Editor\WebCamNameDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

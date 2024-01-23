@@ -126,6 +126,7 @@ public class PoseVisualizerSki : MonoBehaviour
         if ((hipDiff > minHipDifference || (hipDiff > 0.001 && kneeDiff > minKneeAngle)) && threshold)
         {
             skiMovement.moveRight = true;
+            //skiMovement.turnTorque = Mathf.Abs(hipDiff + kneeDiff);
         }
         else
         {
@@ -135,16 +136,12 @@ public class PoseVisualizerSki : MonoBehaviour
         if ((hipDiff < -minHipDifference || (hipDiff < -0.001 && kneeDiff < -minKneeAngle)) && threshold)
         {
             skiMovement.moveLeft = true;
+            //skiMovement.turnTorque =  Mathf.Abs(hipDiff + kneeDiff);
         }
         else
         {
             skiMovement.moveLeft = false;
         }
-    }
-
-    private void FixedUpdate()
-    {
-
     }
 
     float CalculateAngles(Vector4 a, Vector4 b, Vector4 c)
