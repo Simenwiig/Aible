@@ -110,6 +110,7 @@ QualitySettings:
     excludedTargetPlatforms:
     - Nintendo Switch
     - Standalone
+    - Android
   - serializedVersion: 3
     name: PC Low
     pixelLightCount: 2
@@ -213,12 +214,11 @@ QualitySettings:
     terrainFadeLength: 5
     terrainMaxTrees: 50
     excludedTargetPlatforms:
-    - Android
     - Nintendo Switch
     - iPhone
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
-    Android: 1
+    Android: 3
     GameCoreXboxOne: 0
     Lumin: 0
     Nintendo Switch: 0
