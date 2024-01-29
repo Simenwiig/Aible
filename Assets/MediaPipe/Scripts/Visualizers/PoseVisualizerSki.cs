@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class PoseVisualizerSki : MonoBehaviour
 {
+    [SerializeField] bool onMobile;
     [SerializeField] Camera mainCamera;
     [SerializeField] WebCamInput webCamInput;
+    [SerializeField] MobileCam mobileCam;
     [SerializeField] RawImage inputImageUI;
     [SerializeField] SkiMovement skiMovement;
     [SerializeField, Range(0, 1)] float minShulderAngle = 0.3f;
@@ -44,7 +46,15 @@ public class PoseVisualizerSki : MonoBehaviour
     private void LateUpdate()
     {
         // Process an image from a webcam and predict the pose of the person in the frame.
-        detecter.ProcessImage(webCamInput.inputImageTexture);
+        if (onMobile)
+        {
+            detecter.ProcessImage(mobileCam.inputImageTexture);
+        }
+        else
+        {
+            detecter.ProcessImage(webCamInput.inputImageTexture);
+        }
+      
 
         /*
         for (int i = 0; i < detecter.vertexCount; i++)

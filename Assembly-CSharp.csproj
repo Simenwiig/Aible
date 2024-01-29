@@ -138,6 +138,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\OffsetCamera.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Boids\Boids.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\MemoryCounter.cs" />
+    <Compile Include="Assets\MediaPipe\Scripts\WebCam\MobileCam.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\ExplosingMeteor.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Skybox3D.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalWind.cs" />
