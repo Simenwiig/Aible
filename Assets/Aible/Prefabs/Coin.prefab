@@ -24695,6 +24695,7 @@ GameObject:
   - component: {fileID: 7759539618962129465}
   - component: {fileID: 8778738313176663641}
   - component: {fileID: 6729904515647181968}
+  - component: {fileID: 828188901807882582}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -24754,6 +24755,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9, y: 1.55, z: 0.9}
   m_Center: {x: 0, y: 0.79, z: 0}
+--- !u!205 &828188901807882582
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361447455618231183}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.999
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.999
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.0015
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6454385856400928173}
+    - renderer: {fileID: 6837815680073432523}
+  m_Enabled: 1
 --- !u!1 &5214609784555818275
 GameObject:
   m_ObjectHideFlags: 0

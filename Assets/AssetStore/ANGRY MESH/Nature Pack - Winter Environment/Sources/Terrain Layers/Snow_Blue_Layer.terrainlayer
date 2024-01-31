@@ -7,12 +7,12 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Snow_Blue_Layer
-  m_DiffuseTexture: {fileID: 2800000, guid: b94a53fe693b5ff41a047d57dc3d96ea, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: e688e32085bf5de468825049e8a327dd, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: a6595745300d3bf46be8e5ec06d3443f, type: 3}
   m_MaskMapTexture: {fileID: 2800000, guid: 607ab2f3a42cc5a4aa3359f23f01eb8e, type: 3}
   m_TileSize: {x: 4, y: 4}
   m_TileOffset: {x: 0, y: 0}
-  m_Specular: {r: 0, g: 0, b: 0, a: 0}
+  m_Specular: {r: 0, g: 0, b: 0, a: 1}
   m_Metallic: 0
   m_Smoothness: 0
   m_NormalScale: 1

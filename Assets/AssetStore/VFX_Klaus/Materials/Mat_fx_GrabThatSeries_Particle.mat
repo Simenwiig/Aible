@@ -29,7 +29,7 @@ Material:
   - _EMISSION
   - _NORMALMAP
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -109,7 +109,7 @@ Material:
     - Vector1_D56F7636: 5
     - Vector1_E0440C47: 0.002
     - _AlphaClip: 0
-    - _BUILTIN_QueueControl: -1
+    - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BumpScale: 0

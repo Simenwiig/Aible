@@ -102,7 +102,7 @@ Material:
     - Vector1_8685A553: 3
     - Vector1_D56F7636: 2
     - _AlphaClip: 0
-    - _BUILTIN_QueueControl: -1
+    - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BumpScale: 0

@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Aible/Scenes/Main_Menu.unity
     guid: 192ec0fa075afa24c80d6cfee3e868d0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Aible/Scenes/Ski_Level_1_Big.unity
     guid: ad4955903b939a54790a07c48b027be4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Aible/Scenes/Mobile_Test.unity
     guid: f17254042a5f3d247a960235c93e2154
   m_configObjects:

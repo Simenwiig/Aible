@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8778369891874507984}
   - component: {fileID: 3502432590911700615}
   - component: {fileID: 2233554270350470725}
+  - component: {fileID: 8212902218624268093}
   m_Layer: 0
   m_Name: Gate_Flag RED
   m_TagString: Untagged
@@ -118,3 +119,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7911316, y: 2.4534175, z: 0.47219318}
   m_Center: {x: -0.0000005644234, y: 1.0450542, z: -0.025188683}
+--- !u!205 &8212902218624268093
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330820015616125571}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.00000023841858, y: 1.0450563, z: 0.00000017136335}
+  m_Size: 2.4534178
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.999
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.999
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.003
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8778369891874507984}
+  m_Enabled: 1

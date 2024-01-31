@@ -5,10 +5,7 @@ using UnityEngine.UI;
 
 public class PoseVisualizerSki : MonoBehaviour
 {
-    [SerializeField] bool onMobile;
-    [SerializeField] Camera mainCamera;
     [SerializeField] WebCamInput webCamInput;
-    [SerializeField] MobileCam mobileCam;
     [SerializeField] RawImage inputImageUI;
     [SerializeField] SkiMovement skiMovement;
     [SerializeField, Range(0, 1)] float minShulderAngle = 0.3f;
@@ -45,16 +42,7 @@ public class PoseVisualizerSki : MonoBehaviour
 
     private void LateUpdate()
     {
-        // Process an image from a webcam and predict the pose of the person in the frame.
-        if (onMobile)
-        {
-            detecter.ProcessImage(mobileCam.inputImageTexture);
-        }
-        else
-        {
-            detecter.ProcessImage(webCamInput.inputImageTexture);
-        }
-      
+        detecter.ProcessImage(webCamInput.inputImageTexture, BlazePoseModel.lite); 
 
         /*
         for (int i = 0; i < detecter.vertexCount; i++)
@@ -165,13 +153,6 @@ public class PoseVisualizerSki : MonoBehaviour
         }
 
         return angle;
-    }
-
-    Vector2 CalculateEuclideanMidpoint(Vector2 a, Vector2 b)
-    {
-        Vector2 midPoint = new Vector2((a.x + b.x) / 2, (a.y + b.y) / 2);
-
-        return midPoint;
     }
 
     private void OnRenderObject()

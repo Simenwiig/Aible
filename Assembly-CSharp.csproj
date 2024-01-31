@@ -55,7 +55,7 @@
     <UnityVersion>2022.3.13f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="E:\Visual Studio\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="E:\Unity\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="E:\Unity\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -138,7 +138,6 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\OffsetCamera.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Boids\Boids.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\MemoryCounter.cs" />
-    <Compile Include="Assets\MediaPipe\Scripts\WebCam\MobileCam.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\ExplosingMeteor.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Skybox3D.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalWind.cs" />
@@ -180,7 +179,6 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Detail Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Bark Snow.shader" />
-    <None Include="Assets\AssetStore\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_PBR.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross Snow.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Leaf Snow.shader" />
@@ -212,7 +210,6 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Props Snow.shader" />
     <None Include="Assets\AssetStore\SkySeries Freebie\Hdri setup.txt" />
-    <None Include="Assets\AssetStore\Lowpoly Medieval Characters\Sources\Shaders\PT_Medieval_Armors_Shader_Toon.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Overlay.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Fonts\LiberationSans-OFL.txt" />
