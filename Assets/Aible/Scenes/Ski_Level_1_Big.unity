@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e88d3e480021194dab296e759763f86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bee98a03a3379a54ba1746a6c6760a52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4102,7 +4102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &598826065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13914,7 +13914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973516872}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32609814, y: 0.62026143, z: -0.31631985, w: 0.6394354}
+  m_LocalRotation: {x: 0.32609817, y: 0.62026143, z: -0.31631985, w: 0.6394354}
   m_LocalPosition: {x: 107.671036, y: 499.69785, z: 237.09027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13947,7 +13947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 192560591328737610, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.32609814
+      value: 0.32609817
       objectReference: {fileID: 0}
     - target: {fileID: 192560591328737610, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
       propertyPath: m_LocalRotation.y
