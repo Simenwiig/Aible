@@ -42,7 +42,7 @@ public class PoseVisualizerSki : MonoBehaviour
 
     private void LateUpdate()
     {
-        detecter.ProcessImage(webCamInput.inputImageTexture, BlazePoseModel.lite); 
+        detecter.ProcessImage(webCamInput.inputImageTexture, BlazePoseModel.lite, humanExistThreshold); 
 
         /*
         for (int i = 0; i < detecter.vertexCount; i++)

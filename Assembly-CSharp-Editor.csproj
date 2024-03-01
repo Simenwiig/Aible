@@ -61,10 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\PrefabReplacer.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Boids\Editor\BoidsEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\NamingConvention.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Editor\FoliageGroup.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Editor\FoliageGroupEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\DirectionalLightmapperCorrector.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\HeightMapRenderer.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\GradientTexture.cs" />
