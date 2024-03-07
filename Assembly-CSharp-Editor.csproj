@@ -64,11 +64,11 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\NamingConvention.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\DirectionalLightmapperCorrector.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\HeightMapRenderer.cs" />
+    <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\Editor\WebCamNameDrawer.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\GradientTexture.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\RenameToPrefabName.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\Editor\PerformanceTestEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\LodLightmapCopy.cs" />
-    <Compile Include="Assets\MediaPipe\Scripts\WebCam\Editor\WebCamNameDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -444,11 +444,15 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>Library\PackageCache\com.unity.barracuda@3.0.0\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
+      <HintPath>Packages\com.github.homuler.mediapipe\Runtime\Plugins\Protobuf\Google.Protobuf.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages\com.github.homuler.mediapipe\Runtime\Plugins\Protobuf\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">
@@ -1212,6 +1216,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{220BDDB9-97E6-BB3C-B747-2F89098F46C4}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mediapipe.Runtime.csproj">
+      <Project>{D212DF84-94EA-416B-B8DB-51625F81CBA6}</Project>
+      <Name>Mediapipe.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
