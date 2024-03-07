@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 275874967}
-  - component: {fileID: 275874969}
+  - component: {fileID: 275874971}
   - component: {fileID: 275874968}
   - component: {fileID: 275874970}
   m_Layer: 0
@@ -437,29 +437,6 @@ MonoBehaviour:
   smoothLandmarks: 1
   enableSegmentation: 1
   smoothSegmentation: 1
---- !u!114 &275874969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275874966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9be9c09f85432febf88b890fe3f194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bootstrapPrefab: {fileID: 968918444066301895, guid: 1146a9de09159a948b683e94fb3d3c95, type: 3}
-  screen: {fileID: 1889892132}
-  graphRunner: {fileID: 275874968}
-  textureFramePool: {fileID: 275874970}
-  runningMode: 0
-  _worldAnnotationArea: {fileID: 1936307554}
-  _poseDetectionAnnotationController: {fileID: 1889892130}
-  _poseLandmarksAnnotationController: {fileID: 1889892131}
-  _poseWorldLandmarksAnnotationController: {fileID: 1936307555}
-  _segmentationMaskAnnotationController: {fileID: 1889892135}
-  _roiFromLandmarksAnnotationController: {fileID: 1889892133}
 --- !u!114 &275874970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +450,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _poolSize: 10
+--- !u!114 &275874971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275874966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7278fc3eda3da54da2dc4577742f71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bootstrapPrefab: {fileID: 968918444066301895, guid: 1146a9de09159a948b683e94fb3d3c95, type: 3}
+  screen: {fileID: 1889892132}
+  graphRunner: {fileID: 275874968}
+  textureFramePool: {fileID: 275874970}
+  runningMode: 0
+  _poseLandmarksAnnotationController: {fileID: 1889892131}
 --- !u!1 &298505179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,11 +1050,11 @@ PrefabInstance:
     - target: {fileID: 8571076843237194833, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}
       propertyPath: solution
       value: 
-      objectReference: {fileID: 275874969}
+      objectReference: {fileID: 0}
     - target: {fileID: 8571076843237194833, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}
       propertyPath: _solution
       value: 
-      objectReference: {fileID: 275874969}
+      objectReference: {fileID: 275874971}
     - target: {fileID: 8571076843525237352, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}
       propertyPath: m_Name
       value: Annotation Layer
