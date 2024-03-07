@@ -33,6 +33,7 @@ namespace Mediapipe
       {
         if (_Instance != null)
         {
+                    return;
           throw new InvalidOperationException("ResourceManager can be initialized only once");
         }
         _pathResolver = pathResolver;
