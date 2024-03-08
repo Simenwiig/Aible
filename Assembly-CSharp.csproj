@@ -91,6 +91,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hair Segmentation\HairSegmentationConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\FaceDetectionSolution.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\PerformanceTest.cs" />
+    <Compile Include="Assets\MediaPipeUnity\Tutorial\Official Solution\FaceMesh_GPU.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\CameraFly.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkDetectionConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\EnumExtension.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Aible\Scripts\MediaPipe\PoseLandmarkDetection\PoseLandmarkSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Screen.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\WebCamNameAttribute.cs" />
+    <Compile Include="Assets\MediaPipeUnity\Tutorial\Official Solution\FaceMesh.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\SlowDownSkier.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\GraphRunner.cs" />
     <Compile Include="Assets\Aible\Scripts\UI\MobileUI.cs" />
@@ -216,6 +218,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Grass.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\pose_tracking_opengles.txt" />
+    <None Include="Assets\MediaPipeUnity\Tutorial\Official Solution\face_mesh_desktop_live.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Winter Environment\Third-Party Support\Readme.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\object_detection_cpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Leaf.shader" />
@@ -261,6 +264,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Resources\LineBreaking_Leading_Characters.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\MediaPipeUnity\Tutorial\Official Solution\face_mesh_desktop_live_gpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Grass.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Holistic\holistic_cpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Props.shader" />
