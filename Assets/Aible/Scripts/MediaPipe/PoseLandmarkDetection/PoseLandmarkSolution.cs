@@ -7,8 +7,6 @@ namespace Mediapipe.Unity.Sample.PoseTracking
 {
     public class PoseLandmarkSolution : ImageSourceSolution<PoseTrackingGraph>
     {
-        [SerializeField] private PoseLandmarkListAnnotationController _poseLandmarksAnnotationController;
-
         [SerializeField] SkiMovement _skiMovement;
         [SerializeField, Range(0, 1)] float _minShulderAngle = 0.3f;
         [SerializeField, Range(0, 0.2f)] float _minHipDifference = 0.02f;
@@ -25,9 +23,6 @@ namespace Mediapipe.Unity.Sample.PoseTracking
             {
                 graphRunner.OnPoseLandmarksOutput += OnPoseLandmarksOutput;
             }
-
-            var imageSource = ImageSourceProvider.ImageSource;
-            SetupAnnotationController(_poseLandmarksAnnotationController, imageSource);
         }
 
         protected override void AddTextureFrameToInputStream(TextureFrame textureFrame) => graphRunner.AddTextureFrameToInputStream(textureFrame);
@@ -36,17 +31,12 @@ namespace Mediapipe.Unity.Sample.PoseTracking
         {
             var task = graphRunner.WaitNextAsync();
             yield return new WaitUntil(() => task.IsCompleted);
-
-            var result = task.Result;
-            _poseLandmarksAnnotationController.DrawNow(result.poseLandmarks);
         }
 
         private void OnPoseLandmarksOutput(object stream, OutputStream<NormalizedLandmarkList>.OutputEventArgs eventArgs)
         {
             var packet = eventArgs.packet;
             _landmarkList = packet == null ? default : packet.Get(NormalizedLandmarkList.Parser);
-            _poseLandmarksAnnotationController.DrawLater(_landmarkList);
-
         }
 
         private void LateUpdate()
@@ -110,9 +100,9 @@ namespace Mediapipe.Unity.Sample.PoseTracking
             //MOVE RIGHT AND LEFT
 
             //Right Hip
-            float lHipPont = _landmarkList.Landmark[23].Y;
+            float lHipPont = _landmarkList.Landmark[24].Y;
             //Left Hip
-            float rHipPont = _landmarkList.Landmark[24].Y;
+            float rHipPont = _landmarkList.Landmark[23].Y;
 
             //Get distance between each hip
             float hipDistance = lHipPont - rHipPont;
