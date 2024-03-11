@@ -128,6 +128,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AppSettings.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\HandTrackingConfig.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\ScreenController.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandPoints.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\MediaPipeVideoSolution.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\FrameData.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\ObjectDetectionGraph.cs" />
@@ -137,10 +138,12 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\ObjectDetectionConfig.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\InferenceMode.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandTracking.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\AutoFit.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\FinishSkiing.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\PositionIndex.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\LineConnections.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowGrass.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ImageSourceConfig.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\Visualizers\PoseVisualizer.cs" />

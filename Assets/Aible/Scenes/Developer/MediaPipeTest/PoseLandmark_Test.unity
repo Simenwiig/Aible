@@ -537,7 +537,6 @@ MonoBehaviour:
   graphRunner: {fileID: 1411413406}
   textureFramePool: {fileID: 1411413407}
   runningMode: 0
-  _poseLandmarksAnnotationController: {fileID: 1606880525}
   _skiMovement: {fileID: 1472499806}
   _minShulderAngle: 0.3
   _minHipDifference: 0.02
