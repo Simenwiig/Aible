@@ -21,7 +21,7 @@ public class LineConnections : MonoBehaviour
 
     private void Update()
     {
-        _lineRenderer.SetPosition(0, _origin.position);
-        _lineRenderer.SetPosition(1, _destination.position);
+        _lineRenderer.SetPosition(0, _origin.localPosition);
+        _lineRenderer.SetPosition(1, _destination.localPosition);
     }
 }

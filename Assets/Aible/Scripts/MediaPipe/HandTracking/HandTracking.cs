@@ -14,6 +14,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
     public class HandTracking : ImageSourceSolution<HandTrackingGraph>
     {
         [SerializeField] private GameObject _hand;
+        [Range(0.1f, 3f)][SerializeField] private float _handSensitivity = 1f;
 
         private HandPoints _handParent;
         public List<NormalizedLandmarkList> _handLandmarks;
@@ -69,13 +70,20 @@ namespace Mediapipe.Unity.Sample.HandTracking
             }
             _handParent.gameObject.SetActive(true);
 
+            float parentX = _handLandmarks[0].Landmark[0].X - 0.5f;
+            float parentY = 0.8f - _handLandmarks[0].Landmark[0].Y;
+            float parentZ = 0;
+
+            _handParent.gameObject.transform.localPosition = new Vector3(parentX * 20 * _handSensitivity, 
+                                                                        parentY * 8 * _handSensitivity, parentZ);
+
             for (int i = 0; i < _handParent._HandPoints.Count; i++)
             {
-                float x = _handLandmarks[0].Landmark[i].X - 0.5f;
-                float y = _handLandmarks[0].Landmark[i].Y - 0.5f;
-                float z = _handWorldLandmarks[0].Landmark[i].Z;
+                float x = _handWorldLandmarks[0].Landmark[i].X * 20;
+                float y = _handWorldLandmarks[0].Landmark[i].Y * 20;
+                float z = _handWorldLandmarks[0].Landmark[i].Z * 20;
 
-                _handParent._HandPoints[i].transform.localPosition = new Vector3(x * 8, y * 6, z * 20);
+                _handParent._HandPoints[i].transform.localPosition = new Vector3(x, y, z);
             }
         }
     }

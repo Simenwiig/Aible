@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 275874971}
   - component: {fileID: 275874968}
   - component: {fileID: 275874970}
+  - component: {fileID: 275874972}
   m_Layer: 0
   m_Name: Solution
   m_TagString: Untagged
@@ -242,6 +243,20 @@ MonoBehaviour:
   textureFramePool: {fileID: 275874970}
   runningMode: 0
   _hand: {fileID: 9025532468102400677, guid: 0dbaec40e8a132440b1bc0c31526d7e3, type: 3}
+  _handSensitivity: 1
+--- !u!114 &275874972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275874966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe43e351dfdf0804997a00a5a5ff1244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handPoints: {fileID: 275874971}
 --- !u!1001 &436988798
 PrefabInstance:
   m_ObjectHideFlags: 0
