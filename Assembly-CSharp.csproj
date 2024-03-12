@@ -102,6 +102,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Screen.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\WebCamNameAttribute.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\SlowDownSkier.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandGesture\HandGestureTracker.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\GraphRunner.cs" />
     <Compile Include="Assets\Aible\Scripts\UI\MobileUI.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />

@@ -16,8 +16,8 @@ namespace Mediapipe.Unity.Sample.HandTracking
         [SerializeField] private GameObject _hand;
 
         private HandPoints _handParent;
-        private List<NormalizedLandmarkList> _handLandmarks;
-        private List<LandmarkList> _handWorldLandmarks;
+        public List<NormalizedLandmarkList> _handLandmarks;
+        public List<LandmarkList> _handWorldLandmarks;
 
         private void Awake()
         {
@@ -31,7 +31,6 @@ namespace Mediapipe.Unity.Sample.HandTracking
             if (!runningMode.IsSynchronous())
             {
                 graphRunner.OnHandLandmarksOutput += OnHandLandmarksOutput;
-                graphRunner.OnHandednessOutput += OnHandednessOutput;
                 graphRunner.OnHandWorldLandmarksOutput += OnHandWorldLandmarksOutput;
             }
 
@@ -59,15 +58,8 @@ namespace Mediapipe.Unity.Sample.HandTracking
         {
             var packet = eventArgs.packet;
             _handLandmarks = packet == null ? default : packet.Get(NormalizedLandmarkList.Parser);
-        }
+        }    
 
-        private void OnHandednessOutput(object stream, OutputStream<List<ClassificationList>>.OutputEventArgs eventArgs)
-        {
-            var packet = eventArgs.packet;
-            var value = packet == null ? default : packet.Get(ClassificationList.Parser);
-        }      
-
-        
         private void Update()
         {
             if (_handLandmarks == null || _handWorldLandmarks == null || _handParent == null)

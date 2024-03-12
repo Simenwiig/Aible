@@ -9,11 +9,14 @@ public class LineConnections : MonoBehaviour
     [SerializeField] private Transform _origin;
     [SerializeField] private Transform _destination;
 
+    private float _startWidth = 0.25f;
+    private float _endtWidth = 0.25f;
+
     private void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        _lineRenderer.startWidth = 0.1f;
-        _lineRenderer.endWidth = 0.1f;
+        _lineRenderer.startWidth = _startWidth;
+        _lineRenderer.endWidth = _endtWidth;
     }
 
     private void Update()
