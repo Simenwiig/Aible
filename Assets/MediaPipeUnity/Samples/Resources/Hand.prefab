@@ -5375,6 +5375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1989ee49217b0345adc56588ede258b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IndexFingerRayOrigin: {fileID: 4409779089056181321}
+  _indexFingerLine: {fileID: 4290807835262885094}
   _HandPoints:
   - {fileID: 6991178987787710352}
   - {fileID: 5722993497247656022}

@@ -10,6 +10,7 @@ TagManager:
   - cockpit_capitalLaser
   - Coin
   - PlayerBodyPart
+  - Global Resource
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Ground
   - TopLayer
   - Post
-  - 
+  - MenuButton
   - 
   - 
   - 

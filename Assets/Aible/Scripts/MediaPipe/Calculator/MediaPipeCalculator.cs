@@ -7,6 +7,7 @@ namespace Mediapipe.Unity
     public class MediaPipeCalculator : MonoBehaviour
     {
         public static Vector3 ConvertToVector(NormalizedLandmark landmark) => new Vector3(landmark.X, landmark.Y, landmark.Z);
+        public static Vector3 ConvertToVector(Landmark landmark) => new Vector3(landmark.X, landmark.Y, landmark.Z);
 
         public static float CalculateAngles(Vector4 a, Vector4 b, Vector4 c)
         {

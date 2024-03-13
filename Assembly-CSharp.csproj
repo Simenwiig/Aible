@@ -81,6 +81,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Pose Landmark Detection\PoseLandmarkDetectionConfigWindow.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\Obstacles.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\WebCamSource.cs" />
+    <Compile Include="Assets\Aible\Scripts\Utilities\UICollider.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AssetLoader.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\StatsGraphVE.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowHeight.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Detection\FaceDetectionConfigWindow.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\WebCamInput.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\PoseTrackingGraph.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandMenuActions.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkerRunner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Landmark Detection\FaceLandmarkDetectionConfigWindow.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\Currency.cs" />

@@ -19,10 +19,13 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         private void Update()
         {
-            if (_handPoints._handLandmarks == null)
+            if (_handPoints.HandLandmarks == null)
+            {
+                SetHandGesture(HandGestures.HG_Default);
                 return;
+            }         
 
-            _landmarkList = _handPoints._handLandmarks[0];
+            _landmarkList = _handPoints.HandLandmarks[0];
 
             if (CheckIfPointFinger())
             {
