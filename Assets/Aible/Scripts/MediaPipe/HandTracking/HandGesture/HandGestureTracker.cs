@@ -83,7 +83,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
             float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
 
-            return angle < 90;
+            return angle < 110;
         }
     }
 }

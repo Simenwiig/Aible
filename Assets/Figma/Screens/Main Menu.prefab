@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1440991945096733614}
   - component: {fileID: 5008539434614427353}
   - component: {fileID: 3194109986583010738}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Origo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 7343335905051617457}
   - component: {fileID: 7122105325007002949}
   - component: {fileID: 8921978185404131533}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: <Group>
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,16 +183,16 @@ RectTransform:
   m_GameObject: {fileID: 1107103637197841222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4080968563323541334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -51.999756, y: -42.00009}
+  m_AnchorMin: {x: 1, y: 0.83000004}
+  m_AnchorMax: {x: 1, y: 0.83000004}
+  m_AnchoredPosition: {x: -52, y: 82.35544}
   m_SizeDelta: {x: 110, y: 119.28888}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &7343335905051617457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 6501786604611871472}
   - component: {fileID: 3308326597749807129}
   - component: {fileID: 2778290128741273893}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 729255113453144940}
   - component: {fileID: 875298344225836471}
   - component: {fileID: 276465452071274189}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,9 @@ GameObject:
   - component: {fileID: 3250890292204138626}
   - component: {fileID: 4340081400078882498}
   - component: {fileID: 2736797973432891548}
-  m_Layer: 0
+  - component: {fileID: 6072119901824045950}
+  - component: {fileID: 4634728886699793350}
+  m_Layer: 16
   m_Name: <Group>
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,6 +721,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 39:519
+--- !u!114 &6072119901824045950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090819268823145283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4634728886699793350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090819268823145283}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6468671647914051376
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7854187448609918655}
   - component: {fileID: 8807722495804489665}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
