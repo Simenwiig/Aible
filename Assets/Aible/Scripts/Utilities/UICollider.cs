@@ -7,6 +7,7 @@ public class UICollider : MonoBehaviour
 {
     BoxCollider _boxCollider;
     RectTransform _rectTransform;
+    string menuButtonLayer = "MenuButton";
 
     private void Awake()
     {
@@ -14,5 +15,7 @@ public class UICollider : MonoBehaviour
         _rectTransform = GetComponent<RectTransform>();
 
         _boxCollider.size = new Vector3(_rectTransform.rect.width, _rectTransform.rect.height, 10);
+        int layer = LayerMask.NameToLayer(menuButtonLayer);
+        this.gameObject.layer = layer;
     }
 }

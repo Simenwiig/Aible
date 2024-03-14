@@ -92,11 +92,11 @@ namespace Mediapipe.Unity.Sample.HandTracking
             float handWidht_pix = MathF.Sqrt(MathF.Pow(handX, 2) + MathF.Pow(handY, 2) + MathF.Pow(handZ, 2));
 
             float parentX = HandLandmarks[0].Landmark[9].X - 0.5f;
-            float parentY = 0.5f - HandLandmarks[0].Landmark[9].Y;
+            float parentY = 0.6f - HandLandmarks[0].Landmark[9].Y;
             float parentZ = 0;
 
             HandParent.gameObject.transform.localPosition = new Vector3(parentX * 25 * _handSensitivity,
-                                                            parentY * 15 * _handSensitivity, parentZ);
+                                                            parentY * 25 * _handSensitivity, parentZ);
 
             for (int i = 0; i < HandParent._HandPoints.Count; i++)
             {
@@ -106,7 +106,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
 
             
-                HandParent._HandPoints[i].transform.localPosition = Vector3.Lerp(HandParent._HandPoints[i].transform.localPosition, new Vector3(x, y, z), 15f);
+                HandParent._HandPoints[i].transform.localPosition = Vector3.Slerp(HandParent._HandPoints[i].transform.localPosition, new Vector3(x, y, z), 10f * Time.deltaTime);
                 
             }
         }
