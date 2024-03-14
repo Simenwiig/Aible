@@ -13,10 +13,11 @@ public class HandMenuActions : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI testText;
 
-    [SerializeField] private float raycastLength = 20;
+    [SerializeField] private float _raycastLength = 20;
+    [SerializeField] private float _timeBeforeButtonActivates = 1;
 
     private Transform _fingerRayOrigin;
-    [SerializeField] float _timer;
+    float _timer;
 
     private void Start()
     {
@@ -37,17 +38,17 @@ public class HandMenuActions : MonoBehaviour
             Vector3 direction = -_fingerRayOrigin.forward;
             RaycastHit hit;
 
-            if (Physics.Raycast(origin, direction, out hit, raycastLength, _buttonLayer))
+            if (Physics.Raycast(origin, direction, out hit, _raycastLength, _buttonLayer))
             {
-                Debug.DrawRay(origin, direction * raycastLength, Color.green);
-                Button button = hit.transform.gameObject.GetComponent<Button>();
+                Debug.DrawRay(origin, direction * _raycastLength, Color.green);
+                Button button = hit.transform.gameObject.GetComponentInParent<Button>();
                 _timer += Time.deltaTime % 60;
-                if(_timer > 5)
+                if(_timer >= _timeBeforeButtonActivates)
                     ClickButton(button);
             }
             else
             {
-                Debug.DrawRay(origin, direction * raycastLength, Color.red);
+                Debug.DrawRay(origin, direction * _raycastLength, Color.red);
                 _timer = 0;
             }
         }

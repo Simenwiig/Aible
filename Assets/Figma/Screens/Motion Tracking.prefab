@@ -706,7 +706,6 @@ GameObject:
   - component: {fileID: 5049127515723073619}
   - component: {fileID: 3146101874004895306}
   - component: {fileID: 2098348834007254798}
-  - component: {fileID: 4975834476076869841}
   - component: {fileID: 2465334631122038699}
   m_Layer: 0
   m_Name: Group 18
@@ -813,27 +812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 39:571
---- !u!65 &4975834476076869841
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233691360784139717}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2465334631122038699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,7 +836,6 @@ GameObject:
   - component: {fileID: 679223570290385391}
   - component: {fileID: 7622751049390621502}
   - component: {fileID: 8960002356637178620}
-  - component: {fileID: 5912459546648161323}
   - component: {fileID: 5647966970597242896}
   m_Layer: 0
   m_Name: back_btn
@@ -965,27 +942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 40:1182
---- !u!65 &5912459546648161323
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278356703555200920}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5647966970597242896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1980,7 +1936,6 @@ GameObject:
   - component: {fileID: 3920881109572112684}
   - component: {fileID: 3197529241600352241}
   - component: {fileID: 5177835450938137825}
-  - component: {fileID: 5966509306207232457}
   - component: {fileID: 6225438815082785658}
   m_Layer: 0
   m_Name: Group 21
@@ -2087,27 +2042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 39:519
---- !u!65 &5966509306207232457
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071578364474214350}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6225438815082785658
 MonoBehaviour:
   m_ObjectHideFlags: 0

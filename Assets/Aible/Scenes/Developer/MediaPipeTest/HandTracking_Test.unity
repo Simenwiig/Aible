@@ -346,8 +346,10 @@ MonoBehaviour:
   textureFramePool: {fileID: 275874970}
   runningMode: 0
   _hand: {fileID: 9025532468102400677, guid: 0dbaec40e8a132440b1bc0c31526d7e3, type: 3}
+  _handSlerpSpeeed: 20
   _handSensitivity: 1
   HandParent: {fileID: 0}
+  HandIndex: 0
 --- !u!114 &275874972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handPoints: {fileID: 275874971}
+  _pointMaterial: {fileID: 2100000, guid: 8163e4ccb8a73244f8c222c1423e020e, type: 2}
 --- !u!114 &275874973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,8 +382,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65536
   testText: {fileID: 420651734}
-  raycastLength: 20
-  _timer: 0
+  _raycastLength: 20
+  _timeBeforeButtonActivates: 1
 --- !u!1 &420651732
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +766,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1190930109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,7 +850,7 @@ Canvas:
   m_GameObject: {fileID: 1190930107}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 1264297880}
   m_PlaneDistance: 20
   m_PixelPerfect: 0
@@ -869,8 +872,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190930107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.021383341, y: 0.021383341, z: 0.021383341}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 66474371}
@@ -879,9 +882,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 1920.0001, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1223870913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1013,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1134,13 +1137,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 5090819268823145283, guid: 1df422108e09eff44b8394177f8eaf51, type: 3}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464421982037029441, guid: 1df422108e09eff44b8394177f8eaf51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 24.500488
+    - target: {fileID: 4959395119473523882, guid: 1df422108e09eff44b8394177f8eaf51, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1336,7 +1335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8571076842975818526
 MonoBehaviour:
   m_ObjectHideFlags: 0

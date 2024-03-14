@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 3460246679065788513}
   - component: {fileID: 5328821878998293597}
   - component: {fileID: 3597016725947735781}
+  - component: {fileID: 5254033196302878963}
   m_Layer: 0
   m_Name: Rectangle 4
   m_TagString: Untagged
@@ -625,6 +626,18 @@ MonoBehaviour:
           m_StringArgument: Ski_Level_1_Big
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5254033196302878963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997575656662593792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3207853746323434306
 GameObject:
   m_ObjectHideFlags: 0

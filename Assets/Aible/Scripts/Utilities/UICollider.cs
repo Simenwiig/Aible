@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
 public class UICollider : MonoBehaviour
 {
-    BoxCollider _boxCollider;
-    RectTransform _rectTransform;
     string menuButtonLayer = "MenuButton";
 
     private void Awake()
-    {
-        _boxCollider = GetComponent<BoxCollider>();
-        _rectTransform = GetComponent<RectTransform>();
+    { 
+        GameObject UIColliderObj = new GameObject("UICollider", typeof(RectTransform));
+        UIColliderObj.transform.parent = gameObject.transform;
+        RectTransform UIRect = UIColliderObj.GetComponent<RectTransform>();
+        UIRect.localScale = Vector3.one;
+        UIRect.anchoredPosition3D = Vector3.zero;
 
-        _boxCollider.size = new Vector3(_rectTransform.rect.width, _rectTransform.rect.height, 10);
+        UIColliderObj.AddComponent(typeof(BoxCollider));
+        BoxCollider boxCollider = UIColliderObj.GetComponent<BoxCollider>();
+
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        boxCollider.size = new Vector3(rectTransform.rect.width, rectTransform.rect.height, 10);
+
         int layer = LayerMask.NameToLayer(menuButtonLayer);
-        this.gameObject.layer = layer;
+        UIColliderObj.layer = layer;
     }
 }

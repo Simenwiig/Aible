@@ -8,18 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Aible/Scenes/Main_Menu.unity
     guid: 192ec0fa075afa24c80d6cfee3e868d0
+  - enabled: 1
+    path: Assets/Aible/Scenes/Developer/MediaPipeTest/HandTracking_Test.unity
+    guid: e8f2cbb03a1f06246847148831986275
   - enabled: 0
     path: Assets/Aible/Scenes/Ski_Level_1_Big.unity
     guid: ad4955903b939a54790a07c48b027be4
   - enabled: 0
-    path: Assets/Aible/Scenes/Mobile_Test.unity
-    guid: f17254042a5f3d247a960235c93e2154
-  - enabled: 0
     path: Assets/Aible/Scenes/Developer/MediaPipeTest/PoseLandmark_Test.unity
     guid: 7e011a3752cb0944d9f10b5c53ed2fa8
-  - enabled: 1
-    path: Assets/Aible/Scenes/Developer/MediaPipeTest/HandTracking_Test.unity
-    guid: e8f2cbb03a1f06246847148831986275
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 290a6e6411d135049940bec2237b8938, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

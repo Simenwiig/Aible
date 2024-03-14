@@ -3833,6 +3833,7 @@ GameObject:
   - component: {fileID: 8231237150553060147}
   - component: {fileID: 8633355094229297759}
   - component: {fileID: 4795532994475549561}
+  - component: {fileID: 1029688667714932429}
   m_Layer: 0
   m_Name: chrome_ErGPzBiiB2 2
   m_TagString: Untagged
@@ -4020,6 +4021,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 40:1182
+--- !u!114 &1029688667714932429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656258975008999501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3719413211745649946
 GameObject:
   m_ObjectHideFlags: 0

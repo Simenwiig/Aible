@@ -14,13 +14,18 @@ namespace Mediapipe.Unity.Sample.HandTracking
     public class HandTracking : ImageSourceSolution<HandTrackingGraph>
     {
         [SerializeField] private GameObject _hand;
+        [SerializeField] private float _handSlerpSpeeed = 20f;
         [Range(0.1f, 3f)][SerializeField] private float _handSensitivity = 1f;
 
         [HideInInspector] public HandPoints HandParent;
+        [HideInInspector] public int HandIndex;
+
         public List<NormalizedLandmarkList> HandLandmarks;
         public List<LandmarkList> HandWorldLandmarks;
 
         private float _timer;
+        private float _handMiddleWidht_pix;
+        private bool _isHandRemovedFromCamera;
 
         private void Awake()
         {
@@ -70,6 +75,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
                 if (_timer > 0.1f)
                 {
                     HandParent.gameObject.SetActive(false);
+                    _isHandRemovedFromCamera = true;
                 }
                 else
                 {
@@ -78,36 +84,66 @@ namespace Mediapipe.Unity.Sample.HandTracking
                 return;
             }
 
+            // Makes the hand that you started with stay as the target for the handPoints
+            if(HandLandmarks.Count == 1)
+            {
+                HandIndex = 0;
+            }
+            else if(HandLandmarks.Count == 2)
+            {
+                HandIndex = 1;
+            }
+
+            NormalizedLandmarkList handLandmarks = HandLandmarks[HandIndex];
+            LandmarkList handWorldLandmarks = HandWorldLandmarks[HandIndex];
+
+            MoveHandParent(handLandmarks);
+
+            MoveHanPoints(handWorldLandmarks);
+        }
+
+        private void MoveHandParent(NormalizedLandmarkList handLandmarks)
+        {
+            // All the stuff thats commented out is for Z movement for the Parent Hand
+            //float handX = handLandmarks.Landmark[5].X - handLandmarks.Landmark[17].X; 
+            //float handY = handLandmarks.Landmark[5].Y - handLandmarks.Landmark[17].Y;
+            //float handZ = handLandmarks.Landmark[5].Z - handLandmarks.Landmark[17].Z;
+
+            if (_isHandRemovedFromCamera)
+            {
+                
+                HandParent.gameObject.SetActive(true);
+                //_handMiddleWidht_pix = MathF.Sqrt(MathF.Pow(handX, 2) + MathF.Pow(handY, 2) + MathF.Pow(handZ, 2));
+            }
+
             if (_timer > 0)
             {
                 _timer = 0;
-            }
+                _isHandRemovedFromCamera = false;
+            }            
 
-            HandParent.gameObject.SetActive(true);
+            //float handWidht_pix = MathF.Sqrt(MathF.Pow(handX, 2) + MathF.Pow(handY, 2) + MathF.Pow(handZ, 2));
 
-            float handX = HandLandmarks[0].Landmark[5].X - HandLandmarks[0].Landmark[17].X;
-            float handY = HandLandmarks[0].Landmark[5].Y - HandLandmarks[0].Landmark[17].Y;
-            float handZ = HandLandmarks[0].Landmark[5].Z - HandLandmarks[0].Landmark[17].Z;
+            //float widhtDiff = handWidht_pix - _handMiddleWidht_pix;
 
-            float handWidht_pix = MathF.Sqrt(MathF.Pow(handX, 2) + MathF.Pow(handY, 2) + MathF.Pow(handZ, 2));
-
-            float parentX = HandLandmarks[0].Landmark[9].X - 0.5f;
-            float parentY = 0.6f - HandLandmarks[0].Landmark[9].Y;
+            float parentX = handLandmarks.Landmark[9].X - 0.5f;
+            float parentY = 0.6f - handLandmarks.Landmark[9].Y;
             float parentZ = 0;
 
-            HandParent.gameObject.transform.localPosition = new Vector3(parentX * 25 * _handSensitivity,
-                                                            parentY * 25 * _handSensitivity, parentZ);
+            HandParent.gameObject.transform.localPosition = Vector3.Slerp(HandParent.gameObject.transform.localPosition,
+            new Vector3(parentX * 25 * _handSensitivity, parentY * 25 * _handSensitivity, parentZ),
+            _handSlerpSpeeed * Time.deltaTime);
+        }
 
+        private void MoveHanPoints(LandmarkList handWorldLandmarks)
+        {
             for (int i = 0; i < HandParent._HandPoints.Count; i++)
             {
-                float x = HandWorldLandmarks[0].Landmark[i].X * 20;
-                float y = HandWorldLandmarks[0].Landmark[i].Y * 20;
-                float z = HandWorldLandmarks[0].Landmark[i].Z * 20;
+                float x = handWorldLandmarks.Landmark[i].X * 20;
+                float y = handWorldLandmarks.Landmark[i].Y * 20;
+                float z = handWorldLandmarks.Landmark[i].Z * 20;
 
-
-            
-                HandParent._HandPoints[i].transform.localPosition = Vector3.Slerp(HandParent._HandPoints[i].transform.localPosition, new Vector3(x, y, z), 10f * Time.deltaTime);
-                
+                HandParent._HandPoints[i].transform.localPosition = Vector3.Slerp(HandParent._HandPoints[i].transform.localPosition, new Vector3(x, y, z), _handSlerpSpeeed * Time.deltaTime);
             }
         }
     }

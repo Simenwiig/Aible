@@ -13,9 +13,17 @@ namespace Mediapipe.Unity.Sample.HandTracking
     {
         [SerializeField] private HandTracking _handPoints;
 
+        [SerializeField] private Material _pointMaterial;
+        private Material _defaultMaterial;
+
         private HandGestures _handGestures;
 
         private NormalizedLandmarkList _landmarkList;
+
+        private void Start()
+        {
+            _defaultMaterial = HandPoints.GetMaterial(8);
+        }
 
         private void Update()
         {
@@ -25,15 +33,21 @@ namespace Mediapipe.Unity.Sample.HandTracking
                 return;
             }         
 
-            _landmarkList = _handPoints.HandLandmarks[0];
+            _landmarkList = _handPoints.HandLandmarks[_handPoints.HandIndex];
 
             if (CheckIfPointFinger())
             {
+                if (GetHandGestures() == HandGestures.HG_Point)
+                    return;
                 SetHandGesture(HandGestures.HG_Point);
+                HandPoints.ChangeMaterial(8, _pointMaterial);
             }
             else
             {
+                if(GetHandGestures() == HandGestures.HG_Default)
+                    return;
                 SetHandGesture(HandGestures.HG_Default);
+                HandPoints.ChangeMaterial(8, _defaultMaterial);;
             }
         }
 
@@ -56,6 +70,8 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         public void SetHandGesture(HandGestures handGestures)
         {
+            if (GetHandGestures() == handGestures)
+                return;
             _handGestures = handGestures;
         }
 
@@ -75,6 +91,17 @@ namespace Mediapipe.Unity.Sample.HandTracking
             return angle > 170;
         }
 
+        private void PrintFingerAngle(NormalizedLandmark landMarkA, NormalizedLandmark landMarkB, NormalizedLandmark landMarkC)
+        {
+            Vector3 angleA = MediaPipeCalculator.ConvertToVector(landMarkA);
+            Vector3 angleB = MediaPipeCalculator.ConvertToVector(landMarkB);
+            Vector3 angleC = MediaPipeCalculator.ConvertToVector(landMarkC);
+
+            float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
+
+            Debug.Log(angle);
+        }
+
         private bool CheckIfClosedFinger(NormalizedLandmark landMarkA, NormalizedLandmark landMarkB, NormalizedLandmark landMarkC)
         {
             Vector3 angleA = MediaPipeCalculator.ConvertToVector(landMarkA);
@@ -83,7 +110,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
             float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
 
-            return angle < 110;
+            return angle < 160;
         }
     }
 }
