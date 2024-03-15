@@ -12070,7 +12070,7 @@ GameObject:
   - component: {fileID: 1649341095}
   - component: {fileID: 1649341094}
   m_Layer: 5
-  m_Name: Main Canvas
+  m_Name: Camera Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12393,6 +12393,8 @@ MonoBehaviour:
   graphRunner: {fileID: 1731186286}
   textureFramePool: {fileID: 1731186285}
   runningMode: 0
+  HideDebugSprite: 0
+  _poseLandmarksAnnotationController: {fileID: 0}
 --- !u!1 &1757174364
 GameObject:
   m_ObjectHideFlags: 0
