@@ -61,17 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\PrefabReplacer.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Cockpit\Scripts\Boids\Editor\BoidsEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\NamingConvention.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Editor\FoliageGroup.cs" />
-    <Compile Include="Assets\SampleTemplate\Scenes\Oasis\Scripts\Editor\FoliageGroupEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\DirectionalLightmapperCorrector.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\HeightMapRenderer.cs" />
+    <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\Editor\WebCamNameDrawer.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\GradientTexture.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\RenameToPrefabName.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\Editor\PerformanceTestEditor.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Editor\LodLightmapCopy.cs" />
-    <Compile Include="Assets\MediaPipe\Scripts\WebCam\Editor\WebCamNameDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -414,6 +411,10 @@
       <HintPath>E:\Unity\Editor\2022.3.13f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>E:\Unity\Editor\2022.3.13f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:\Unity\Editor\2022.3.13f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
@@ -438,16 +439,20 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages\com.github.homuler.mediapipe\Runtime\Plugins\Protobuf\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Packages\com.github.homuler.mediapipe\Runtime\Plugins\Protobuf\Google.Protobuf.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Library\PackageCache\com.unity.barracuda@3.0.0\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1215,6 +1220,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{220BDDB9-97E6-BB3C-B747-2F89098F46C4}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mediapipe.Runtime.csproj">
+      <Project>{D212DF84-94EA-416B-B8DB-51625F81CBA6}</Project>
+      <Name>Mediapipe.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

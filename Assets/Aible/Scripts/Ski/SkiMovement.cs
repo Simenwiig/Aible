@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SkiMovement : MonoBehaviour
 {
-    [HideInInspector] public bool canMove;
-    [HideInInspector] public bool canAnimate;
+    public bool canMove;
+    public bool canAnimate;
     [HideInInspector] public bool moveRight;
     [HideInInspector] public bool moveLeft;
 
@@ -46,6 +46,11 @@ public class SkiMovement : MonoBehaviour
 
         turnTorque = maxTurnTorque;
         speed = startSpeed;
+    }
+
+    private void Start()
+    {
+        SkiAnimation.PlayAnimation("Skiing_Straight");
     }
 
     void FixedUpdate()

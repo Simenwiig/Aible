@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 3460246679065788513}
   - component: {fileID: 5328821878998293597}
   - component: {fileID: 3597016725947735781}
+  - component: {fileID: 5254033196302878963}
   m_Layer: 0
   m_Name: Rectangle 4
   m_TagString: Untagged
@@ -625,6 +626,18 @@ MonoBehaviour:
           m_StringArgument: Ski_Level_1_Big
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5254033196302878963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997575656662593792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3207853746323434306
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d7ae31a75ae28445b217d2404ded2c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 356386e743cf2994c92a62b892eb6363, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1086,11 +1099,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6291990203912558370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52, y: -42.00009}
+  m_AnchorMin: {x: 1, y: 0.83000004}
+  m_AnchorMax: {x: 1, y: 0.83000004}
+  m_AnchoredPosition: {x: -52, y: 82.35544}
   m_SizeDelta: {x: 110, y: 119.28888}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &7297556460058449775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,7 +1152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 64741aef64b57dc4da275e6c45360197, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef66e7ad9030c4f4f80fe1e2d04ceab3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

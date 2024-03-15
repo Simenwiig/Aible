@@ -10,6 +10,7 @@ TagManager:
   - cockpit_capitalLaser
   - Coin
   - PlayerBodyPart
+  - Global Resource
   layers:
   - Default
   - TransparentFX
@@ -26,18 +27,18 @@ TagManager:
   - MainCameraOnly
   - Ground
   - TopLayer
+  - Post
+  - MenuButton
   - 
   - 
   - 
   - 
   - 
-  - Cockpit
-  - Cockpit_3DSkybox
-  - Cockpit_3DSkybox_BG
-  - Cockpit_Ally
-  - Cockpit_Invader
-  - Cockpit_BG
-  - Cockpit_DepthClear
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

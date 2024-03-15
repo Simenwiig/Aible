@@ -322,7 +322,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.3
+  m_fontSize: 24.7
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96
+  m_fontSize: 89.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1299,6 +1299,7 @@ GameObject:
   - component: {fileID: 6912679339237358466}
   - component: {fileID: 5033833432401519240}
   - component: {fileID: 8229367548901879619}
+  - component: {fileID: 2803078336577054836}
   m_Layer: 0
   m_Name: chrome_ErGPzBiiB2 2
   m_TagString: Untagged
@@ -1486,6 +1487,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 40:1182
+--- !u!114 &2803078336577054836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329800766424808433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3460158362554092293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,7 +3078,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.87
+  m_fontSize: 25.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3198,11 +3211,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 434302743229733042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -106.999756, y: -101.64453}
+  m_AnchorMin: {x: 1, y: 0.83000004}
+  m_AnchorMax: {x: 1, y: 0.83000004}
+  m_AnchoredPosition: {x: -52, y: 82.35544}
   m_SizeDelta: {x: 110, y: 119.28888}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &8366759876430126694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,7 +3264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 29650dc4a88097941a04f230bd4b0d7e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef66e7ad9030c4f4f80fe1e2d04ceab3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3347,7 +3360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95d152e5a7e05304e974512d9332ed08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65fcb7f34987a7b4c8fac093794bbac0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

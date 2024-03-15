@@ -41,3 +41,11 @@ Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.render-pipelines.universal from version 12.1.7 to 14.0.9
+
+=== Wed Jan 31 09:28:56 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.render-pipelines.universal from version 12.1.7 to 14.0.9

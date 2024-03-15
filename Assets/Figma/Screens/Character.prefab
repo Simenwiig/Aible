@@ -561,6 +561,7 @@ GameObject:
   - component: {fileID: 8662723582664456101}
   - component: {fileID: 4209749805660479955}
   - component: {fileID: 4501096576704908188}
+  - component: {fileID: 8617006719862380828}
   m_Layer: 0
   m_Name: Group 21
   m_TagString: Untagged
@@ -666,6 +667,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 39:519
+--- !u!114 &8617006719862380828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403906265668353221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &505864250554829187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d20f79ab03393d444aec28b7cda20e4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37836f3bd2430ab438d67a544d6d5e05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2822,7 +2835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e43cf6772b2a7c459c69998cc43ed80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc173a1afa629d14d9ad45dc0f7fdcc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3060,7 +3073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 11fbaf86bf971314d986822c0ce3a3c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc173a1afa629d14d9ad45dc0f7fdcc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3677,7 +3690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e4b64fed007140f4f87f7bac602898d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 838c55cad8e064d47be1cced4e8cd42c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3869,7 +3882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38b6e2b7b5464d843b01c4c60a14c9d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef66e7ad9030c4f4f80fe1e2d04ceab3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4225,7 +4238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c9968bc7ca1ada418318cec518e47fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecf7dc743d4e5de4e84456115ebaab24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4321,7 +4334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89bf6771d79a5f74bbc36051d5a99380, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecf7dc743d4e5de4e84456115ebaab24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5039,6 +5052,7 @@ GameObject:
   - component: {fileID: 3242919944157054559}
   - component: {fileID: 83097500338857721}
   - component: {fileID: 3585113054932377514}
+  - component: {fileID: 1642155445784248414}
   m_Layer: 0
   m_Name: back_btn
   m_TagString: Untagged
@@ -5144,6 +5158,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 40:1181
+--- !u!114 &1642155445784248414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6065645741692298563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6112799625975925525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,6 +6097,7 @@ GameObject:
   - component: {fileID: 5492489176753140892}
   - component: {fileID: 6833386415491327855}
   - component: {fileID: 5857348183681867045}
+  - component: {fileID: 2922735639352954449}
   m_Layer: 0
   m_Name: Group 22
   m_TagString: Untagged
@@ -6176,6 +6203,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TargetScreenNodeId: 40:1181
+--- !u!114 &2922735639352954449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119254593792198709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80003296aa216d40841547316b356ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8182530570520546658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,7 +6765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b9608d63c06c1cb4bacbf99b41de9b8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 838c55cad8e064d47be1cced4e8cd42c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
