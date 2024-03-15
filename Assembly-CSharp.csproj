@@ -124,6 +124,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Bootstrap.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\FaceMeshConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingSolution.cs" />
+    <Compile Include="Assets\Aible\Scripts\Ski\SkiPlayer\SkiLandmarkOutput.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\ImageSource.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\MoveTo.cs" />

@@ -12393,10 +12393,6 @@ MonoBehaviour:
   graphRunner: {fileID: 1731186286}
   textureFramePool: {fileID: 1731186285}
   runningMode: 0
-  _skiMovement: {fileID: 1034567868}
-  _minShulderAngle: 0.3
-  _minHipDifference: 0.02
-  _minKneeAngle: 13
 --- !u!1 &1757174364
 GameObject:
   m_ObjectHideFlags: 0
@@ -14319,6 +14315,10 @@ PrefabInstance:
       propertyPath: m_Lens.FarClipPlane
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5676862154907473049, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
+      propertyPath: _poseLandmarkSolution
+      value: 
+      objectReference: {fileID: 1731186287}
     - target: {fileID: 6087348609732993778, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
       propertyPath: m_FollowOffset.y
       value: 4.17
