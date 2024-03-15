@@ -23082,6 +23082,7 @@ GameObject:
   - component: {fileID: 8974102606993685681}
   - component: {fileID: 9170819606195144231}
   - component: {fileID: 1225145628435859344}
+  - component: {fileID: 5676862154907473049}
   - component: {fileID: 2111085388317748458}
   - component: {fileID: 4970299478324538825}
   - component: {fileID: 6561415399254244924}
@@ -23154,6 +23155,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd8a4f2f221b3f449481bab8a65ad42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5676862154907473049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121831369329528125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0ca25e16626442b71f61e18e38d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skiMovement: {fileID: 2111085388317748458}
+  _poseLandmarkSolution: {fileID: 0}
+  _minShulderAngle: 0.3
+  _minHipDifference: 0.02
+  _minKneeAngle: 13
 --- !u!114 &2111085388317748458
 MonoBehaviour:
   m_ObjectHideFlags: 0
