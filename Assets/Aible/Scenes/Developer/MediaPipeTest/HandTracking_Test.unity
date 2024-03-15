@@ -346,10 +346,11 @@ MonoBehaviour:
   textureFramePool: {fileID: 275874970}
   runningMode: 0
   _hand: {fileID: 9025532468102400677, guid: 0dbaec40e8a132440b1bc0c31526d7e3, type: 3}
-  _handSlerpSpeeed: 20
+  _handSlerpSpeeed: 15
   _handSensitivity: 1
   HandParent: {fileID: 0}
   HandIndex: 0
+  HandWorldIndex: 0
 --- !u!114 &275874972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe43e351dfdf0804997a00a5a5ff1244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handPoints: {fileID: 275874971}
+  _handTracking: {fileID: 275874971}
   _pointMaterial: {fileID: 2100000, guid: 8163e4ccb8a73244f8c222c1423e020e, type: 2}
 --- !u!114 &275874973
 MonoBehaviour:

@@ -19,13 +19,14 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         [HideInInspector] public HandPoints HandParent;
         [HideInInspector] public int HandIndex;
+        [HideInInspector] public int HandWorldIndex;
 
         public List<NormalizedLandmarkList> HandLandmarks;
         public List<LandmarkList> HandWorldLandmarks;
 
         private float _timer;
-        private float _handMiddleWidht_pix;
         private bool _isHandRemovedFromCamera;
+        //private float _handMiddleWidht_pix;
 
         private void Awake()
         {
@@ -85,17 +86,26 @@ namespace Mediapipe.Unity.Sample.HandTracking
             }
 
             // Makes the hand that you started with stay as the target for the handPoints
-            if(HandLandmarks.Count == 1)
-            {
-                HandIndex = 0;
-            }
-            else if(HandLandmarks.Count == 2)
+            if(HandLandmarks.Count == 2)
             {
                 HandIndex = 1;
             }
+            else
+            {
+                HandIndex = 0;
+            }
+
+            if (HandWorldLandmarks.Count == 2)
+            {
+                HandWorldIndex = 1;
+            }
+            else
+            {
+                HandWorldIndex = 0;
+            }
 
             NormalizedLandmarkList handLandmarks = HandLandmarks[HandIndex];
-            LandmarkList handWorldLandmarks = HandWorldLandmarks[HandIndex];
+            LandmarkList handWorldLandmarks = HandWorldLandmarks[HandWorldIndex];
 
             MoveHandParent(handLandmarks);
 
@@ -105,6 +115,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
         private void MoveHandParent(NormalizedLandmarkList handLandmarks)
         {
             // All the stuff thats commented out is for Z movement for the Parent Hand
+
             //float handX = handLandmarks.Landmark[5].X - handLandmarks.Landmark[17].X; 
             //float handY = handLandmarks.Landmark[5].Y - handLandmarks.Landmark[17].Y;
             //float handZ = handLandmarks.Landmark[5].Z - handLandmarks.Landmark[17].Z;

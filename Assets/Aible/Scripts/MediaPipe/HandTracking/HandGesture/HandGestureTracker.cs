@@ -11,7 +11,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
     public class HandGestureTracker : MonoBehaviour
     {
-        [SerializeField] private HandTracking _handPoints;
+        [SerializeField] private HandTracking _handTracking;
 
         [SerializeField] private Material _pointMaterial;
         private Material _defaultMaterial;
@@ -27,13 +27,13 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         private void Update()
         {
-            if (_handPoints.HandLandmarks == null)
+            if (_handTracking.HandLandmarks == null)
             {
                 SetHandGesture(HandGestures.HG_Default);
                 return;
             }         
 
-            _landmarkList = _handPoints.HandLandmarks[_handPoints.HandIndex];
+            _landmarkList = _handTracking.HandLandmarks[_handTracking.HandIndex];
 
             if (CheckIfPointFinger())
             {
