@@ -5376,8 +5376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IndexFingerRayOrigin: {fileID: 4409779089056181321}
-  _indexFingerLine: {fileID: 4290807835262885094}
-  _HandPoints:
+  Points:
   - {fileID: 6991178987787710352}
   - {fileID: 5722993497247656022}
   - {fileID: 4797704737193669544}

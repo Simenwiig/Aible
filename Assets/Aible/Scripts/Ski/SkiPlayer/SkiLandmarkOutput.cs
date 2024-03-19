@@ -17,7 +17,7 @@ public class SkiLandmarkOutput : MonoBehaviour
 
     private void LateUpdate()
     {
-        NormalizedLandmarkList landmarkList = _poseLandmarkSolution.LandmarkList;
+        NormalizedLandmarkList landmarkList = _poseLandmarkSolution._LandmarkList;
 
         if (landmarkList != null)
         {

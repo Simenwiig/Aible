@@ -22,7 +22,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         private void Start()
         {
-            _defaultMaterial = HandPoints.GetMaterial(8);
+            _defaultMaterial = LandmarkPoints.GetMaterial(8);
         }
 
         private void Update()
@@ -40,14 +40,14 @@ namespace Mediapipe.Unity.Sample.HandTracking
                 if (GetHandGestures() == HandGestures.HG_Point)
                     return;
                 SetHandGesture(HandGestures.HG_Point);
-                HandPoints.ChangeMaterial(8, _pointMaterial);
+                LandmarkPoints.ChangeMaterial(8, _pointMaterial);
             }
             else
             {
                 if(GetHandGestures() == HandGestures.HG_Default)
                     return;
                 SetHandGesture(HandGestures.HG_Default);
-                HandPoints.ChangeMaterial(8, _defaultMaterial);;
+                LandmarkPoints.ChangeMaterial(8, _defaultMaterial);;
             }
         }
 

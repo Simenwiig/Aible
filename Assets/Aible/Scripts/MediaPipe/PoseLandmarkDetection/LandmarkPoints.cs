@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandPoints : MonoBehaviour
+public class LandmarkPoints : MonoBehaviour
 {
     public Transform IndexFingerRayOrigin;
-    public List<GameObject> _HandPoints;
+    public List<GameObject> Points;
 
-    static public HandPoints Instance;
+    static public LandmarkPoints Instance;
 
     private void Awake()
     {
@@ -17,11 +17,11 @@ public class HandPoints : MonoBehaviour
 
     static public void ChangeMaterial(int handPointIndex, Material material)
     {
-        Instance._HandPoints[handPointIndex].GetComponent<MeshRenderer>().material = material;
+        Instance.Points[handPointIndex].GetComponent<MeshRenderer>().material = material;
     }
 
     static public Material GetMaterial(int handPointIndex)
     {
-        return Instance._HandPoints[handPointIndex].GetComponent<MeshRenderer>().materials[0];
+        return Instance.Points[handPointIndex].GetComponent<MeshRenderer>().materials[0];
     }
 }

@@ -17,7 +17,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
         [SerializeField] private float _handSlerpSpeeed = 20f;
         [Range(0.1f, 3f)][SerializeField] private float _handSensitivity = 1f;
 
-        [HideInInspector] public HandPoints HandParent;
+        [HideInInspector] public LandmarkPoints HandParent;
         [HideInInspector] public int HandIndex;
         [HideInInspector] public int HandWorldIndex;
 
@@ -32,7 +32,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
         {
             GameObject handClone = GameObject.Instantiate(_hand) as GameObject;
             handClone.name = "Hand";
-            HandParent = handClone.GetComponent<HandPoints>();
+            HandParent = handClone.GetComponent<LandmarkPoints>();
         }
 
         protected override void OnStartRun()
@@ -148,13 +148,13 @@ namespace Mediapipe.Unity.Sample.HandTracking
 
         private void MoveHanPoints(LandmarkList handWorldLandmarks)
         {
-            for (int i = 0; i < HandParent._HandPoints.Count; i++)
+            for (int i = 0; i < HandParent.Points.Count; i++)
             {
                 float x = handWorldLandmarks.Landmark[i].X * 20;
                 float y = handWorldLandmarks.Landmark[i].Y * 20;
                 float z = handWorldLandmarks.Landmark[i].Z * 20;
 
-                HandParent._HandPoints[i].transform.localPosition = Vector3.Slerp(HandParent._HandPoints[i].transform.localPosition, new Vector3(x, y, z), _handSlerpSpeeed * Time.deltaTime);
+                HandParent.Points[i].transform.localPosition = Vector3.Slerp(HandParent.Points[i].transform.localPosition, new Vector3(x, y, z), _handSlerpSpeeed * Time.deltaTime);
             }
         }
     }

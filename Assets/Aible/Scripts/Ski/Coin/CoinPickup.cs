@@ -30,13 +30,5 @@ namespace Currency
 
             Destroy(gameObject);
         }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Currency.ResetCoins();
-            }
-        }
     }
 }
