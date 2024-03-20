@@ -70,7 +70,6 @@
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Manager\ItemManager.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSettings.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\PoseTrackingSolution.cs" />
-    <Compile Include="Assets\AssetStore\Insects Pack CorCore\DisableSpriteOnPlay.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\TextureFrame.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingGraph.cs" />
     <Compile Include="Assets\Aible\Scripts\MediaPipe\Calculator\MediaPipeCalculator.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Landmark Detection\FaceLandmarkerRunner.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\Coin\CoinPickup.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Solution.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Manager\DifficultyManager.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Pose Landmark Detection\PoseLandmarkDetectionConfigWindow.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\WebCamSource.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\UICollider.cs" />
@@ -100,6 +100,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkDetectionConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\EnumExtension.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\VNectModel.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Basket.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\SceneMetaData.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\PerformanceTestStage.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Landmark Detection\FaceLandmarkDetectionConfig.cs" />
@@ -129,7 +130,6 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Bootstrap.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\FaceMeshConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingSolution.cs" />
-    <Compile Include="Assets\AssetStore\Insects Pack CorCore\SimplePathFollowing.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\SkiPlayer\SkiLandmarkOutput.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\ImageSource.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />
@@ -181,7 +181,6 @@
     <Compile Include="Assets\Aible\Scripts\Ski\SkiPlayer\SkiAnimation.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\VideoSource.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ModalButton.cs" />
-    <Compile Include="Assets\AssetStore\Insects Pack CorCore\CurvyPathFollowing.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\PoseTrackingConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\RunningMode.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
@@ -646,12 +645,12 @@
       <HintPath>Packages\com.github.homuler.mediapipe\Runtime\Plugins\Protobuf\Google.Protobuf.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

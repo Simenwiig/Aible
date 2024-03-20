@@ -75,6 +75,8 @@ public class ItemManager : MonoBehaviour
         // Apply offset to the spawn position
         Vector3 spawnPosition = new Vector3(xPos, yPos, 0) + transform.position;
 
-        GameObject item = GameObject.Instantiate(_item, spawnPosition, Quaternion.identity,this.transform) as GameObject;
+        float yRot = Random.Range(0, 360);
+
+        GameObject item = GameObject.Instantiate(_item, spawnPosition, Quaternion.Euler(0, yRot, 0),this.transform) as GameObject;
     }
 }

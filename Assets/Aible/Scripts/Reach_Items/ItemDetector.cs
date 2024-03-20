@@ -9,6 +9,7 @@ using Color = UnityEngine.Color;
 public class ItemDetector : MonoBehaviour
 {
     [SerializeField] private DrawPoseLandmark _drawPoseLandmark;
+    [SerializeField] private Basket _basket;
     [SerializeField] private float _radius = 0.5f;
     [SerializeField] private LayerMask _reachItemLayer;
 
@@ -46,6 +47,7 @@ public class ItemDetector : MonoBehaviour
         ReachItem item = collider.gameObject.GetComponent<ReachItem>();
         item.ItemReached();
         Destroy(item.gameObject);
+        _basket.AddApple();
     }
     
     private void OnDrawGizmos()
