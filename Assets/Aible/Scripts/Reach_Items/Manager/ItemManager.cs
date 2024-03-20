@@ -7,17 +7,28 @@ using UnityEditor.IMGUI.Controls;
 public class ItemManager : MonoBehaviour
 {
     public static int NumberOfItemsCollected;
-
+    [Header("References")]
     [SerializeField] private TextMeshProUGUI itemCollectedText;
+
+    [Header("Item Settings")]
     [SerializeField] private GameObject _item;
     [SerializeField] private float _timeBetweenSpawns = 3f;
+    public bool CanItemFallDown;
+    public float TimeBeforeAppleFallDown = 5f;
 
     [SerializeField] float startAngle = 30f; // Starting angle in degrees
     [SerializeField] float arcAngle = 120f; // Angle of the arc in degrees
 
     static bool changeCoinAmount = true;
 
+    public static ItemManager _ItemManager;
+
     private float _timer;
+
+    private void Awake()
+    {
+        _ItemManager = this;
+    }
 
     private void Start()
     {

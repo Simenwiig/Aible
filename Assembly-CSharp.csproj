@@ -88,8 +88,8 @@
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowHeight.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\ObjectDetectionSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Selfie Segmentation\SelfieSegmentationConfig.cs" />
-    <Compile Include="Assets\Aible\Scripts\Ski\Coin\Currency.cs" />
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Items\Apple.cs" />
+    <Compile Include="Assets\Aible\Scripts\Ski\Coin\Currency.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\SceneLoader.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\OnTrigger.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hair Segmentation\HairSegmentationConfig.cs" />
@@ -139,6 +139,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\ScreenController.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\MediaPipeVideoSolution.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\FrameData.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Insects\Insect.cs" />
     <Compile Include="Assets\Aible\Scripts\MediaPipe\PoseLandmarkDetection\LandmarkPoints.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\ObjectDetectionGraph.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnow.cs" />
@@ -219,6 +220,7 @@
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\face_detection_cpu.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\pose_tracking_cpu.txt" />
+    <None Include="Assets\AssetStore\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\MediaPipe_OLD\Shaders\Visualizer.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\hand_tracking_gpu.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Selfie Segmentation\selfie_segmentation_cpu.txt" />
