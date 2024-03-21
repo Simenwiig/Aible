@@ -87,6 +87,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AssetLoader.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\StatsGraphVE.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowHeight.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Insects\Fly.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\ObjectDetectionSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Selfie Segmentation\SelfieSegmentationConfig.cs" />
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Items\Apple.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\GlobalVolumeFeature.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Garden\Scripts\Runtime\WashiLightController.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\MediaPipeVideoGraph.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Manager\MobSpawner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\HandTrackingGraph.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\TextureFramePool.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowTree.cs" />
@@ -217,10 +219,12 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMPro.cginc" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\face_detection_opengles.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Cross.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-BasicPBR.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\iris_tracking_gpu.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-Overlay.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\face_detection_cpu.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-Skin Forward.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\pose_tracking_cpu.txt" />
     <None Include="Assets\AssetStore\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\MediaPipe_OLD\Shaders\Visualizer.shader" />
@@ -240,6 +244,7 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Props Snow.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\Benchmark\BenchmarkUI.uss" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Unity Standard\ToonLit.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\official_hand_tracking_demo_opengles.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-SSD.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Selfie Segmentation\selfie_segmentation_gpu.txt" />
@@ -255,13 +260,17 @@
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Detail Props.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Bark Snow.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-Glass.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross Snow.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Hair Segmentation\hair_segmentation_gpu.txt" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-SkinCutout Forward Specular DoubleSided.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\pose_tracking_gpu.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Leaf Snow.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\Shaders\HLSL\Water.hlsl" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Unity Standard\ToonBasic.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\StandardDoubleSided.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Object Detection\object_detection_gpu.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\face_mesh_gpu.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Sprites\EmojiOne_Attribution.txt" />
@@ -270,6 +279,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Cross Snow.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-SkinCutout Forward DoubleSided.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Readme.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\face_mesh_opengles.txt" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-SSD.shader" />
@@ -282,8 +292,11 @@
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\official_hand_tracking_demo_gpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Tree Bark.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-Skin Defered.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\hand_tracking_cpu.txt" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-Ice.shader" />
     <None Include="Assets\SampleTemplate\Scenes\Garden\Shaders\GravelsPixelDepthOffset_Shader.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders 1.3.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\official_hand_tracking_demo_cpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Grass Snow.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Resources\LineBreaking_Following_Characters.txt" />
@@ -297,6 +310,7 @@
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile-Masking.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Cross.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Props Snow.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Shaders\Polygonmaker-AS-SkinCutout Defered DoubleSided.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Holistic\holistic_opengles.txt" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\iris_tracking_cpu.txt" />
     <None Include="Assets\AssetStore\SkySeries Freebie\Hdri setup.txt" />
@@ -309,6 +323,7 @@
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\face_detection_gpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity URP\Detail Props.shader" />
     <None Include="Assets\SampleTemplate\SharedAssets\TextMeshPro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Polygonmaker\Wild Life Series\Wild Life - Insects\Polygonmaker - Shader\Unity Standard\ToonBasicOutline_modified.shader" />
     <None Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\face_mesh_cpu.txt" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Leaf Snow.shader" />
     <None Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Shaders\Unity Standard\Tree Bark Snow.shader" />

@@ -25,20 +25,37 @@ public class ItemDetector : MonoBehaviour
         if (_bodyPoints == null || _drawPoseLandmark.IsBodyRemovedFromCamera)
             return;
 
+        //camera
+        Camera camera = Camera.main;
+
         // Right arm detector
-        _rightOrigin = _bodyPoints.Points[16].transform.position;       
-        Collider[] rightCollider = Physics.OverlapSphere(_rightOrigin, _radius, _reachItemLayer, QueryTriggerInteraction.Collide);
+        _rightOrigin = new Vector3(_bodyPoints.Points[16].transform.position.x, _bodyPoints.Points[16].transform.position.y, 0);       
+        Collider[] rightCollider = Physics.OverlapCapsule(camera.transform.position, _rightOrigin, _radius, _reachItemLayer, QueryTriggerInteraction.Collide);
         if (rightCollider.Length > 0)
         {
-            ItemDetected(rightCollider[0]);
+            if (rightCollider[0].gameObject.tag == "ReachItem")
+            {
+                ItemDetected(rightCollider[0]);
+            }
+            else
+            {
+                MobDetected(rightCollider[0]);
+            }
         }
 
         // Left arm detector
         _leftOrigin = _bodyPoints.Points[15].transform.position;
-        Collider[] leftCollider = Physics.OverlapSphere(_leftOrigin, _radius, _reachItemLayer, QueryTriggerInteraction.Collide);
+        Collider[] leftCollider = Physics.OverlapCapsule(camera.transform.position, _leftOrigin, _radius, _reachItemLayer, QueryTriggerInteraction.Collide);
         if (leftCollider.Length > 0)
         {
-            ItemDetected(leftCollider[0]);
+            if (leftCollider[0].gameObject.tag == "ReachItem")
+            {
+                ItemDetected(leftCollider[0]);
+            }
+            else
+            {
+                MobDetected(leftCollider[0]);
+            }         
         }
     }
 
@@ -49,14 +66,28 @@ public class ItemDetector : MonoBehaviour
         Destroy(item.gameObject);
         _basket.AddApple();
     }
-    
+
+    private void MobDetected(Collider collider)
+    {
+        Insect insect = collider.gameObject.GetComponent<Insect>();
+        StartCoroutine(insect.Die());
+    }
+    /*
     private void OnDrawGizmos()
     {
         if (_bodyPoints == null || _drawPoseLandmark.IsBodyRemovedFromCamera)
             return;
 
-        Gizmos.color = Color.red;  
-        Gizmos.DrawWireSphere(_rightOrigin, _radius);
-        Gizmos.DrawWireSphere(_leftOrigin, _radius);
-    }
+        // Set the color for the Gizmos
+        Gizmos.color = Color.red;
+
+        Camera camera = Camera.main;
+
+        // Right arm capsule
+        var rightBottom = camera.transform.position;
+        var rightTop = _rightOrigin;
+        Gizmos.DrawWireSphere(rightBottom, _radius); // Draw bottom sphere
+        Gizmos.DrawWireSphere(rightTop, _radius);  // Draw top sphere
+        Gizmos.DrawLine(rightBottom, rightTop);  // Draw connecting line
+    }*/
 }

@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 5628684358860361533}
   m_Layer: 17
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: ReachItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

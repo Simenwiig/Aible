@@ -32,7 +32,7 @@ public class ItemManager : MonoBehaviour
 
     private void Start()
     {
-        NumberOfItemsCollected = 0;
+        itemCollectedText.text = NumberOfItemsCollected.ToString();
         SpawnItem();
     }
 
