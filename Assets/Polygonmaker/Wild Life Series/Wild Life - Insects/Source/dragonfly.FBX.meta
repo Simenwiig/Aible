@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: b7392261dd4bd5e44a910ddf49d8750a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: dragonfly
+    100002: //RootNode
+    100004: DragonflyAntena_L1
+    100006: DragonflyAntena_L2
+    100008: DragonflyAntena_R1
+    100010: DragonflyAntena_R2
+    100012: DragonflyHead
+    100014: DragonflyHub001
+    100016: DragonflyLLeg031
+    100018: DragonflyLLeg032
+    100020: DragonflyLLeg03Ankle
+    100022: DragonflyLLeg03Collarbone
+    100024: DragonflyLLeg1
+    100026: DragonflyLLeg1 1
+    100028: DragonflyLLeg2
+    100030: DragonflyLLeg2 1
+    100032: DragonflyLLegAnkle
+    100034: DragonflyLLegAnkle 1
+    100036: DragonflyLLegCollarbone
+    100038: DragonflyLLegCollarbone 1
+    100040: DragonflyNeck
+    100042: DragonflyRLeg031
+    100044: DragonflyRLeg032
+    100046: DragonflyRLeg03Ankle
+    100048: DragonflyRLeg03Collarbone
+    100050: DragonflyRLeg1
+    100052: DragonflyRLeg1 1
+    100054: DragonflyRLeg2
+    100056: DragonflyRLeg2 1
+    100058: DragonflyRLegAnkle
+    100060: DragonflyRLegAnkle 1
+    100062: DragonflyRLegCollarbone
+    100064: DragonflyRLegCollarbone 1
+    100066: DragonflyTail1
+    100068: DragonflyTail2
+    100070: DragonflyWing_L1
+    100072: DragonflyWing_L2
+    100074: DragonflyWing_R1
+    100076: DragonflyWing_R2
+    400000: //RootNode
+    400002: dragonfly
+    400004: DragonflyAntena_L1
+    400006: DragonflyAntena_L2
+    400008: DragonflyAntena_R1
+    400010: DragonflyAntena_R2
+    400012: DragonflyHead
+    400014: DragonflyHub001
+    400016: DragonflyLLeg031
+    400018: DragonflyLLeg032
+    400020: DragonflyLLeg03Ankle
+    400022: DragonflyLLeg03Collarbone
+    400024: DragonflyLLeg1
+    400026: DragonflyLLeg1 1
+    400028: DragonflyLLeg2
+    400030: DragonflyLLeg2 1
+    400032: DragonflyLLegAnkle
+    400034: DragonflyLLegAnkle 1
+    400036: DragonflyLLegCollarbone
+    400038: DragonflyLLegCollarbone 1
+    400040: DragonflyNeck
+    400042: DragonflyRLeg031
+    400044: DragonflyRLeg032
+    400046: DragonflyRLeg03Ankle
+    400048: DragonflyRLeg03Collarbone
+    400050: DragonflyRLeg1
+    400052: DragonflyRLeg1 1
+    400054: DragonflyRLeg2
+    400056: DragonflyRLeg2 1
+    400058: DragonflyRLegAnkle
+    400060: DragonflyRLegAnkle 1
+    400062: DragonflyRLegCollarbone
+    400064: DragonflyRLegCollarbone 1
+    400066: DragonflyTail1
+    400068: DragonflyTail2
+    400070: DragonflyWing_L1
+    400072: DragonflyWing_L2
+    400074: DragonflyWing_R1
+    400076: DragonflyWing_R2
+    4300000: dragonfly
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: dragonfly
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dragonfly_01
+    second: {fileID: 2100000, guid: 76c3b82c54ba3de448e5c3a3297bff94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dragonfly_01_A
+    second: {fileID: 2100000, guid: 2499d227755625c4e8b6d716e4d856b0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
