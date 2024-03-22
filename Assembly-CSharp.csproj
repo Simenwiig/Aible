@@ -97,6 +97,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hair Segmentation\HairSegmentationConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\FaceDetectionSolution.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\PerformanceTest.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Actions\Reach_Item_Actions.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\CameraFly.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkDetectionConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\EnumExtension.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\WebCamNameAttribute.cs" />
     <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandGesture\HandGestureTracker.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\GraphRunner.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Mobs\MobSpawner.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\GameManger\StartSkiing.cs" />
     <Compile Include="Assets\Aible\Scripts\UI\MobileUI.cs" />
     <Compile Include="Assets\Aible\Scripts\Reach_Items\ItemDetector.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\FullscreenQuad.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\DisableIfTransitionManager.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\FaceDetectionGraph.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Mobs\MobSpawnerSettings.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Bootstrap.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\FaceMeshConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingSolution.cs" />
@@ -163,7 +166,6 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\GlobalVolumeFeature.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Garden\Scripts\Runtime\WashiLightController.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\MediaPipeVideoGraph.cs" />
-    <Compile Include="Assets\Aible\Scripts\Reach_Items\Manager\MobSpawner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\HandTrackingGraph.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\TextureFramePool.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowTree.cs" />
@@ -198,6 +200,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\ImageSourceType.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\MemoryCounter.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Insects\Bee.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkDetectionConfigWindow.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Detection\FaceDetectorRunner.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalWind.cs" />

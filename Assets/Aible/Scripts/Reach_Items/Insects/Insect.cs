@@ -5,7 +5,6 @@ using DG.Tweening;
 
 public class Insect : MonoBehaviour
 {
-    [SerializeField] private bool testKill;
     public bool startMovement;
     [HideInInspector] public bool IsMoving;
     [SerializeField] private GameObject _itemPrefab;
@@ -16,6 +15,7 @@ public class Insect : MonoBehaviour
     public float MoveDuration = 3f;
     public float LandDuration = 1f;
 
+    private Vector3 _startPos;
     private Vector3 _endPos;
 
     private Coroutine _movementCoroutine;
@@ -42,18 +42,14 @@ public class Insect : MonoBehaviour
             startMovement = false;
             _movementCoroutine = StartCoroutine(Movement());
         }
-
-        if (testKill)
-        {
-            testKill = false;
-            StartCoroutine(Die());
-        }
     }
 
     virtual protected IEnumerator Movement()
     {
         IsMoving = true;
         _canDie = true;
+
+        _startPos = transform.position;
 
         if (ReverseEndPos)
         {
@@ -87,8 +83,6 @@ public class Insect : MonoBehaviour
 
         TakeItem();
         _canDie = false;
-
-        print("dff");
 
         MoveToTarget(_endPos, MoveDuration);
 
@@ -129,8 +123,6 @@ public class Insect : MonoBehaviour
         if (!_canDie)
             yield break;
 
-        print("dadadad");
-
         StopCoroutine(_movementCoroutine);
         transform.DOKill();
 
@@ -152,7 +144,14 @@ public class Insect : MonoBehaviour
 
     virtual protected void MoveToTarget(Vector3 target, float duration)
     {
-        transform.DOMove(target + TargetOffset, duration);
+        if (_startPos.x > 0)
+        {
+            transform.DOMove(target + TargetOffset, duration);
+        }
+        else
+        {
+            transform.DOMove(target + new Vector3(-TargetOffset.x, TargetOffset.y, TargetOffset.z), duration);
+        }    
         transform.LookAt(target);
     }
 

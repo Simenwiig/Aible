@@ -25,6 +25,16 @@ public class ItemManager : MonoBehaviour
 
     private float _timer;
 
+    private void OnEnable()
+    {
+        Reach_Item_Actions.SetDifficulty += SetDifficulty;
+    }
+
+    private void OnDisable()
+    {
+        Reach_Item_Actions.SetDifficulty -= SetDifficulty;
+    }
+
     private void Awake()
     {
         _ItemManager = this;
@@ -53,6 +63,37 @@ public class ItemManager : MonoBehaviour
         {
             _timer += Time.deltaTime;
         }
+    }
+
+    private void SetDifficulty(Difficulty difficulty)
+    {
+        switch (difficulty)
+        {
+            case Difficulty.D_Level_0:
+                D_Level_0();
+                break;
+            case Difficulty.D_Level_1:
+                D_Level_1();
+                break;
+            case Difficulty.D_Level_2:
+                break;
+            case Difficulty.D_Level_3:
+                break;
+            case Difficulty.D_Level_4:
+                break;
+            case Difficulty.D_Level_5:
+                break;
+        }
+    }
+
+    private void D_Level_0()
+    {
+        CanItemFallDown = false;
+    }
+
+    private void D_Level_1()
+    {
+        CanItemFallDown = true;
     }
 
     public static void AddItem(int item)

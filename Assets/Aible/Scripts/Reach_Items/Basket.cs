@@ -10,6 +10,16 @@ public class Basket : MonoBehaviour
 
     [HideInInspector] public int HighestAppleIndex;
 
+    private void OnEnable()
+    {
+        Reach_Item_Actions.ItemReached += AddApple;
+    }
+
+    private void OnDisable()
+    {
+        Reach_Item_Actions.ItemReached -= AddApple;
+    }
+
     private void Awake()
     {
         if (AppleIndex > 0)
