@@ -44,14 +44,16 @@ public class MobSpawner : MonoBehaviour
                 SetLevel(0);
                 break;
             case Difficulty.D_Level_2:
-                SetLevel(1);
+                SetLevel(0);
                 break;
             case Difficulty.D_Level_3:
-                SetLevel(2);
+                SetLevel(1);
                 break;
             case Difficulty.D_Level_4:
+                SetLevel(2);
                 break;
             case Difficulty.D_Level_5:
+                SetLevel(3);
                 break;
         }
     }
@@ -64,7 +66,10 @@ public class MobSpawner : MonoBehaviour
         _randomTime = Random.Range(_mobSpawnerSettings.TimeBetweenSpawns.x, _mobSpawnerSettings.TimeBetweenSpawns.y);
 
         if(_mobSpawnerSettings.MobTypes.Count > 0)
+        {
             ActivateObjectPools(_mobSpawnerSettings);
+            SpawnMobs(_mobSpawnerSettings.MobTypes.Count - 1);
+        }
     }
 
     private void ActivateObjectPools(MobSpawnerSettings mobSpawnerSettings)
@@ -150,13 +155,20 @@ public class MobSpawner : MonoBehaviour
         }  
     }
 
-    private void SpawnMobs()
+    private void SpawnMobs(int mobIndex = default)
     {
-        int rndIndex = Random.Range(0, _mobSpawnerSettings.MobTypes.Count);
-
         GameObject mob;
+        MobType mobType;
 
-        MobType mobType = _mobSpawnerSettings.MobTypes[rndIndex];
+        if (mobIndex == default)
+        {
+            int rndIndex = Random.Range(0, _mobSpawnerSettings.MobTypes.Count);
+            mobType = _mobSpawnerSettings.MobTypes[rndIndex];
+        }
+        else
+        {
+            mobType = _mobSpawnerSettings.MobTypes[mobIndex];
+        }
 
         switch (mobType)
         {

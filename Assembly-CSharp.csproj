@@ -204,6 +204,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\MemoryCounter.cs" />
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Insects\Bee.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkDetectionConfigWindow.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Items\ItemSettinngs.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Detection\FaceDetectorRunner.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalWind.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\TaskApiRunner.cs" />

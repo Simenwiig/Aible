@@ -92,13 +92,16 @@ public class Insect : MonoBehaviour
 
     //Actions
 
-
     protected GameObject GetItem()
     {
         if (_basket.HighestAppleIndex < 0)
             return null;
 
-        _itemIndex = _basket.HighestAppleIndex;
+        if (_basket.HighestAppleIndex < _basket._apples.Length)
+            _itemIndex = _basket.HighestAppleIndex;
+        else
+            _itemIndex = _basket._apples.Length - 1;
+
         return _basket._apples[_itemIndex];
     }
 

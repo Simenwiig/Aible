@@ -17,15 +17,24 @@ public class DifficultyManager : MonoBehaviour
 {
     private Difficulty _difficulty;
 
-    public Action SetDificulty;
+    private void OnEnable()
+    {
+        Reach_Item_Actions.ChangeDifficulty += ChangeDifficulty;
+    }
 
-    public Difficulty Difficulty
+    private void OnDisable()
+    {
+        Reach_Item_Actions.ChangeDifficulty -= ChangeDifficulty;
+    }
+
+    private Difficulty Difficulty
     {
         get => _difficulty;
         set
         {
             _difficulty = value;
             Reach_Item_Actions.SetDifficulty(_difficulty);
+            Debug.Log(_difficulty);
         }
     }
 
@@ -36,11 +45,9 @@ public class DifficultyManager : MonoBehaviour
         Difficulty = _startDifficulty;
     }
 
-    private void Update()
+    private void ChangeDifficulty(Difficulty difficulty)
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Difficulty = Difficulty.D_Level_3;
-        }
+        if (Difficulty != difficulty)
+            Difficulty = difficulty;
     }
 }

@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Recorder;
 using UnityEngine;
-using static Mediapipe.ImageFrame;
 
 namespace Mediapipe.Unity.Sample.PoseTracking
 {

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Pool;
 
 public class ItemManager : MonoBehaviour
@@ -14,16 +12,22 @@ public class ItemManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private TextMeshProUGUI itemCollectedText;
 
+    [Header("Settings")]
+    [SerializeField] private ItemSettinngs[] _itemSettings;
+
     [Header("Item Settings")]
     [SerializeField] private GameObject _item;
-    [SerializeField] private float _timeBetweenSpawns = 3f;
-    public bool CanItemFallDown;
-    public float TimeBeforeAppleFallDown = 5f;
+    [SerializeField] float _startAngle = 30f; // Starting angle in degrees
+    [SerializeField] float _arcAngle = 120f; // Angle of the arc in degrees
 
-    [SerializeField] float startAngle = 30f; // Starting angle in degrees
-    [SerializeField] float arcAngle = 120f; // Angle of the arc in degrees
+    [HideInInspector] public bool CanItemFallDown;
+    [HideInInspector] public float TimeBeforeAppleFallDown;
 
-    private ObjectPool<GameObject> _pool;
+    private float _timeBetweenSpawns;
+    private Vector2 _xItemLocation = new Vector2(3.0f, 4.2f);
+    private Vector2 _yItemLocation = new Vector2(4.5f, 6.0f);
+
+    private ObjectPool<GameObject> _itemPool;
 
     private float _timer;
 
@@ -43,7 +47,7 @@ public class ItemManager : MonoBehaviour
     {
         _ItemManager = this;
 
-        _pool = new ObjectPool<GameObject>(() =>
+        _itemPool = new ObjectPool<GameObject>(() =>
         {
             return Instantiate(_item, this.transform);
         }, item =>
@@ -70,6 +74,32 @@ public class ItemManager : MonoBehaviour
         {
             changeCoinAmount = false;
             itemCollectedText.text = NumberOfItemsCollected.ToString();
+
+
+            if (NumberOfItemsCollected >= 50)
+            {
+                ChangeDifficulty(Difficulty.D_Level_5);
+            }
+            else if (NumberOfItemsCollected >= 40)
+            {
+                ChangeDifficulty(Difficulty.D_Level_4);
+            }
+            else if (NumberOfItemsCollected >= 30)
+            {
+                ChangeDifficulty(Difficulty.D_Level_3);
+            }
+            else if (NumberOfItemsCollected >= 20)
+            {
+                ChangeDifficulty(Difficulty.D_Level_2);
+            }
+            else if (NumberOfItemsCollected >= 10)
+            {
+                ChangeDifficulty(Difficulty.D_Level_1);
+            }
+            else
+            {
+                ChangeDifficulty(Difficulty.D_Level_0);
+            }
         }
 
         if(_timer >= _timeBetweenSpawns)
@@ -83,19 +113,26 @@ public class ItemManager : MonoBehaviour
         }
     }
 
+    private void ChangeDifficulty(Difficulty difficulty)
+    {
+        Reach_Item_Actions.ChangeDifficulty(difficulty);
+    }
+
     private void SetDifficulty(Difficulty difficulty)
     {
         switch (difficulty)
         {
             case Difficulty.D_Level_0:
-                D_Level_0();
+                SetLevel(0);
                 break;
             case Difficulty.D_Level_1:
-                D_Level_1();
+                SetLevel(1);
                 break;
             case Difficulty.D_Level_2:
+                SetLevel(2);
                 break;
             case Difficulty.D_Level_3:
+                SetLevel(3);
                 break;
             case Difficulty.D_Level_4:
                 break;
@@ -104,14 +141,15 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    private void D_Level_0()
+    private void SetLevel(int level)
     {
-        CanItemFallDown = false;
-    }
+        ItemSettinngs itemSettinngs = _itemSettings[level];
 
-    private void D_Level_1()
-    {
-        CanItemFallDown = true;
+        CanItemFallDown = itemSettinngs.CanItemFallDown;
+        _timeBetweenSpawns = itemSettinngs.TimeBetweenSpawns;
+        TimeBeforeAppleFallDown = itemSettinngs.TimeBeforeAppleFallDown;
+        _xItemLocation = itemSettinngs.XItemLocation;
+        _yItemLocation = itemSettinngs.YItemLocation;
     }
 
     public static void AddItem(int item)
@@ -122,29 +160,27 @@ public class ItemManager : MonoBehaviour
 
     private void SpawnItem()
     {
-        float startAngleRad = Mathf.Deg2Rad * startAngle;
-        float arcAngleRad = Mathf.Deg2Rad * arcAngle;
+        float startAngleRad = Mathf.Deg2Rad * _startAngle;
+        float arcAngleRad = Mathf.Deg2Rad * _arcAngle;
 
         float angle = Random.Range(startAngleRad, startAngleRad + arcAngleRad);
 
-        // Calculate x and z positions using the generated angle
-        float xPos = Random.Range(3.0f, 4.2f) * Mathf.Cos(angle);
-        float yPos = Random.Range(4.5f, 6.0f) * Mathf.Sin(angle);
+        // Calculate x and y positions using the generated angle
+        float xPos = Random.Range(_xItemLocation.x, _xItemLocation.y) * Mathf.Cos(angle);
+        float yPos = Random.Range(_yItemLocation.x, _yItemLocation.y) * Mathf.Sin(angle);
 
         // Apply offset to the spawn position
         Vector3 spawnPosition = new Vector3(xPos, yPos, 0) + transform.position;
 
         float yRot = Random.Range(0, 360);
 
-        GameObject item = _pool.Get();
+        GameObject item = _itemPool.Get();
         item.transform.position = spawnPosition;
         item.transform.rotation = Quaternion.Euler(0, yRot, 0);
-
-        //GameObject item = GameObject.Instantiate(_item, spawnPosition, Quaternion.Euler(0, yRot, 0),this.transform) as GameObject;
     }
 
     public void RealeaseItem(GameObject item)
     {
-        _pool.Release(item);  
+        _itemPool.Release(item);  
     }
 }
