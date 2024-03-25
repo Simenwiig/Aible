@@ -36,5 +36,11 @@ public class DifficultyManager : MonoBehaviour
         Difficulty = _startDifficulty;
     }
 
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Difficulty = Difficulty.D_Level_3;
+        }
+    }
 }

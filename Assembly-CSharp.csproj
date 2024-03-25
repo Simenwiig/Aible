@@ -160,6 +160,7 @@
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Items\ReachItem.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\PositionIndex.cs" />
     <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\LineConnections.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Mobs\MobSpawnPoint.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowGrass.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ImageSourceConfig.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\Visualizers\PoseVisualizer.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Detection\FaceDetectionConfigWindow.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\WebCam\WebCamInput.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\PoseTrackingGraph.cs" />
+    <Compile Include="Assets\Aible\Scripts\Reach_Items\Mobs\MobType.cs" />
     <Compile Include="Assets\Aible\Scripts\MediaPipe\HandTracking\HandMenuActions.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Hand Landmark Detection\HandLandmarkerRunner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Face Landmark Detection\FaceLandmarkDetectionConfigWindow.cs" />

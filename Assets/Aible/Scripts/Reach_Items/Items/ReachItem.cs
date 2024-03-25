@@ -7,5 +7,6 @@ public class ReachItem : MonoBehaviour
     virtual public void ItemReached()
     {
         ItemManager.AddItem(1);
+        Reach_Item_Actions.ReleaseItem(this.gameObject);
     }
 }

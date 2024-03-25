@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.IMGUI.Controls;
+using UnityEngine.Pool;
 
 public class ItemManager : MonoBehaviour
 {
     public static int NumberOfItemsCollected;
+    public static ItemManager _ItemManager;
+
+    static bool changeCoinAmount = true;
+
     [Header("References")]
     [SerializeField] private TextMeshProUGUI itemCollectedText;
 
@@ -19,25 +23,39 @@ public class ItemManager : MonoBehaviour
     [SerializeField] float startAngle = 30f; // Starting angle in degrees
     [SerializeField] float arcAngle = 120f; // Angle of the arc in degrees
 
-    static bool changeCoinAmount = true;
-
-    public static ItemManager _ItemManager;
+    private ObjectPool<GameObject> _pool;
 
     private float _timer;
 
     private void OnEnable()
     {
         Reach_Item_Actions.SetDifficulty += SetDifficulty;
+        Reach_Item_Actions.ReleaseItem += RealeaseItem;
     }
 
     private void OnDisable()
     {
         Reach_Item_Actions.SetDifficulty -= SetDifficulty;
+        Reach_Item_Actions.ReleaseItem -= RealeaseItem;
     }
 
     private void Awake()
     {
         _ItemManager = this;
+
+        _pool = new ObjectPool<GameObject>(() =>
+        {
+            return Instantiate(_item, this.transform);
+        }, item =>
+        {
+            item.SetActive(true);
+        }, item =>
+        {
+            item.SetActive(false);
+        }, item =>
+        {
+            Destroy(item);
+        }, false, 10, 50);
     }
 
     private void Start()
@@ -118,6 +136,15 @@ public class ItemManager : MonoBehaviour
 
         float yRot = Random.Range(0, 360);
 
-        GameObject item = GameObject.Instantiate(_item, spawnPosition, Quaternion.Euler(0, yRot, 0),this.transform) as GameObject;
+        GameObject item = _pool.Get();
+        item.transform.position = spawnPosition;
+        item.transform.rotation = Quaternion.Euler(0, yRot, 0);
+
+        //GameObject item = GameObject.Instantiate(_item, spawnPosition, Quaternion.Euler(0, yRot, 0),this.transform) as GameObject;
+    }
+
+    public void RealeaseItem(GameObject item)
+    {
+        _pool.Release(item);  
     }
 }

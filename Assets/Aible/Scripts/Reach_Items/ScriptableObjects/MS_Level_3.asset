@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d6f40ddf7a3ab94ba12c609ffba3a66, type: 3}
-  m_Name: MS_Level_2
+  m_Name: MS_Level_3
   m_EditorClassIdentifier: 
   CanSpawnMobs: 1
-  TimeBetweenSpawns: {x: 10, y: 12}
-  MobTypes: 00000000
+  TimeBetweenSpawns: {x: 8, y: 10}
+  MobTypes: 0000000001000000

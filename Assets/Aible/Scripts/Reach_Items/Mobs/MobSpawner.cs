@@ -1,13 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Security;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class MobSpawner : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private MobSpawnPoint _spawnPoint;
+    [SerializeField] private Basket _mobTarget;
+    [Header("Settings")]
     [SerializeField] private MobSpawnerSettings[] _spawnerSettings;
 
-    private List<GameObject> _mobs;
+    MobSpawnerSettings _mobSpawnerSettings;
+
+    [SerializeField] private List<GameObject> _mobs;
+
+    private ObjectPool<GameObject> _flyPool;
+    private ObjectPool<GameObject> _beePool;
 
     private bool _canSpawnMobs;
     private float _randomTime;
@@ -16,15 +24,17 @@ public class MobSpawner : MonoBehaviour
     private void OnEnable()
     {
         Reach_Item_Actions.SetDifficulty += SetDifficulty;
+        Reach_Item_Actions.ReleaseMob += ReleaseMob;
     }
 
     private void OnDisable()
     {
         Reach_Item_Actions.SetDifficulty -= SetDifficulty;
+        Reach_Item_Actions.ReleaseMob -= ReleaseMob;
     }
 
     private void SetDifficulty(Difficulty difficulty)
-    {
+    {     
         switch (difficulty)
         {
             case Difficulty.D_Level_0:
@@ -37,6 +47,7 @@ public class MobSpawner : MonoBehaviour
                 SetLevel(1);
                 break;
             case Difficulty.D_Level_3:
+                SetLevel(2);
                 break;
             case Difficulty.D_Level_4:
                 break;
@@ -47,18 +58,60 @@ public class MobSpawner : MonoBehaviour
 
     private void SetLevel(int level)
     {
-        MobSpawnerSettings mobSpawnerSettings = _spawnerSettings[level];
+        _mobSpawnerSettings = _spawnerSettings[level];
 
-        _canSpawnMobs = mobSpawnerSettings.CanSpawnMobs;
-        _randomTime = Random.Range(mobSpawnerSettings.TimeBetweenSpawns.x, mobSpawnerSettings.TimeBetweenSpawns.y);
+        _canSpawnMobs = _mobSpawnerSettings.CanSpawnMobs;
+        _randomTime = Random.Range(_mobSpawnerSettings.TimeBetweenSpawns.x, _mobSpawnerSettings.TimeBetweenSpawns.y);
 
-        if (mobSpawnerSettings.Mobs.Count < 0)
-            return;
+        if(_mobSpawnerSettings.MobTypes.Count > 0)
+            ActivateObjectPools(_mobSpawnerSettings);
+    }
 
-        _mobs.Clear();
-        for (int i = 0; i < mobSpawnerSettings.Mobs.Count; i++)
+    private void ActivateObjectPools(MobSpawnerSettings mobSpawnerSettings)
+    {    
+        for (int i = 0; i < mobSpawnerSettings.MobTypes.Count; i++)
         {
-            _mobs.Add(mobSpawnerSettings.Mobs[i]);
+            switch (mobSpawnerSettings.MobTypes[i])
+            {
+                case MobType.MT_Fly:
+                    if(_flyPool == null)
+                    {
+                        _flyPool = new ObjectPool<GameObject>(() =>
+                        {
+                            return Instantiate(_mobs[0], this.transform);
+                        }, mob =>
+                        {
+                            mob.SetActive(true);
+                        }, mob =>
+                        {
+                            mob.SetActive(false);
+                        }, mob =>
+                        {
+                            Destroy(mob);
+                        }, false, 6, 10);
+                        Debug.LogWarning("CreateFlyPool");
+                    }
+                    break;
+                case MobType.MT_Bee:
+                    if (_beePool == null)
+                    {
+                        _beePool = new ObjectPool<GameObject>(() =>
+                        {
+                            return Instantiate(_mobs[1], this.transform);
+                        }, mob =>
+                        {
+                            mob.SetActive(true);
+                        }, mob =>
+                        {
+                            mob.SetActive(false);
+                        }, mob =>
+                        {
+                            Destroy(mob);
+                        }, false, 6, 10);
+                        Debug.LogWarning("CreateBeePool");
+                    }
+                    break;
+            }
         }
     }
 
@@ -84,13 +137,57 @@ public class MobSpawner : MonoBehaviour
         }
     }
 
-    public void SpawnMobs()
+    private void ReleaseMob(Insect mob)
     {
-        int randMobIndex = Random.Range(0, _mobs.Count);
+        switch (mob.MobType)
+        {
+            case MobType.MT_Fly:
+                _flyPool.Release(mob.gameObject);
+                break;
+            case MobType.MT_Bee:
+                _beePool.Release(mob.gameObject);
+                break;
+        }  
+    }
 
-        GameObject mob = _mobs[randMobIndex];
+    private void SpawnMobs()
+    {
+        int rndIndex = Random.Range(0, _mobSpawnerSettings.MobTypes.Count);
+
+        GameObject mob;
+
+        MobType mobType = _mobSpawnerSettings.MobTypes[rndIndex];
+
+        switch (mobType)
+        {
+            case MobType.MT_Fly:
+                mob = _flyPool.Get();
+                break;
+            case MobType.MT_Bee:
+                mob = _beePool.Get();
+                break;
+            default:
+                return;
+        }
 
         Insect insect = mob.GetComponent<Insect>();
+        insect._basket = _mobTarget;
+
+        float randomY = Random.Range(_spawnPoint.SpawnPoints[0].position.y, _spawnPoint.SpawnPoints[1].position.y);
+        float x;
+
+        int rnd = Random.Range(0, 2);
+
+        if (rnd == 0)
+        {
+            x = _spawnPoint.SpawnPoints[0].position.x;
+        }
+        else
+        {
+            x = -_spawnPoint.SpawnPoints[0].position.x;
+        }
+
+        mob.transform.position = new Vector3(x, randomY, _spawnPoint.SpawnPoints[0].position.z);
 
         if (insect.IsMoving)
         {
@@ -98,7 +195,6 @@ public class MobSpawner : MonoBehaviour
             return;
         }
 
-        mob.SetActive(true);
         insect.startMovement = true;
     }
 }

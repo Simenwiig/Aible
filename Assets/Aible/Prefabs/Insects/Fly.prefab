@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6536666781611644775}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6837556634215902952}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg03Collarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6384202534061001127}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyTail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5907800307141315755}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4500742628036900623}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2282012479408599719}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5718065576370540271}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLegAnkle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3604317410714471716}
   - component: {fileID: 755271327302903370}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7304381797204547425}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyWing_R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4063186845897853656}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952124214995955774}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3756976801821516181}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 697081728302545513}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8649345168110671615}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326157410510384615}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLegCollarbone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836263736529184565}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyAntena_L2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6593968702253764089}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLegCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117070148724766952}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg03Ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9005060351003232217}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyAntena_R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4892943554607777851}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyAntena_R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2336776833652809840}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,8 +1048,7 @@ GameObject:
   - component: {fileID: 1240199435213084155}
   - component: {fileID: 4689982156237617294}
   - component: {fileID: 646143276306294986}
-  - component: {fileID: 794970835323530449}
-  m_Layer: 18
+  m_Layer: 14
   m_Name: Fly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4707696543640468729}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 9.87, y: 0.87, z: -1.776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1106,12 +1105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d16b4201fc21944bc4bab8a6b56280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testKill: 0
   startMovement: 0
   IsMoving: 0
+  _basket: {fileID: 0}
+  MobType: 0
   _itemPrefab: {fileID: 5525716735975693423}
   _itemPrefabReverse: {fileID: 2676827333816670382}
-  Target: {fileID: 0}
   TargetOffset: {x: 0.2, y: 0.43, z: -0.1}
   ReverseEndPos: 0
   MoveDuration: 7
@@ -1143,27 +1142,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &794970835323530449
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4707696543640468729}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.3
-  m_Center: {x: 0, y: 0.54, z: 0}
 --- !u!1 &5149196783460216282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7957980196356958910}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1205,7 +1183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867733495994588787}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyWing_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4733243782790647895}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,7 +1280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4184014293014454115}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyWing_L2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4773129227401671593}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLegCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4235309797007663002}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1374,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512117044769689122}
-  m_Layer: 0
+  - component: {fileID: 5021218466377306920}
+  m_Layer: 18
   m_Name: FlyHub001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1430,6 +1409,27 @@ Transform:
   - {fileID: 2836208721161590276}
   m_Father: {fileID: 8268087691384588609}
   m_LocalEulerAnglesHint: {x: -0.40763277, y: -93.833206, z: -87.93901}
+--- !u!135 &5021218466377306920
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822422278323201910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6836735361058875717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,7 +1439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6816309264757201175}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyAntena_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8966339013887536072}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLeg03Collarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6322889401454229014}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg03Ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8547217003311332003}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyWing_R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4936283176180403619}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4328163512723364691}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyNeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4734973685039932339}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2567872542316781344}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLegCollarbone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,7 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7472976569091079184}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyRLegAnkle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4273779032810149880}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FlyLLeg1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

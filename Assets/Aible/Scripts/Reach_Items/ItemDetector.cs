@@ -62,15 +62,15 @@ public class ItemDetector : MonoBehaviour
     {
         ReachItem item = collider.gameObject.GetComponent<ReachItem>();
         item.ItemReached();
-        Destroy(item.gameObject);
         Reach_Item_Actions.ItemReached?.Invoke();
     }
 
     private void MobDetected(Collider collider)
     {
-        Insect insect = collider.gameObject.GetComponent<Insect>();
+        Insect insect = collider.gameObject.GetComponentInParent<Insect>();
         StartCoroutine(insect.Die());
     }
+
     /*
     private void OnDrawGizmos()
     {

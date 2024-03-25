@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5413514219829994726}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4636076618078233427}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspAntena_R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2256182619098828308}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspAntena_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401479128037169983}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg03Collarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7951351354405280095}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLegCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6586831320659568935}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7971784960395452226}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspWing_R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4180064015418375418}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLegAnkle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4504861558068666003}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspTail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4634863401598779981}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6307462913434524254}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8403991525859753693}
   - component: {fileID: 2025402419612531829}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3835189347094162404}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8784267695673855545}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg03Collarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840093626444663940}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7721158062461153707}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLegCollarbone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9152277230552119010}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7215746208896600957}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7388689353252872269}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspWing_R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520993639421719252}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspAntena_R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548686918789508868}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspNeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3623198556292079446}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspWing_L2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7828711003058492678}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8864087441954863597}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspWing_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1658829356490391526}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6534304761824184933}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg03Ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6834477359437473623}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379757279058717759}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLegCollarbone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8622751895041151104}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,7 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1352780410234069230}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7655295892031359778}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg03Ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6394951976001285017}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1482,7 +1482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4928179595003771967}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspRLegAnkle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6895049080958772664}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,9 +1546,8 @@ GameObject:
   - component: {fileID: 1598423026487082048}
   - component: {fileID: 1708825774389421674}
   - component: {fileID: 1307224290915544233}
-  - component: {fileID: 9188426319480725828}
   - component: {fileID: 3554681417241700809}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,34 +1606,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMovement: 0
   IsMoving: 0
+  _basket: {fileID: 0}
+  MobType: 1
   _itemPrefab: {fileID: 9133269026480861567}
   _itemPrefabReverse: {fileID: 6629674740345097552}
-  Target: {fileID: 0}
   TargetOffset: {x: 0.2, y: 0.43, z: -0.1}
   ReverseEndPos: 0
   MoveDuration: 7
   LandDuration: 2
---- !u!135 &9188426319480725828
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8259152024207511728}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.3
-  m_Center: {x: 0, y: 0.1, z: 0.03}
 --- !u!54 &3554681417241700809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1671,7 +1650,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661218958408616023}
-  m_Layer: 0
+  - component: {fileID: 4933467612051058739}
+  m_Layer: 18
   m_Name: WaspHub001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1705,6 +1685,27 @@ Transform:
   - {fileID: 8578330778174644454}
   m_Father: {fileID: 1598423026487082048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4933467612051058739
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8585281387231258176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0.08, y: -0.05, z: 0}
 --- !u!1 &8634153680497509731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,7 +1715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8140836783567783011}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLeg032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1746,7 +1747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8529736186837788370}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspLLegCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1778,7 +1779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6415851540993237152}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WaspAntena_L2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

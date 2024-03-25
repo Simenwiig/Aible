@@ -5,11 +5,12 @@ using DG.Tweening;
 
 public class Insect : MonoBehaviour
 {
-    public bool startMovement;
+    [HideInInspector] public bool startMovement;
     [HideInInspector] public bool IsMoving;
+    [HideInInspector] public Basket _basket;
+    public MobType MobType;
     [SerializeField] private GameObject _itemPrefab;
     [SerializeField] private GameObject _itemPrefabReverse;
-    public Transform Target;
     public Vector3 TargetOffset;
     public bool ReverseEndPos;
     public float MoveDuration = 3f;
@@ -22,7 +23,6 @@ public class Insect : MonoBehaviour
 
     private Animator _animator;
     private Rigidbody _rb;
-    private Basket _basket;
     private GameObject _item;
     private int _itemIndex;
     private bool _canDie;
@@ -31,8 +31,6 @@ public class Insect : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
-        _basket = Target.gameObject.GetComponentInParent<Basket>();
-        this.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -66,7 +64,7 @@ public class Insect : MonoBehaviour
         if (!_item)
         {
             IsMoving = false;
-            this.gameObject.SetActive(false);
+            Reach_Item_Actions.ReleaseMob(this);
             yield break;
         }
 
@@ -89,7 +87,7 @@ public class Insect : MonoBehaviour
         yield return new WaitForSeconds(MoveDuration);
 
         IsMoving = false;
-        gameObject.SetActive(false);
+        Reach_Item_Actions.ReleaseMob(this);
     }
 
     //Actions
@@ -123,21 +121,23 @@ public class Insect : MonoBehaviour
         if (!_canDie)
             yield break;
 
+        _canDie = false;
+
         StopCoroutine(_movementCoroutine);
         transform.DOKill();
-
+        
         yield return new WaitForSeconds(0.01f);
-
+        
         AnimSetTrigger("death");
+        
         _rb.isKinematic = false;
-
+        
         yield return new WaitForSeconds(3f);
-
+      
         _rb.isKinematic = true;
-        transform.position = _endPos;
         AnimPlayAnimation("idle");
         IsMoving = false;
-        this.gameObject.SetActive(false);
+        Reach_Item_Actions.ReleaseMob(this);
     }
 
     //Movement

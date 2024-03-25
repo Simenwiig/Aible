@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Apple : ReachItem
 {   
-    [SerializeField] private float _timer;
-
-    private Rigidbody rb;
+    private float _timer;
+    private Rigidbody _rb;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
         _timer = 0;
     }
 
     override public void ItemReached()
     {
         base.ItemReached();
+    }
+
+    private void OnEnable()
+    {
+        _timer = 0;
     }
 
     private void Update()
@@ -37,10 +41,12 @@ public class Apple : ReachItem
 
     private IEnumerator FallDown()
     {
-        rb.useGravity = true;
+        _rb.isKinematic = false;
 
         yield return new WaitForSeconds(3);
 
-        Destroy(this);
+        _rb.isKinematic = true;
+
+        Reach_Item_Actions.ReleaseItem(this.gameObject);
     }
 }
