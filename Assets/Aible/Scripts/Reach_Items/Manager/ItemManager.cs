@@ -59,7 +59,7 @@ public class ItemManager : MonoBehaviour
         }, item =>
         {
             Destroy(item);
-        }, false, 10, 50);
+        }, false, 10, 30);
     }
 
     private void Start()
