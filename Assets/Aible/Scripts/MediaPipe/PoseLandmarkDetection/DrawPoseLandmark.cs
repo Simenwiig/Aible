@@ -10,15 +10,17 @@ public class DrawPoseLandmark : MonoBehaviour
     [SerializeField][Range(0, 1)] private float visibilty = 0.9f;
 
     [HideInInspector] public LandmarkPoints BodyPoints;
-    [HideInInspector] public bool IsBodyRemovedFromCamera;
+    [HideInInspector] public bool IsBodyRemovedFromCamera = true;
 
     private float _timer;
 
     private void Awake()
     {
-        GameObject handClone = GameObject.Instantiate(_body) as GameObject;
-        handClone.name = "Body";
-        BodyPoints = handClone.GetComponent<LandmarkPoints>();
+        GameObject bodyClone = GameObject.Instantiate(_body) as GameObject;
+        bodyClone.name = "Body";
+        BodyPoints = bodyClone.GetComponent<LandmarkPoints>();
+        bodyClone.gameObject.SetActive(false);
+        IsBodyRemovedFromCamera = true;
     }
 
     void Update()

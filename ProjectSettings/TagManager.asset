@@ -12,6 +12,7 @@ TagManager:
   - PlayerBodyPart
   - Global Resource
   - ReachItem
+  - MenuButton
   layers:
   - Default
   - TransparentFX

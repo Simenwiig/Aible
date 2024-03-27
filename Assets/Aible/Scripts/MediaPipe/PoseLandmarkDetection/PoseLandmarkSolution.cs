@@ -39,5 +39,18 @@ namespace Mediapipe.Unity.Sample.PoseTracking
             var packet = eventArgs.packet;
             _LandmarkWordList = packet == null ? default : packet.Get(LandmarkList.Parser);
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Stop();
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Resume();
+            }
+        }
     }
 }

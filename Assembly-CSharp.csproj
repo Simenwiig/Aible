@@ -83,7 +83,6 @@
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Manager\DifficultyManager.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Pose Landmark Detection\PoseLandmarkDetectionConfigWindow.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\WebCamSource.cs" />
-    <Compile Include="Assets\Aible\Scripts\Utilities\UICollider.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AssetLoader.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Benchmark\StatsGraphVE.cs" />
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowHeight.cs" />
@@ -131,6 +130,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\DisableIfTransitionManager.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Detection\FaceDetectionGraph.cs" />
     <Compile Include="Assets\Aible\Scripts\Reach_Items\Mobs\MobSpawnerSettings.cs" />
+    <Compile Include="Assets\Aible\Scripts\MediaPipe\CharacterMovement\CharacterPoseController.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\Bootstrap.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Face Mesh\FaceMeshConfig.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Iris Tracking\IrisTrackingSolution.cs" />
@@ -139,6 +139,7 @@
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\LoadingBar.cs" />
     <Compile Include="Assets\Aible\Scripts\Utilities\MoveTo.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\WaitForResult.cs" />
+    <Compile Include="Assets\Aible\Scripts\UI\LandmarkUIActivation.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Tasks\Pose Landmark Detection\PoseLandmarkerRunner.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\AppSettings.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Hand Tracking\HandTrackingConfig.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Assets\AssetStore\ANGRY MESH\Nature Pack - Common\Scripts\AGGlobalSnowGrass.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ImageSourceConfig.cs" />
     <Compile Include="Assets\MediaPipe_OLD\Scripts\Visualizers\PoseVisualizer.cs" />
+    <Compile Include="Assets\Aible\Scripts\UI\UICollider.cs" />
     <Compile Include="Assets\SampleTemplate\SharedAssets\Scripts\Runtime\GlobalVolumeFeature.cs" />
     <Compile Include="Assets\SampleTemplate\Scenes\Garden\Scripts\Runtime\WashiLightController.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\MediaPipe Video\MediaPipeVideoGraph.cs" />
@@ -185,6 +187,7 @@
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Selfie Segmentation\SelfieSegmentationSolution.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\VisionTaskApiRunner.cs" />
     <Compile Include="Assets\Aible\Scripts\Ski\SkiPlayer\SkiAnimation.cs" />
+    <Compile Include="Assets\Aible\Scripts\UI\StartScreen.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Common\Scripts\ImageSource\VideoSource.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\UI\Scripts\ModalButton.cs" />
     <Compile Include="Assets\MediaPipeUnity\Samples\Scenes\Pose Tracking\PoseTrackingConfig.cs" />

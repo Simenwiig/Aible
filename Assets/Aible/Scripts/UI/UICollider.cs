@@ -22,5 +22,6 @@ public class UICollider : MonoBehaviour
 
         int layer = LayerMask.NameToLayer(menuButtonLayer);
         UIColliderObj.layer = layer;
+        UIColliderObj.tag = menuButtonLayer;
     }
 }

@@ -17,7 +17,7 @@ LightingSettings:
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 0
   m_BakeBackend: 2
-  m_LightmapMaxSize: 512
+  m_LightmapMaxSize: 1024
   m_BakeResolution: 20
   m_Padding: 2
   m_LightmapCompression: 2
@@ -27,7 +27,7 @@ LightingSettings:
   m_CompAOExponentDirect: 0
   m_ExtractAO: 0
   m_MixedBakeMode: 0
-  m_LightmapsBakeMode: 0
+  m_LightmapsBakeMode: 1
   m_FilterMode: 1
   m_LightmapParameters: {fileID: 111300000, guid: c0faa38d0e446d5478567a110a4fdfca, type: 2}
   m_ExportTrainingData: 0

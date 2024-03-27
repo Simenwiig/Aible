@@ -33,6 +33,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
             GameObject handClone = GameObject.Instantiate(_hand) as GameObject;
             handClone.name = "Hand";
             HandParent = handClone.GetComponent<LandmarkPoints>();
+            handClone.gameObject.SetActive(false);
         }
 
         protected override void OnStartRun()

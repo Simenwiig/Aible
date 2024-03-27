@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mediapipe.Unity.Sample.PoseTracking;
-using Mediapipe;
-using Mediapipe.Unity;
+using UnityEngine.UI;
 using Color = UnityEngine.Color;
 
 public class ItemDetector : MonoBehaviour
 {
     [SerializeField] private DrawPoseLandmark _drawPoseLandmark;
+    [SerializeField] private Image _progressBar;
+    [SerializeField] private float _timeBeforeButtonActivates = 1f;
     [SerializeField] private float _radius = 0.5f;
     [SerializeField] private LayerMask _reachItemLayer;
+
+    private float _timer;
 
     private LandmarkPoints _bodyPoints;
 
@@ -22,7 +24,10 @@ public class ItemDetector : MonoBehaviour
         _bodyPoints = _drawPoseLandmark.BodyPoints;
 
         if (_bodyPoints == null || _drawPoseLandmark.IsBodyRemovedFromCamera)
+        {
+            Deactivate(_progressBar);
             return;
+        }
 
         //camera
         Camera camera = Camera.main;
@@ -36,9 +41,13 @@ public class ItemDetector : MonoBehaviour
             {
                 ItemDetected(rightCollider[0]);
             }
-            else
+            else if(rightCollider[0].gameObject.tag == "Mob")
             {
                 MobDetected(rightCollider[0]);
+            }
+            else if (rightCollider[0].gameObject.tag == "MenuButton")
+            {
+                CheckForButton(rightCollider[0]);
             }
         }
 
@@ -51,10 +60,19 @@ public class ItemDetector : MonoBehaviour
             {
                 ItemDetected(leftCollider[0]);
             }
-            else
+            else if(leftCollider[0].gameObject.tag == "Mob")
             {
                 MobDetected(leftCollider[0]);
-            }         
+            }
+            else if (leftCollider[0].gameObject.tag == "MenuButton")
+            {
+                CheckForButton(leftCollider[0]);
+            }
+        }
+
+        if (leftCollider.Length <= 0 && rightCollider.Length <= 0)
+        {
+            Deactivate(_progressBar);
         }
     }
 
@@ -69,6 +87,30 @@ public class ItemDetector : MonoBehaviour
     {
         Insect insect = collider.gameObject.GetComponentInParent<Insect>();
         StartCoroutine(insect.Die());
+    }
+
+    private void CheckForButton(Collider collider)
+    {
+        Button button = collider.gameObject.GetComponentInParent<Button>();
+        _progressBar.transform.position = collider.gameObject.transform.position + Vector3.up * 1.3f;
+        _timer += Time.deltaTime % 60;
+        _progressBar.fillAmount = _timer / _timeBeforeButtonActivates;
+        if (_timer >= _timeBeforeButtonActivates)
+        {
+            _progressBar.fillAmount = 0;
+            ClickButton(button);
+        }
+    }
+
+    private void ClickButton(Button button)
+    {
+        button.onClick.Invoke();
+    }
+
+    public void Deactivate(Image progressBar)
+    {
+        progressBar.fillAmount = 0;
+        _timer = 0;
     }
 
     /*

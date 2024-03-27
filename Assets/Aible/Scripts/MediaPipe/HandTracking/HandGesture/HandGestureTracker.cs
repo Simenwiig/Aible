@@ -86,7 +86,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
             Vector3 angleB = MediaPipeCalculator.ConvertToVector(landMarkB);
             Vector3 angleC = MediaPipeCalculator.ConvertToVector(landMarkC);
 
-            float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
+            float angle = MediaPipeCalculator.CalculateXAngle(angleA, angleB, angleC);
 
             return angle > 170;
         }
@@ -97,7 +97,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
             Vector3 angleB = MediaPipeCalculator.ConvertToVector(landMarkB);
             Vector3 angleC = MediaPipeCalculator.ConvertToVector(landMarkC);
 
-            float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
+            float angle = MediaPipeCalculator.CalculateXAngle(angleA, angleB, angleC);
 
             Debug.Log(angle);
         }
@@ -108,7 +108,7 @@ namespace Mediapipe.Unity.Sample.HandTracking
             Vector3 angleB = MediaPipeCalculator.ConvertToVector(landMarkB);
             Vector3 angleC = MediaPipeCalculator.ConvertToVector(landMarkC);
 
-            float angle = MediaPipeCalculator.CalculateAngles(angleA, angleB, angleC);
+            float angle = MediaPipeCalculator.CalculateXAngle(angleA, angleB, angleC);
 
             return angle < 160;
         }

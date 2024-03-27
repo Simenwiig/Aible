@@ -75,7 +75,6 @@ public class ItemManager : MonoBehaviour
             changeCoinAmount = false;
             itemCollectedText.text = NumberOfItemsCollected.ToString();
 
-
             if (NumberOfItemsCollected >= 50)
             {
                 ChangeDifficulty(Difficulty.D_Level_5);

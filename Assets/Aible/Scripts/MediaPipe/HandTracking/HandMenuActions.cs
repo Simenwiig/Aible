@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class HandMenuActions : MonoBehaviour
 {
     [SerializeField] private HandTracking _handTracking;
+    [SerializeField] private LandmarkUIActivation _landmarkUIActivation;
     [SerializeField] private HandGestureTracker _handGestureTracker;
     [SerializeField] private LayerMask _buttonLayer;
-
-    [SerializeField] private TextMeshProUGUI testText;
+    [SerializeField] private Image _progressBar;
 
     [SerializeField] private float _raycastLength = 20;
     [SerializeField] private float _timeBeforeButtonActivates = 1;
@@ -22,44 +22,25 @@ public class HandMenuActions : MonoBehaviour
     private void Start()
     {
         _fingerRayOrigin = _handTracking.HandParent.IndexFingerRayOrigin;
+        _progressBar.fillAmount = 0;
     }
 
     private void Update()
     {
-        testText.text = _timer.ToString("F2");
-
         if (_handTracking.HandLandmarks == null)
             return;
 
         if (_handGestureTracker.GetHandGestures() == HandGestures.HG_Point)
-        {
+        {      
             Vector3 origin = _fingerRayOrigin.position;
             origin += -_fingerRayOrigin.forward * _fingerRayOrigin.localScale.x * 0.5f;
             Vector3 direction = -_fingerRayOrigin.forward;
-            RaycastHit hit;
 
-            if (Physics.Raycast(origin, direction, out hit, _raycastLength, _buttonLayer))
-            {
-                Debug.DrawRay(origin, direction * _raycastLength, Color.green);
-                Button button = hit.transform.gameObject.GetComponentInParent<Button>();
-                _timer += Time.deltaTime % 60;
-                if(_timer >= _timeBeforeButtonActivates)
-                    ClickButton(button);
-            }
-            else
-            {
-                Debug.DrawRay(origin, direction * _raycastLength, Color.red);
-                _timer = 0;
-            }
+            _landmarkUIActivation.CheckForButton(_progressBar, origin, direction, _raycastLength, _buttonLayer, _timeBeforeButtonActivates);
         }
         else
         {
-            _timer = 0;
+            _landmarkUIActivation.Deactivate(_progressBar);
         }
-    }
-
-    private void ClickButton(Button button)
-    {
-        button.onClick.Invoke();
     }
 }
