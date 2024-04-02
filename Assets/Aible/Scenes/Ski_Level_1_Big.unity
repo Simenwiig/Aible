@@ -5082,7 +5082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skiMovement: {fileID: 1034567868}
   startCanvas: {fileID: 366960370}
-  startText: {fileID: 989351506}
   startCounterText: {fileID: 512723509}
   dontStart: 0
   instantlyStart: 0
@@ -7454,7 +7453,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main_Menu
+          m_StringArgument: Demo_Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1034567868 stripped
@@ -10957,6 +10956,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 729677986}
+    - target: {fileID: 4506314280837502761, guid: 42c10233ef308534b904c5db780e5d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Demo_Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 4798648047740478234, guid: 42c10233ef308534b904c5db780e5d38, type: 3}
       propertyPath: m_Name
       value: Pause Screen
@@ -14210,7 +14213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973516872}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32609817, y: 0.62026143, z: -0.31631985, w: 0.6394354}
+  m_LocalRotation: {x: 0.32609814, y: 0.62026143, z: -0.31631985, w: 0.6394354}
   m_LocalPosition: {x: 107.671036, y: 499.69785, z: 237.09027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14307,7 +14310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 192560591328737610, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.32609817
+      value: 0.32609814
       objectReference: {fileID: 0}
     - target: {fileID: 192560591328737610, guid: 81bed3df0646e4a42818c513fb4add4d, type: 3}
       propertyPath: m_LocalRotation.y

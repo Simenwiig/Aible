@@ -13,6 +13,7 @@ TagManager:
   - Global Resource
   - ReachItem
   - MenuButton
+  - Mob
   layers:
   - Default
   - TransparentFX
