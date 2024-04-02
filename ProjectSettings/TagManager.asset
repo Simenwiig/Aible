@@ -11,6 +11,9 @@ TagManager:
   - Coin
   - PlayerBodyPart
   - Global Resource
+  - ReachItem
+  - MenuButton
+  - Mob
   layers:
   - Default
   - TransparentFX
@@ -29,8 +32,8 @@ TagManager:
   - TopLayer
   - Post
   - MenuButton
-  - 
-  - 
+  - ReachItem
+  - Mob
   - 
   - 
   - 

@@ -17,7 +17,7 @@ public class SkiLandmarkOutput : MonoBehaviour
 
     private void LateUpdate()
     {
-        NormalizedLandmarkList landmarkList = _poseLandmarkSolution.LandmarkList;
+        NormalizedLandmarkList landmarkList = _poseLandmarkSolution._LandmarkList;
 
         if (landmarkList != null)
         {
@@ -33,7 +33,7 @@ public class SkiLandmarkOutput : MonoBehaviour
         Vector3 lArmAngleB = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[11]);
         Vector3 lArmAngleC = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[13]);
 
-        float lArmAngle = MediaPipeCalculator.CalculateAngles(lArmAngleA, lArmAngleB, lArmAngleC);
+        float lArmAngle = MediaPipeCalculator.CalculateXAngle(lArmAngleA, lArmAngleB, lArmAngleC);
         float lNormalizedAngle = lArmAngle / 90f;
 
         if (lNormalizedAngle > _minShulderAngle && _skiMovement.leftArmAngle < (lNormalizedAngle - 0.05f))
@@ -56,7 +56,7 @@ public class SkiLandmarkOutput : MonoBehaviour
         Vector3 rArmAngleB = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[12]);
         Vector3 rArmAngleC = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[14]);
 
-        float rArmAngle = MediaPipeCalculator.CalculateAngles(rArmAngleA, rArmAngleB, rArmAngleC);
+        float rArmAngle = MediaPipeCalculator.CalculateXAngle(rArmAngleA, rArmAngleB, rArmAngleC);
         float rNormalizedAngle = rArmAngle / 90f;
 
         if (rNormalizedAngle > _minShulderAngle && _skiMovement.rightArmAngle < (rNormalizedAngle - 0.05f))
@@ -91,14 +91,14 @@ public class SkiLandmarkOutput : MonoBehaviour
         Vector3 rKneeAngleB = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[26]);
         Vector3 rKneeAngleC = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[28]);
 
-        float rKneeAngle = MediaPipeCalculator.CalculateAngles(rKneeAngleA, rKneeAngleB, rKneeAngleC);
+        float rKneeAngle = MediaPipeCalculator.CalculateXAngle(rKneeAngleA, rKneeAngleB, rKneeAngleC);
 
         //Left Knee Angle
         Vector3 lKneeAngleA = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[23]);
         Vector3 lKneeAngleB = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[25]);
         Vector3 lKneeAngleC = MediaPipeCalculator.ConvertToVector(landmarkList.Landmark[27]);
 
-        float lKneeAngle = MediaPipeCalculator.CalculateAngles(lKneeAngleA, lKneeAngleB, lKneeAngleC);
+        float lKneeAngle = MediaPipeCalculator.CalculateXAngle(lKneeAngleA, lKneeAngleB, lKneeAngleC);
 
         //Get difference between each knee angle
         float kneeDiff = lKneeAngle - rKneeAngle;

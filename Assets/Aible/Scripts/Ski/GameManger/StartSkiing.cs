@@ -8,7 +8,6 @@ public class StartSkiing : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] private SkiMovement skiMovement;
     [SerializeField] private Canvas startCanvas;
-    [SerializeField] private TextMeshProUGUI startText;
     [SerializeField] private TextMeshProUGUI startCounterText;
 
     [Header("Settings")]
