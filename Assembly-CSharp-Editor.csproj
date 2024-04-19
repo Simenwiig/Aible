@@ -1237,6 +1237,10 @@
       <Project>{D212DF84-94EA-416B-B8DB-51625F81CBA6}</Project>
       <Name>Mediapipe.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.utilities.screenshot.editor.csproj">
+      <Project>{5FC760FA-8305-391E-BB70-F211DCCFCD0D}</Project>
+      <Name>sc.utilities.screenshot.editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
