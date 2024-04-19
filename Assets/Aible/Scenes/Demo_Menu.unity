@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handTracking: {fileID: 275874971}
-  _pointMaterial: {fileID: 2100000, guid: 8163e4ccb8a73244f8c222c1423e020e, type: 2}
+  _pointMaterial: {fileID: 2100000, guid: aad90bf986372e64b94e630e6607c9db, type: 2}
 --- !u!114 &275874973
 MonoBehaviour:
   m_ObjectHideFlags: 0
