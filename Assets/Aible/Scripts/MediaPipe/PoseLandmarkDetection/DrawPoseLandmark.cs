@@ -1,6 +1,7 @@
 using Mediapipe;
 using Mediapipe.Unity.Sample.PoseTracking;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DrawPoseLandmark : MonoBehaviour
 {
@@ -64,5 +65,23 @@ public class DrawPoseLandmark : MonoBehaviour
             BodyPoints.Points[i].transform.localPosition = Vector3.Slerp(BodyPoints.Points[i].transform.localPosition, 
                 new Vector3(x, y, z), _bodySlerpSpeeed * Time.deltaTime);
         }
+
+        RotateHands();
+    }
+
+
+    private void RotateHands()
+    {
+        Transform leftHand = BodyPoints.Points[15].transform;
+        Transform leftTarget = BodyPoints.Points[13].transform;
+
+        leftHand.LookAt(leftTarget.position, Vector3.up);
+        //leftHand.eulerAngles = new Vector3(leftHand.eulerAngles.x, 90, leftHand.eulerAngles.z);
+        
+        Transform rightHand = BodyPoints.Points[16].transform;
+        Transform rightTarget = BodyPoints.Points[14].transform;
+
+        rightHand.LookAt(rightTarget.position, Vector3.up);
+        //rightHand.eulerAngles = new Vector3(rightHand.eulerAngles.x, 90, rightHand.eulerAngles.z);
     }
 }
