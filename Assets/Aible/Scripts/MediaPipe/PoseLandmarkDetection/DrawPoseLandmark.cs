@@ -75,13 +75,25 @@ public class DrawPoseLandmark : MonoBehaviour
         Transform leftHand = BodyPoints.Points[15].transform;
         Transform leftTarget = BodyPoints.Points[13].transform;
 
-        leftHand.LookAt(leftTarget.position, Vector3.up);
-        //leftHand.eulerAngles = new Vector3(leftHand.eulerAngles.x, 90, leftHand.eulerAngles.z);
-        
+        if (leftHand.eulerAngles.y > 100)
+        {
+            leftHand.LookAt(leftTarget.position, Vector3.down);
+        }
+        else
+        {
+            leftHand.LookAt(leftTarget.position, Vector3.up);
+        }
+
         Transform rightHand = BodyPoints.Points[16].transform;
         Transform rightTarget = BodyPoints.Points[14].transform;
 
-        rightHand.LookAt(rightTarget.position, Vector3.up);
-        //rightHand.eulerAngles = new Vector3(rightHand.eulerAngles.x, 90, rightHand.eulerAngles.z);
+        if (rightHand.eulerAngles.y > 100)
+        {
+            rightHand.LookAt(rightTarget.position, Vector3.up);
+        }
+        else
+        {
+            rightHand.LookAt(rightTarget.position, Vector3.down);
+        }
     }
 }
