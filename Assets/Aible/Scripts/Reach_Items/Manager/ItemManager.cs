@@ -176,7 +176,8 @@ public class ItemManager : MonoBehaviour
 
         GameObject item = _itemPool.Get();
         item.transform.position = spawnPosition;
-        item.transform.rotation = Quaternion.Euler(0, yRot, 0);
+        GameObject itemBase = item.transform.GetChild(0).gameObject;
+        itemBase.transform.rotation = Quaternion.Euler(0, yRot, 0);
     }
 
     public void RealeaseItem(GameObject item)

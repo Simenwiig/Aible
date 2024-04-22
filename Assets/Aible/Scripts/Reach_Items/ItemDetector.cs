@@ -78,7 +78,7 @@ public class ItemDetector : MonoBehaviour
 
     private void ItemDetected(Collider collider)
     {
-        ReachItem item = collider.gameObject.GetComponent<ReachItem>();
+        ReachItem item = collider.gameObject.GetComponentInParent<ReachItem>();
         item.ItemReached();
         Reach_Item_Actions.ItemReached?.Invoke();
     }
